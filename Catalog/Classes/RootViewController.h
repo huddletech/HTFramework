@@ -6,7 +6,10 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+#import "AbstractGenericViewController.h"
+
 @interface RootViewController : UITableViewController {
+	NSArray *catalogItems;
 }
 
 @end

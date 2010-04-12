@@ -11,14 +11,16 @@
 
 @implementation RootViewController
 
-/*
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+	
+	self.title = @"Catalog";
+	
+	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController", nil];
+	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,6 +61,7 @@
 - (void)viewDidUnload {
 	// Release anything that can be recreated in viewDidLoad or on demand.
 	// e.g. self.myOutlet = nil;
+	[catalogItems release];
 }
 
 
@@ -71,7 +74,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [catalogItems count];
 }
 
 
@@ -87,21 +90,24 @@
     
 	// Configure the cell.
 
+	cell.textLabel.text = [catalogItems objectAtIndex:indexPath.row];
+	
     return cell;
 }
 
 
 
-/*
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    // Navigation logic may go here -- for example, create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-	// [self.navigationController pushViewController:anotherViewController animated:YES];
-	// [anotherViewController release];
+	NSString *selectedItemLabel = [catalogItems objectAtIndex:indexPath.row];
+	
+	if ([selectedItemLabel isEqualToString:@"AbstractGenericViewController"]){
+		AbstractGenericViewController *anotherViewController = [[AbstractGenericViewController alloc] init];
+		[self.navigationController pushViewController:anotherViewController animated:YES];
+		[anotherViewController release];
+	}
 }
-*/
 
 
 /*
