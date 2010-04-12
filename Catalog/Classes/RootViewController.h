@@ -10,8 +10,11 @@
 #import "DateViewController.h"
 #import "SelectionListViewController.h"
 #import "LongTextFieldViewController.h";
+#import "TextFieldEditingViewController.h"
 
-@interface RootViewController : UITableViewController <SelectionListViewControllerDelegate, LongTextFieldEditingViewControllerDelegate>{
+@interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
+                                                       LongTextFieldEditingViewControllerDelegate,
+                                                       TextFieldEditingViewControllerDelegate>{
 	NSArray *catalogItems;
 }
 

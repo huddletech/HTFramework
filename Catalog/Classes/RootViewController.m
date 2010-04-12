@@ -20,6 +20,7 @@
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
 					                         @"LongTextFieldViewController",
+					                         @"TextFieldEditingViewController",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -127,6 +128,14 @@
 		controller.string = @"Pre-populated text";
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
+	} else if ([selectedItemLabel isEqualToString:@"TextFieldEditingViewController"]){
+		TextFieldEditingViewController *controller = [[TextFieldEditingViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		controller.delegate = self;
+		controller.fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		controller.fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+		controller.fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
 	}
 }
 
@@ -189,6 +198,13 @@
 - (void)takeNewString:(NSString *)newValue{
 	NSLog(@"You entered: %@", newValue);
 }
+
+#pragma mark TextFieldEditingViewControllerDelegate methods
+
+- (void)valuesDidChange:(NSDictionary *)newValues{
+	NSLog(@"You entered: %@", newValues);
+}
+
 
 @end
 
