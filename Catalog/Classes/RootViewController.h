@@ -10,7 +10,7 @@
 #import "DateViewController.h"
 #import "SelectionListViewController.h"
 
-@interface RootViewController : UITableViewController {
+@interface RootViewController : UITableViewController <SelectionListViewControllerDelegate>{
 	NSArray *catalogItems;
 }
 

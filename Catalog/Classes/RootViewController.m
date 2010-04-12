@@ -115,9 +115,17 @@
 		[self.navigationController pushViewController:anotherViewController animated:YES];
 		[anotherViewController release];
 	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
-		SelectionListViewController *anotherViewController = [[SelectionListViewController alloc] init];
-		[self.navigationController pushViewController:anotherViewController animated:YES];
-		[anotherViewController release];
+		//SelectionListViewController *anotherViewController = [[SelectionListViewController alloc] init];
+		//[self.navigationController pushViewController:anotherViewController animated:YES];
+		//[anotherViewController release];
+		
+		SelectionListViewController *controller = [[SelectionListViewController alloc] init];
+		controller.delegate = self;
+		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		controller.initialSelection = 1;
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
+		
 	}
 }
 
@@ -166,6 +174,12 @@
     [super dealloc];
 }
 
+#pragma mark SelectionListViewControllerDelegate methods
+
+- (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
+{
+    NSLog(@"You selected row %i from array %@", row, theList);
+}
 
 @end
 
