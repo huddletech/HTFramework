@@ -8,6 +8,7 @@
 
 #import "AbstractGenericViewController.h"
 #import "DateViewController.h"
+#import "SelectionListViewController.h"
 
 @interface RootViewController : UITableViewController {
 	NSArray *catalogItems;

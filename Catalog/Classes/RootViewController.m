@@ -18,6 +18,7 @@
 	
 	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController",
 					                         @"DateViewController",
+					                         @"SelectionListViewController",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -111,6 +112,10 @@
 		[anotherViewController release];
 	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
 		DateViewController *anotherViewController = [[DateViewController alloc] init];
+		[self.navigationController pushViewController:anotherViewController animated:YES];
+		[anotherViewController release];
+	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
+		SelectionListViewController *anotherViewController = [[SelectionListViewController alloc] init];
 		[self.navigationController pushViewController:anotherViewController animated:YES];
 		[anotherViewController release];
 	}
