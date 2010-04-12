@@ -10,21 +10,26 @@
 
 
 @implementation AbstractGenericViewController
+@synthesize hideCancelButton, hideSaveButton;
 - (void)viewWillAppear:(BOOL)animated 
 {
-	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-								   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-							       target:self
-							       action:@selector(cancel)];
-	self.navigationItem.leftBarButtonItem = cancelButton;
-	[cancelButton release];
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-								   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-							       target:self
-							       action:@selector(save)];
-	
-	self.navigationItem.rightBarButtonItem = saveButton;
-	[saveButton release];
+	if (!hideCancelButton){
+		UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+									   target:self
+									   action:@selector(cancel)];
+		self.navigationItem.leftBarButtonItem = cancelButton;
+		[cancelButton release];
+	}
+	if (!hideSaveButton){
+		UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+									   target:self
+									   action:@selector(save)];
+		
+		self.navigationItem.rightBarButtonItem = saveButton;
+		[saveButton release];
+	}
 	[super viewWillAppear:animated];
 }
 -(IBAction)cancel
