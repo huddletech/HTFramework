@@ -40,21 +40,6 @@
     [datePicker addTarget:self action:@selector(dateChanged) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:datePicker];
 	
-	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-									 initWithTitle:NSLocalizedString(@"Cancel", @"Cancel - for button to cancel changes")
-									 style:UIBarButtonItemStylePlain
-									 target:self
-									 action:@selector(cancel)];
-	self.navigationItem.leftBarButtonItem = cancelButton;
-	[cancelButton release];
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-								   initWithTitle:NSLocalizedString(@"Save", @"Save - for button to save changes")
-								   style:UIBarButtonItemStylePlain
-								   target:self
-								   action:@selector(save)];
-	self.navigationItem.rightBarButtonItem = saveButton;
-	[saveButton release];
-	
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
