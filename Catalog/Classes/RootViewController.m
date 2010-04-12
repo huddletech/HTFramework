@@ -26,6 +26,7 @@
 					                         @"TextFieldEditingViewController",
 					                         @"EditableSelectionListViewController",
 					                         @"ListViewController",
+					                         @"SectionedListViewController",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -151,6 +152,16 @@
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"ListViewController"]){
 		ListViewController *controller = [[ListViewController alloc] init];
+		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
+	} else if ([selectedItemLabel isEqualToString:@"SectionedListViewController"]){
+		SectionedListViewController *controller = [[SectionedListViewController alloc] init];
+		ListSection *section1 = [[ListSection alloc] init];
+		section1.title = @"Section 1";
+		ListSection *section2 = [[ListSection alloc] init];
+		section2.title = @"Section 2";
+		controller.sections = [NSArray arrayWithObjects:section1, section2, nil];
 		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];

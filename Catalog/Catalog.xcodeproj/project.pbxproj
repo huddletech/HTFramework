@@ -15,6 +15,8 @@
 		0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */; };
 		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
 		0024F5191173DB82003066B2 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F5181173DB82003066B2 /* ListViewController.m */; };
+		0024F5C21173E059003066B2 /* ListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F5C11173E059003066B2 /* ListSection.m */; };
+		0024F5D01173E1C2003066B2 /* SectionedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F5CF1173E1C2003066B2 /* SectionedListViewController.m */; };
 		1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CatalogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -42,6 +44,10 @@
 		0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldEditingViewController.m; sourceTree = "<group>"; };
 		0024F5171173DB82003066B2 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		0024F5181173DB82003066B2 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		0024F5C01173E059003066B2 /* ListSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSection.h; sourceTree = "<group>"; };
+		0024F5C11173E059003066B2 /* ListSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSection.m; sourceTree = "<group>"; };
+		0024F5CE1173E1C2003066B2 /* SectionedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionedListViewController.h; sourceTree = "<group>"; };
+		0024F5CF1173E1C2003066B2 /* SectionedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionedListViewController.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CatalogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CatalogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogAppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +132,10 @@
 				1D3623250D0F684500981E51 /* CatalogAppDelegate.m */,
 				0024F5171173DB82003066B2 /* ListViewController.h */,
 				0024F5181173DB82003066B2 /* ListViewController.m */,
+				0024F5C01173E059003066B2 /* ListSection.h */,
+				0024F5C11173E059003066B2 /* ListSection.m */,
+				0024F5CE1173E1C2003066B2 /* SectionedListViewController.h */,
+				0024F5CF1173E1C2003066B2 /* SectionedListViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -252,6 +262,8 @@
 				0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */,
 				0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */,
 				0024F5191173DB82003066B2 /* ListViewController.m in Sources */,
+				0024F5C21173E059003066B2 /* ListSection.m in Sources */,
+				0024F5D01173E1C2003066B2 /* SectionedListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
