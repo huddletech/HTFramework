@@ -124,6 +124,8 @@
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
 		LongTextFieldViewController *controller = [[LongTextFieldViewController alloc] init];
+		controller.delegate = self;
+		controller.string = @"Pre-populated text";
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
@@ -174,11 +176,19 @@
     [super dealloc];
 }
 
+
 #pragma mark SelectionListViewControllerDelegate methods
 
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 {
     NSLog(@"You selected row %i from array %@", row, theList);
+}
+
+
+#pragma mark SelectionListViewControllerDelegate methods
+
+- (void)takeNewString:(NSString *)newValue{
+	NSLog(@"You entered: %@", newValue);
 }
 
 @end

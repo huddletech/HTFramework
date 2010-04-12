@@ -11,7 +11,7 @@
 #import "SelectionListViewController.h"
 #import "LongTextFieldViewController.h";
 
-@interface RootViewController : UITableViewController <SelectionListViewControllerDelegate>{
+@interface RootViewController : UITableViewController <SelectionListViewControllerDelegate, LongTextFieldEditingViewControllerDelegate>{
 	NSArray *catalogItems;
 }
 
