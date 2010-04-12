@@ -189,20 +189,21 @@
 
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 {
-    NSLog(@"You selected row %i from array %@", row, theList);
+    NSLog(@"You chose row %i from array %@", row, theList);
 }
 
 
 #pragma mark SelectionListViewControllerDelegate methods
 
 - (void)takeNewString:(NSString *)newValue{
-	NSLog(@"You entered: %@", newValue);
+	NSLog(@"You selected: %@", newValue);
 }
+
 
 #pragma mark TextFieldEditingViewControllerDelegate methods
 
 - (void)valuesDidChange:(NSDictionary *)newValues{
-	NSLog(@"You entered: %@", newValues);
+	NSLog(@"You changed values: %@", newValues);
 }
 
 
