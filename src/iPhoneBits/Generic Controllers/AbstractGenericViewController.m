@@ -32,4 +32,8 @@
 {
 	[self.navigationController popViewControllerAnimated:YES];
 }
+-(IBAction)save
+{
+	// you should override this
+}
 @end
