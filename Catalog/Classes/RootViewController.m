@@ -21,6 +21,7 @@
 					                         @"SelectionListViewController",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
+					                         @"EditableSelectionListViewController",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -136,6 +137,13 @@
 		controller.fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
+	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
+		EditableSelectionListViewController *controller = [[EditableSelectionListViewController alloc] init];
+		controller.delegate = self;
+		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		controller.initialSelection = 1;
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
 	}
 }
 
@@ -185,7 +193,7 @@
 }
 
 
-#pragma mark SelectionListViewControllerDelegate methods
+#pragma mark SelectionListViewControllerDelegate / EditableSelectionListViewControllerDelegate methods
 
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 {
