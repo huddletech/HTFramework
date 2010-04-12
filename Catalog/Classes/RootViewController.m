@@ -16,12 +16,16 @@
 	
 	self.title = @"Catalog";
 	
+	catalogSections = [NSArray arrayWithObject:@"Originals from iphonebits"];
+	[catalogSections retain];
+	
 	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController",
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
 					                         @"EditableSelectionListViewController",
+					                         @"ListViewController",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -68,6 +72,7 @@
 	// Release anything that can be recreated in viewDidLoad or on demand.
 	// e.g. self.myOutlet = nil;
 	[catalogItems release];
+	[catalogSections release];
 }
 
 
@@ -142,6 +147,11 @@
 		controller.delegate = self;
 		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		controller.initialSelection = 1;
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
+	} else if ([selectedItemLabel isEqualToString:@"ListViewController"]){
+		ListViewController *controller = [[ListViewController alloc] init];
+		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
