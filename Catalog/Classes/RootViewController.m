@@ -108,18 +108,14 @@
 	NSString *selectedItemLabel = [catalogItems objectAtIndex:indexPath.row];
 	
 	if ([selectedItemLabel isEqualToString:@"AbstractGenericViewController"]){
-		AbstractGenericViewController *anotherViewController = [[AbstractGenericViewController alloc] init];
-		[self.navigationController pushViewController:anotherViewController animated:YES];
-		[anotherViewController release];
+		AbstractGenericViewController *controller = [[AbstractGenericViewController alloc] init];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
-		DateViewController *anotherViewController = [[DateViewController alloc] init];
-		[self.navigationController pushViewController:anotherViewController animated:YES];
-		[anotherViewController release];
+		DateViewController *controller = [[DateViewController alloc] init];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
-		//SelectionListViewController *anotherViewController = [[SelectionListViewController alloc] init];
-		//[self.navigationController pushViewController:anotherViewController animated:YES];
-		//[anotherViewController release];
-		
 		SelectionListViewController *controller = [[SelectionListViewController alloc] init];
 		controller.delegate = self;
 		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
@@ -127,9 +123,9 @@
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
-		LongTextFieldViewController *anotherViewController = [[LongTextFieldViewController alloc] init];
-		[self.navigationController pushViewController:anotherViewController animated:YES];
-		[anotherViewController release];
+		LongTextFieldViewController *controller = [[LongTextFieldViewController alloc] init];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
 	}
 }
 
