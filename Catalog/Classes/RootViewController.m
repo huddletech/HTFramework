@@ -120,6 +120,7 @@
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
 		DateViewController *controller = [[DateViewController alloc] init];
+		controller.delegate = self;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
@@ -235,6 +236,12 @@
 	NSLog(@"You changed values: %@", newValues);
 }
 
+
+#pragma mark DateViewDelegate methods
+
+- (void)takeNewDate:(NSDate *)newDate{
+	NSLog(@"You took new date: %@", newDate);
+}
 
 @end
 

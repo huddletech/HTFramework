@@ -19,7 +19,8 @@
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,
                                                        TextFieldEditingViewControllerDelegate,
-                                                       EditableSelectionListViewControllerDelegate>{
+                                                       EditableSelectionListViewControllerDelegate,
+                                                       DateViewDelegate>{
 	NSArray *catalogItems;
 	NSArray *catalogSections;													   
 }
