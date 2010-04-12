@@ -96,7 +96,7 @@
     }
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateFormat:@"MMMM dd, yyyy"];
+	[formatter setDateStyle:NSDateFormatterLongStyle];
 	cell.textLabel.text = [formatter stringFromDate:date];
 	[formatter release];
 	
