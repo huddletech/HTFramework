@@ -13,17 +13,16 @@
 - (void)viewWillAppear:(BOOL)animated 
 {
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-									 initWithTitle:NSLocalizedString(@"Cancel", @"Cancel - for button to cancel changes")
-									 style:UIBarButtonItemStylePlain
-									 target:self
-									 action:@selector(cancel)];
+								   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+							       target:self
+							       action:@selector(cancel)];
 	self.navigationItem.leftBarButtonItem = cancelButton;
 	[cancelButton release];
 	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
-								   initWithTitle:NSLocalizedString(@"Save", @"Save - for button to save changes")
-								   style:UIBarButtonItemStylePlain
-								   target:self
-								   action:@selector(save)];
+								   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+							       target:self
+							       action:@selector(save)];
+	
 	self.navigationItem.rightBarButtonItem = saveButton;
 	[saveButton release];
 	[super viewWillAppear:animated];
