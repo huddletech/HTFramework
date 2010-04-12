@@ -12,13 +12,11 @@
 
 @implementation ListViewController
 @synthesize list;
-@synthesize lastIndexPath;
 
 
 - (void)dealloc 
 {
 	[list release];
-	[lastIndexPath release];
     [super dealloc];
 }
 #pragma mark -
@@ -30,7 +28,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     
-    static NSString *SelectionListCellIdentifier = @"SelectionListCellIdentifier";
+    static NSString *SelectionListCellIdentifier = @"ListCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
     if (cell == nil) 

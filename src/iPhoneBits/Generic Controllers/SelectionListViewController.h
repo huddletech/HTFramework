@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
+#import "ListViewController.h"
+
 
 @protocol SelectionListViewControllerDelegate <NSObject>
 @required
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 @end
 
-@interface SelectionListViewController : AbstractGenericViewController 
+@interface SelectionListViewController : ListViewController 
 {
-	NSArray			*list;
 	NSIndexPath		*lastIndexPath;
 	NSInteger		initialSelection;
 	

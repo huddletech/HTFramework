@@ -40,16 +40,11 @@
 }
 - (void)dealloc 
 {
-	[list release];
 	[lastIndexPath release];
     [super dealloc];
 }
 #pragma mark -
 #pragma mark Tableview methods
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
-{
-    return [list count];
-}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     

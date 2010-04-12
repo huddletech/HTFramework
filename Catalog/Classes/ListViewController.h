@@ -14,8 +14,6 @@
 @interface ListViewController : AbstractGenericViewController 
 {
 	NSArray			*list;
-	NSIndexPath		*lastIndexPath;
 }
-@property (nonatomic, retain) NSIndexPath *lastIndexPath;
 @property (nonatomic, retain) NSArray *list;
 @end
