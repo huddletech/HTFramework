@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3BE1173CBD3003066B2 /* UIColor-Table.m */; };
+		0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */; };
+		0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C51173CBD3003066B2 /* DateViewController.m */; };
+		0024F3D61173CBD3003066B2 /* EditableSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C71173CBD3003066B2 /* EditableSelectionListViewController.m */; };
+		0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */; };
+		0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */; };
+		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
 		1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CatalogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -18,6 +25,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0024F3BD1173CBD3003066B2 /* UIColor-Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Table.h"; sourceTree = "<group>"; };
+		0024F3BE1173CBD3003066B2 /* UIColor-Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Table.m"; sourceTree = "<group>"; };
+		0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGenericViewController.h; sourceTree = "<group>"; };
+		0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGenericViewController.m; sourceTree = "<group>"; };
+		0024F3C41173CBD3003066B2 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
+		0024F3C51173CBD3003066B2 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
+		0024F3C61173CBD3003066B2 /* EditableSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableSelectionListViewController.h; sourceTree = "<group>"; };
+		0024F3C71173CBD3003066B2 /* EditableSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableSelectionListViewController.m; sourceTree = "<group>"; };
+		0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongTextFieldViewController.h; sourceTree = "<group>"; };
+		0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongTextFieldViewController.m; sourceTree = "<group>"; };
+		0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionListViewController.h; sourceTree = "<group>"; };
+		0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionListViewController.m; sourceTree = "<group>"; };
+		0024F3CC1173CBD3003066B2 /* TextFieldEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEditingViewController.h; sourceTree = "<group>"; };
+		0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldEditingViewController.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CatalogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CatalogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogAppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +68,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0024F3B21173CBD3003066B2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0024F3B31173CBD3003066B2 /* iPhoneBits */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		0024F3B31173CBD3003066B2 /* iPhoneBits */ = {
+			isa = PBXGroup;
+			children = (
+				0024F3B41173CBD3003066B2 /* Categories */,
+				0024F3C11173CBD3003066B2 /* Generic Controllers */,
+			);
+			path = iPhoneBits;
+			sourceTree = "<group>";
+		};
+		0024F3B41173CBD3003066B2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0024F3BD1173CBD3003066B2 /* UIColor-Table.h */,
+				0024F3BE1173CBD3003066B2 /* UIColor-Table.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		0024F3C11173CBD3003066B2 /* Generic Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */,
+				0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */,
+				0024F3C41173CBD3003066B2 /* DateViewController.h */,
+				0024F3C51173CBD3003066B2 /* DateViewController.m */,
+				0024F3C61173CBD3003066B2 /* EditableSelectionListViewController.h */,
+				0024F3C71173CBD3003066B2 /* EditableSelectionListViewController.m */,
+				0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */,
+				0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */,
+				0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */,
+				0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */,
+				0024F3CC1173CBD3003066B2 /* TextFieldEditingViewController.h */,
+				0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */,
+			);
+			path = "Generic Controllers";
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +136,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0024F3B21173CBD3003066B2 /* src */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -171,6 +239,13 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */,
+				0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */,
+				0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */,
+				0024F3D61173CBD3003066B2 /* EditableSelectionListViewController.m in Sources */,
+				0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */,
+				0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */,
+				0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
