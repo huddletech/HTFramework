@@ -9,6 +9,7 @@
 #import "AbstractGenericViewController.h"
 #import "DateViewController.h"
 #import "SelectionListViewController.h"
+#import "LongTextFieldViewController.h";
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate>{
 	NSArray *catalogItems;

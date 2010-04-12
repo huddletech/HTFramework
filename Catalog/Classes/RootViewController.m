@@ -19,6 +19,7 @@
 	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController",
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
+					                         @"LongTextFieldViewController",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -125,7 +126,10 @@
 		controller.initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
-		
+	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
+		LongTextFieldViewController *anotherViewController = [[LongTextFieldViewController alloc] init];
+		[self.navigationController pushViewController:anotherViewController animated:YES];
+		[anotherViewController release];
 	}
 }
 
