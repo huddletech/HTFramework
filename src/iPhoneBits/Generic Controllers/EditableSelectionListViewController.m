@@ -65,14 +65,14 @@
 	NSUInteger oldRow = [lastIndexPath row];
 	if (row >= [list count])
 	{
-		cell.font = [UIFont boldSystemFontOfSize:19.0];
-		cell.text = NSLocalizedString(@"Other…", @"Other…");
+		cell.textLabel.font = [UIFont boldSystemFontOfSize:19.0];
+		cell.textLabel.text = NSLocalizedString(@"Other…", @"Other…");
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	else
 	{
-		cell.font = [UIFont systemFontOfSize:19.0];
-		cell.text = [list objectAtIndex:row];
+		cell.textLabel.font = [UIFont systemFontOfSize:19.0];
+		cell.textLabel.text = [list objectAtIndex:row];
 		cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 		
 	}

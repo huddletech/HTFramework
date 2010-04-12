@@ -63,7 +63,7 @@
     
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];
-	cell.text = [list objectAtIndex:row];
+	cell.textLabel.text = [list objectAtIndex:row];
 	cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 
     return cell;
