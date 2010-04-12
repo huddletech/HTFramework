@@ -30,6 +30,7 @@
 	theTableView.dataSource = self;
 	[self.view addSubview:theTableView];
 	self.dateTableView = theTableView;
+	theTableView.scrollEnabled = NO;
 	[theTableView release];
 	
     UIDatePicker *theDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, 200.0, 320.0, 216.0)];
