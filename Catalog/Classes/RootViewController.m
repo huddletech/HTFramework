@@ -78,7 +78,6 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	NSLog(@"returning %i", [catalogItems count]);
     return [catalogItems count];
 }
 
