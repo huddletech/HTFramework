@@ -16,7 +16,9 @@
 	
 	self.title = @"Catalog";
 	
-	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController", nil];
+	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController",
+					                         @"DateViewController",
+					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -74,6 +76,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	NSLog(@"returning %i", [catalogItems count]);
     return [catalogItems count];
 }
 
@@ -104,6 +107,10 @@
 	
 	if ([selectedItemLabel isEqualToString:@"AbstractGenericViewController"]){
 		AbstractGenericViewController *anotherViewController = [[AbstractGenericViewController alloc] init];
+		[self.navigationController pushViewController:anotherViewController animated:YES];
+		[anotherViewController release];
+	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
+		DateViewController *anotherViewController = [[DateViewController alloc] init];
 		[self.navigationController pushViewController:anotherViewController animated:YES];
 		[anotherViewController release];
 	}

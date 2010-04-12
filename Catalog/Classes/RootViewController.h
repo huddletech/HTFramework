@@ -7,6 +7,7 @@
 //
 
 #import "AbstractGenericViewController.h"
+#import "DateViewController.h"
 
 @interface RootViewController : UITableViewController {
 	NSArray *catalogItems;
