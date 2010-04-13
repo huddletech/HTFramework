@@ -1,0 +1,14 @@
+LongTextFieldViewController
+* fix dimensions for iPad
+
+EditableSelectionListViewController
+* fix crash when saving Other value
+
+DateViewController
+* fix vertical layout for iPad
+
+TextFieldEditingViewController
+* add support for having more than rows
+
+Catalog
+* landscape orientation support

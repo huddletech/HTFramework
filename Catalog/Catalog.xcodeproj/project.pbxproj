@@ -19,6 +19,7 @@
 		00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README.markdown */; };
 		00FC9B75117504E6006FE2E1 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9B74117504E6006FE2E1 /* MainWindow-iPad.xib */; };
 		00FC9C2911751499006FE2E1 /* ExampleTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9C2811751499006FE2E1 /* ExampleTableItem.m */; };
+		00FC9D33117520EA006FE2E1 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9D32117520EA006FE2E1 /* TODO */; };
 		1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CatalogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -53,6 +54,7 @@
 		00FC9B74117504E6006FE2E1 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		00FC9C2711751499006FE2E1 /* ExampleTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableItem.h; sourceTree = "<group>"; };
 		00FC9C2811751499006FE2E1 /* ExampleTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableItem.m; sourceTree = "<group>"; };
+		00FC9D32117520EA006FE2E1 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CatalogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CatalogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogAppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				00FC9D32117520EA006FE2E1 /* TODO */,
 				00FC9AB51174F9E5006FE2E1 /* README.markdown */,
 				0024F3B21173CBD3003066B2 /* src */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -259,6 +262,7 @@
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
 				00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */,
 				00FC9B75117504E6006FE2E1 /* MainWindow-iPad.xib in Resources */,
+				00FC9D33117520EA006FE2E1 /* TODO in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
