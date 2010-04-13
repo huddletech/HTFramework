@@ -14,17 +14,23 @@
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;
+
+
 -(IBAction)save
 {
     [self.delegate rowChosen:[lastIndexPath row] fromArray:list];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 #pragma mark -
 - (id)initWithStyle:(UITableViewStyle)style
 {
 	initialSelection = -1;
 	return self;
 }
+
+
 - (void)viewWillAppear:(BOOL)animated 
 {
 	// Check to see if user has indicated a row to be selected, and set it
@@ -38,13 +44,18 @@
 	
     [super viewWillAppear:animated];
 }
+
+
 - (void)dealloc 
 {
 	[lastIndexPath release];
     [super dealloc];
 }
+
+
 #pragma mark -
 #pragma mark Tableview methods
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     
