@@ -13,7 +13,6 @@
 #import "TextFieldEditingViewController.h"
 #import "EditableSelectionListViewController.h"
 #import "ListViewController.h"
-#import "SectionedListViewController.h"
 #import "ListSection.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
