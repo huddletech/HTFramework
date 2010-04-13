@@ -6,13 +6,7 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-#import "AbstractGenericViewController.h"
-#import "DateViewController.h"
-#import "SelectionListViewController.h"
-#import "LongTextFieldViewController.h";
-#import "TextFieldEditingViewController.h"
-#import "EditableSelectionListViewController.h"
-#import "ExampleListViewController.h"
+#import "HTFramework.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,
