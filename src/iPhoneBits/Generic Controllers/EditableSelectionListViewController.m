@@ -107,6 +107,7 @@
 		controller.fieldValues = [NSArray arrayWithObject:@""];
 		controller.delegate = self;
 		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
 	}
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
