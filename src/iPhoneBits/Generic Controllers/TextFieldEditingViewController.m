@@ -120,6 +120,7 @@
 		label.textColor = [UIColor tableCellNonEditableTextColor];
 		label.font = font;
 		[cell.contentView addSubview:label];
+		cell.backgroundColor = [UIColor whiteColor];
 		[label release];
 		
 		
