@@ -20,13 +20,6 @@
     [super dealloc];
 }
 
-- (void)viewWillAppear:(BOOL)animated 
-{
-	self.hideSaveButton = YES;
-	self.hideCancelButton = YES;
-	[super viewWillAppear:animated];
-}
-
 
 #pragma mark -
 #pragma mark Tableview methods
