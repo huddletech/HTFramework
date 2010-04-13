@@ -16,7 +16,7 @@
 		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
 		00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A581174F6FF006FE2E1 /* ListViewController.m */; };
 		00FC9A781174F858006FE2E1 /* ExampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A771174F858006FE2E1 /* ExampleListViewController.m */; };
-		00FC9AB61174F9E5006FE2E1 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README */; };
+		00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README.markdown */; };
 		1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CatalogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -47,7 +47,7 @@
 		00FC9A761174F858006FE2E1 /* ExampleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleListViewController.h; sourceTree = "<group>"; };
 		00FC9A771174F858006FE2E1 /* ExampleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleListViewController.m; sourceTree = "<group>"; };
 		00FC9A9E1174F966006FE2E1 /* HTFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFramework.h; sourceTree = "<group>"; };
-		00FC9AB51174F9E5006FE2E1 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = SOURCE_ROOT; };
+		00FC9AB51174F9E5006FE2E1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = SOURCE_ROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CatalogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CatalogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogAppDelegate.m; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				00FC9AB51174F9E5006FE2E1 /* README */,
+				00FC9AB51174F9E5006FE2E1 /* README.markdown */,
 				0024F3B21173CBD3003066B2 /* src */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -241,7 +241,7 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
-				00FC9AB61174F9E5006FE2E1 /* README in Resources */,
+				00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
