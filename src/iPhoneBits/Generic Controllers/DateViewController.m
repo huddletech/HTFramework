@@ -25,7 +25,12 @@
     self.view = theView;
     [theView release];
 	
-	UITableView *theTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 67.0, 320.0, 480.0) style:UITableViewStyleGrouped];
+	float tableViewVerticalOffset = 67.0;
+	float screenWidth = 320.0; 
+	float screenHeight = 480.0;
+	
+	UITableView *theTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, tableViewVerticalOffset, screenWidth, screenHeight)
+															 style:UITableViewStyleGrouped];
 	theTableView.delegate = self;
 	theTableView.dataSource = self;
 	[self.view addSubview:theTableView];
@@ -33,7 +38,10 @@
 	theTableView.scrollEnabled = NO;
 	[theTableView release];
 	
-    UIDatePicker *theDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, 200.0, 320.0, 216.0)];
+	float datePickerVerticalOffset = 200.0;
+	float datePickerHeight = 200.0;
+	
+    UIDatePicker *theDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, datePickerVerticalOffset, screenWidth, datePickerHeight)];
 	theDatePicker.datePickerMode = UIDatePickerModeDate;
     self.datePicker = theDatePicker;
     [theDatePicker release];
