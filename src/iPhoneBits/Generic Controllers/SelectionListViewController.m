@@ -65,8 +65,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
     if (cell == nil) 
 	{
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:SelectionListCellIdentifier] autorelease];
-    }
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+									   reuseIdentifier:SelectionListCellIdentifier] autorelease];}
     
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];

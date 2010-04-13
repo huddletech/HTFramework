@@ -35,7 +35,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
     if (cell == nil) 
 	{
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:SelectionListCellIdentifier] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+									   reuseIdentifier:SelectionListCellIdentifier] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
