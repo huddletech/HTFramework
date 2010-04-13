@@ -14,7 +14,7 @@
 		0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */; };
 		0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */; };
 		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
-		0024F5191173DB82003066B2 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F5181173DB82003066B2 /* ListViewController.m */; };
+		00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A581174F6FF006FE2E1 /* ListViewController.m */; };
 		1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CatalogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -40,8 +40,8 @@
 		0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionListViewController.m; sourceTree = "<group>"; };
 		0024F3CC1173CBD3003066B2 /* TextFieldEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEditingViewController.h; sourceTree = "<group>"; };
 		0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldEditingViewController.m; sourceTree = "<group>"; };
-		0024F5171173DB82003066B2 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		0024F5181173DB82003066B2 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CatalogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CatalogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogAppDelegate.m; sourceTree = "<group>"; };
@@ -74,6 +74,8 @@
 		0024F3B21173CBD3003066B2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				00FC9A571174F6FF006FE2E1 /* ListViewController.h */,
+				00FC9A581174F6FF006FE2E1 /* ListViewController.m */,
 				0024F3B31173CBD3003066B2 /* iPhoneBits */,
 			);
 			name = src;
@@ -124,8 +126,6 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* CatalogAppDelegate.h */,
 				1D3623250D0F684500981E51 /* CatalogAppDelegate.m */,
-				0024F5171173DB82003066B2 /* ListViewController.h */,
-				0024F5181173DB82003066B2 /* ListViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */,
 				0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */,
 				0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */,
-				0024F5191173DB82003066B2 /* ListViewController.m in Sources */,
+				00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
