@@ -12,3 +12,9 @@ TextFieldEditingViewController
 
 Catalog
 * landscape orientation support
+
+General
+* unit tests
+
+Other controllers to build
+* MultipleChoiceSelectionList
