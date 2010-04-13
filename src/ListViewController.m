@@ -36,6 +36,7 @@
     if (cell == nil) 
 	{
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:SelectionListCellIdentifier] autorelease];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
 	NSUInteger row = [indexPath row];
@@ -47,8 +48,6 @@
 	else {
 		cell.textLabel.text = [itemForRow descriptionForTable:self];
 	}
-
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
     return cell;
 }
