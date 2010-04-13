@@ -60,10 +60,15 @@
     static NSString *LongTextFieldCellIdentifier = @"LongTextFieldCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LongTextFieldCellIdentifier];
-    if (cell == nil) 
+    
+	float textViewHeight = 161.0;
+	float textViewWidth = 280.0;
+	float textViewOffset = 10.0;
+	
+	if (cell == nil) 
 	{
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:LongTextFieldCellIdentifier] autorelease];
-		UITextView *theTextView = [[UITextView alloc] initWithFrame:CGRectMake(10.0, 10.0, 280.0, 161.0)];
+		UITextView *theTextView = [[UITextView alloc] initWithFrame:CGRectMake(textViewOffset, textViewOffset, textViewWidth, textViewHeight)];
 		theTextView.editable = YES;
 		theTextView.text = string;
 		theTextView.font = [UIFont systemFontOfSize:14.0];
