@@ -26,8 +26,8 @@
     [theView release];
 	
 	float tableViewVerticalOffset = 67.0;
-	float screenWidth = 320.0; 
-	float screenHeight = 480.0;
+	float screenWidth = self.view.frame.size.width; 
+	float screenHeight = self.view.frame.size.height;
 	
 	UITableView *theTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, tableViewVerticalOffset, screenWidth, screenHeight)
 															 style:UITableViewStyleGrouped];
@@ -38,8 +38,8 @@
 	theTableView.scrollEnabled = NO;
 	[theTableView release];
 	
-	float datePickerVerticalOffset = 200.0;
 	float datePickerHeight = 200.0;
+	float datePickerVerticalOffset = 200.0;
 	
     UIDatePicker *theDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0.0, datePickerVerticalOffset, screenWidth, datePickerHeight)];
 	theDatePicker.datePickerMode = UIDatePickerModeDate;
