@@ -40,7 +40,14 @@
     
 	NSUInteger row = [indexPath row];
 	
-	cell.textLabel.text = [list objectAtIndex:row];
+	NSObject<TableItemDisplay> *itemForRow = [list objectAtIndex:row];
+	
+	if ([itemForRow isKindOfClass:[NSString class]])
+		cell.textLabel.text = (NSString*)itemForRow;
+	else {
+		cell.textLabel.text = [itemForRow descriptionForTable:self];
+	}
+
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	
     return cell;

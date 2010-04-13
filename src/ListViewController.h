@@ -11,9 +11,14 @@
 #import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
 
+@protocol TableItemDisplay <NSObject>
+@required
+-(NSString*) descriptionForTable:(AbstractGenericViewController*)table;
+@end
+
 @interface ListViewController : AbstractGenericViewController 
 {
-	NSArray			*list;
+	NSArray	*list;
 }
 @property (nonatomic, retain) NSArray *list;
 @end
