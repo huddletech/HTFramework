@@ -13,6 +13,7 @@
 
 - (void)viewWillAppear:(BOOL)animated 
 {
+	self.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 	self.hideSaveButton = YES;
 	self.hideCancelButton = YES;
 	[super viewWillAppear:animated];
