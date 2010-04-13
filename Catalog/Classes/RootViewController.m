@@ -151,7 +151,7 @@
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"ListViewController"]){
-		ListViewController *controller = [[ListViewController alloc] init];
+		ExampleListViewController *controller = [[ExampleListViewController alloc] init];
 		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
