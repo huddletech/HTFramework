@@ -273,8 +273,10 @@ static NSString *kViewKey = @"viewKey";
     return customSlider;
 }
 
-- (void)sliderAction:(id)sender
-{ }
+- (void)sliderAction:(id)sender{
+	UISlider *slider = (UISlider*)sender;
+	NSLog(@"slider moved to %f", slider.value);
+}
 
 - (UIActivityIndicatorView *)progressInd
 {
