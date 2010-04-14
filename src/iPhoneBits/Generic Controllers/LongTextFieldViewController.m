@@ -24,22 +24,9 @@
 {
     [super viewDidLoad];
 }
-- (void)viewWillAppear:(BOOL)animated 
+- (void)viewDidAppear:(BOOL)animated 
 {
-	
-	
-	NSUInteger firstRowIndices[] = {0,0};
-	NSIndexPath *firstRowPath = [NSIndexPath indexPathWithIndexes:firstRowIndices length:2];
-	UITableViewCell *firstCell = [self.tableView cellForRowAtIndexPath:firstRowPath];
-	UITextView *firstCellTextField = nil;
-	for (UIView *oneView in firstCell.contentView.subviews)
-	{
-		if ([oneView isMemberOfClass:[UITextView class]])
-			firstCellTextField = (UITextView *)oneView;
-	}
-	[firstCellTextField becomeFirstResponder];
-	
-    [super viewWillAppear:animated];
+	[textView becomeFirstResponder];
 }
 - (void)dealloc 
 {
@@ -72,7 +59,7 @@
 		theTextView.editable = YES;
 		theTextView.text = string;
 		theTextView.font = [HTStyle longTextFieldFont];
-		[theTextView becomeFirstResponder];
+		//[theTextView becomeFirstResponder];
 		self.textView = theTextView;
 		[[cell contentView] addSubview:theTextView];
 		[theTextView release];
