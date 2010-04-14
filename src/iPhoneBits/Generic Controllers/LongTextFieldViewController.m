@@ -8,7 +8,7 @@
 //  Modifications by Andy Waite
 
 #import "LongTextFieldViewController.h"
-
+#import "HTStyle.h"
 
 @implementation LongTextFieldViewController
 @synthesize string;
@@ -71,7 +71,7 @@
 		UITextView *theTextView = [[UITextView alloc] initWithFrame:CGRectMake(textViewOffset, textViewOffset, textViewWidth, textViewHeight)];
 		theTextView.editable = YES;
 		theTextView.text = string;
-		theTextView.font = [UIFont systemFontOfSize:14.0];
+		theTextView.font = [HTStyle longTextFieldFont];
 		[theTextView becomeFirstResponder];
 		self.textView = theTextView;
 		[[cell contentView] addSubview:theTextView];

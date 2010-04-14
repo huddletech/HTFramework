@@ -4,6 +4,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
+#import "HTStyle.h"
 
 @protocol DateViewDelegate <NSObject>
 @required
