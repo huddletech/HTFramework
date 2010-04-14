@@ -17,9 +17,7 @@
 @synthesize delegate;
 -(IBAction)save
 {
-	NSLog(@"save1");
     [self.delegate rowChosen:[lastIndexPath row] fromArray:list];
-	NSLog(@"save2");
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark -
