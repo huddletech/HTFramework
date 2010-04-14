@@ -56,7 +56,6 @@
 
 static NSString *kSectionTitleKey = @"sectionTitleKey";
 static NSString *kLabelKey = @"labelKey";
-static NSString *kSourceKey = @"sourceKey";
 static NSString *kViewKey = @"viewKey";
 
 #pragma mark -
@@ -88,42 +87,36 @@ static NSString *kViewKey = @"viewKey";
 							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UISwitch", kSectionTitleKey,
 								 @"Standard Switch", kLabelKey,
-								 @"ControlsViewController.m:\r-(UISwitch *)switchCtl", kSourceKey,
 								 self.switchCtl, kViewKey,
 							 nil],
 
 							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UISlider", kSectionTitleKey,
 								 @"Standard Slider", kLabelKey,
-								 @"ControlsViewController.m:\r-(UISlider *)sliderCtl", kSourceKey,
 								 self.sliderCtl, kViewKey,
 							 nil],
 							
 							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UISlider", kSectionTitleKey,
 								 @"Customized Slider", kLabelKey,
-								 @"ControlsViewController.m:\r-(UISlider *)customSlider", kSourceKey,
 								 self.customSlider, kViewKey,
 							 nil],
 							
 							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UIPageControl", kSectionTitleKey,
 								 @"Ten Pages", kLabelKey,
-								 @"ControlsViewController.m:\r-(UIPageControl *)pageControl", kSourceKey,
 								 self.pageControl, kViewKey,
 							 nil],
 							
 							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UIActivityIndicatorView", kSectionTitleKey,
 								 @"Style Gray", kLabelKey,
-								 @"ControlsViewController.m:\r-(UIActivityIndicatorView *)progressInd", kSourceKey,
 								 self.progressInd, kViewKey,
 							 nil],
 							
 							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UIProgressView", kSectionTitleKey,
 								 @"Style Default", kLabelKey,
-								 @"ControlsViewController.m:\r-(UIProgressView *)progressBar", kSourceKey,
 								 self.progressBar, kViewKey,
 							 nil],
 							nil];
@@ -172,77 +165,46 @@ static NSString *kViewKey = @"viewKey";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 2;
+	return 1;
 }
 
-// to determine specific row height for each cell, override this.
-// In this example, each row is determined by its subviews that are embedded.
-//
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return ([indexPath row] == 0) ? 50.0 : 38.0;
-}
 
 // to determine which UITableViewCell to be used on a given row.
 //
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = nil;
-
-	if ([indexPath row] == 0)
+	static NSString *kDisplayCell_ID = @"DisplayCellID";
+	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kDisplayCell_ID];
+	if (cell == nil)
 	{
-		static NSString *kDisplayCell_ID = @"DisplayCellID";
-		cell = [self.tableView dequeueReusableCellWithIdentifier:kDisplayCell_ID];
-        if (cell == nil)
-        {
-			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDisplayCell_ID] autorelease];
-			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		}
-		else
-		{
-			// the cell is being recycled, remove old embedded controls
-			UIView *viewToRemove = nil;
-			viewToRemove = [cell.contentView viewWithTag:kViewTag];
-			if (viewToRemove)
-				[viewToRemove removeFromSuperview];
-		}
-		
-		cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kLabelKey];
-		
-		UIControl *control = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kViewKey];
-		[cell.contentView addSubview:control];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDisplayCell_ID] autorelease];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	else
 	{
-		static NSString *kSourceCellID = @"SourceCellID";
-		cell = [self.tableView dequeueReusableCellWithIdentifier:kSourceCellID];
-        if (cell == nil)
-        {
-			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kSourceCellID] autorelease];
-			cell.selectionStyle = UITableViewCellSelectionStyleNone;
-			
-			cell.textLabel.opaque = NO;
-            cell.textLabel.textAlignment = UITextAlignmentCenter;
-            cell.textLabel.textColor = [UIColor grayColor];
-			cell.textLabel.numberOfLines = 2;
-			cell.textLabel.highlightedTextColor = [UIColor blackColor];
-            cell.textLabel.font = [UIFont systemFontOfSize:12];	
-        }
-		
-		cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kSourceKey];
+		// the cell is being recycled, remove old embedded controls
+		UIView *viewToRemove = nil;
+		viewToRemove = [cell.contentView viewWithTag:kViewTag];
+		if (viewToRemove)
+			[viewToRemove removeFromSuperview];
 	}
+	
+	cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kLabelKey];
+	
+	UIControl *control = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kViewKey];
+	[cell.contentView addSubview:control];
 
 	return cell;
 }
 
 - (void)switchAction:(id)sender
 {
-	// NSLog(@"switchAction: value = %d", [sender isOn]);
+	NSLog(@"switchAction: value = %d", [sender isOn]);
 }
 
 - (void)pageAction:(id)sender
 {
-	// NSLog(@"pageAction: current page = %d", [sender currentPage]);
+	NSLog(@"pageAction: current page = %d", [sender currentPage]);
 }
 
 
