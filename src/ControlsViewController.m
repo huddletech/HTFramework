@@ -68,7 +68,6 @@ static NSString *kViewKey = @"viewKey";
 {	
 	[switchCtl release];
 	[sliderCtl release];
-	[customSlider release];
 	[progressInd release];
 	[progressBar release];
 	
@@ -93,12 +92,6 @@ static NSString *kViewKey = @"viewKey";
 								 @"UISlider", kSectionTitleKey,
 								 @"Standard Slider", kLabelKey,
 								 self.sliderCtl, kViewKey,
-							 nil],
-							
-							[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"UISlider", kSectionTitleKey,
-								 @"Customized Slider", kLabelKey,
-								 self.customSlider, kViewKey,
 							 nil],
 							
 							[NSDictionary dictionaryWithObjectsAndKeys:
@@ -130,8 +123,6 @@ static NSString *kViewKey = @"viewKey";
     switchCtl = nil;
     [sliderCtl release];
     sliderCtl = nil;
-    [customSlider release];
-    customSlider = nil;
     [progressInd release];
     progressInd = nil;
     [progressBar release];
@@ -244,34 +235,6 @@ static NSString *kViewKey = @"viewKey";
     return sliderCtl;
 }
 
-- (UISlider *)customSlider
-{
-    if (customSlider == nil) 
-    {
-        CGRect frame = CGRectMake(174, 12.0, 120.0, kSliderHeight);
-        customSlider = [[UISlider alloc] initWithFrame:frame];
-        [customSlider addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
-        // in case the parent view draws with a custom color or gradient, use a transparent color
-        customSlider.backgroundColor = [UIColor clearColor];	
-        UIImage *stetchLeftTrack = [[UIImage imageNamed:@"orangeslide.png"]
-									stretchableImageWithLeftCapWidth:10.0 topCapHeight:0.0];
-        UIImage *stetchRightTrack = [[UIImage imageNamed:@"yellowslide.png"]
-									 stretchableImageWithLeftCapWidth:10.0 topCapHeight:0.0];
-        [customSlider setThumbImage: [UIImage imageNamed:@"slider_ball.png"] forState:UIControlStateNormal];
-        [customSlider setMinimumTrackImage:stetchLeftTrack forState:UIControlStateNormal];
-        [customSlider setMaximumTrackImage:stetchRightTrack forState:UIControlStateNormal];
-        customSlider.minimumValue = 0.0;
-        customSlider.maximumValue = 100.0;
-        customSlider.continuous = YES;
-        customSlider.value = 50.0;
-		
-		// Add an accessibility label that describes the slider.
-		[customSlider setAccessibilityLabel:NSLocalizedString(@"CustomSlider", @"")];
-		
-		customSlider.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    }
-    return customSlider;
-}
 
 - (void)sliderAction:(id)sender{
 	UISlider *slider = (UISlider*)sender;
