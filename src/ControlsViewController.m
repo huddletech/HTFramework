@@ -69,7 +69,6 @@ static NSString *kViewKey = @"viewKey";
 	[switchCtl release];
 	[sliderCtl release];
 	[customSlider release];
-	[pageControl release];
 	[progressInd release];
 	[progressBar release];
 	
@@ -103,12 +102,6 @@ static NSString *kViewKey = @"viewKey";
 							 nil],
 							
 							[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"UIPageControl", kSectionTitleKey,
-								 @"Ten Pages", kLabelKey,
-								 self.pageControl, kViewKey,
-							 nil],
-							
-							[NSDictionary dictionaryWithObjectsAndKeys:
 								 @"UIActivityIndicatorView", kSectionTitleKey,
 								 @"Style Gray", kLabelKey,
 								 self.progressInd, kViewKey,
@@ -139,8 +132,6 @@ static NSString *kViewKey = @"viewKey";
     sliderCtl = nil;
     [customSlider release];
     customSlider = nil;
-    [pageControl release];
-    pageControl = nil;
     [progressInd release];
     progressInd = nil;
     [progressBar release];
@@ -284,24 +275,6 @@ static NSString *kViewKey = @"viewKey";
 
 - (void)sliderAction:(id)sender
 { }
-
-- (UIPageControl *)pageControl
-{
-    if (pageControl == nil) 
-    {
-        CGRect frame = CGRectMake(120.0, 14.0, 178.0, 20.0);
-        pageControl = [[UIPageControl alloc] initWithFrame:frame];
-        [pageControl addTarget:self action:@selector(pageAction:) forControlEvents:UIControlEventTouchUpInside];
-		
-        // in case the parent view draws with a custom color or gradient, use a transparent color
-        pageControl.backgroundColor = [UIColor grayColor];
-        
-        pageControl.numberOfPages = 10;	// must be set or control won't draw
-		
-		pageControl.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    }
-    return pageControl;
-}
 
 - (UIActivityIndicatorView *)progressInd
 {

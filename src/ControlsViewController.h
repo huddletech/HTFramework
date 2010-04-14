@@ -52,7 +52,6 @@
 	UISwitch				*switchCtl;
 	UISlider				*sliderCtl;
 	UISlider				*customSlider;
-	UIPageControl			*pageControl;
 	UIActivityIndicatorView	*progressInd;
 	UIProgressView			*progressBar;
 	
@@ -62,7 +61,6 @@
 @property (nonatomic, retain, readonly) UISwitch *switchCtl;
 @property (nonatomic, retain, readonly) UISlider *sliderCtl;
 @property (nonatomic, retain, readonly) UISlider *customSlider;
-@property (nonatomic, retain, readonly) UIPageControl *pageControl;
 @property (nonatomic, retain, readonly) UIActivityIndicatorView *progressInd;
 @property (nonatomic, retain, readonly) UIProgressView *progressBar;
 
