@@ -89,7 +89,8 @@
     }
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-	[formatter setDateStyle:NSDateFormatterLongStyle];
+	[formatter setDateStyle:NSDateFormatterFullStyle];
+	cell.textLabel.textAlignment = UITextAlignmentCenter;
 	cell.textLabel.text = [formatter stringFromDate:date];
 	[formatter release];
 	
