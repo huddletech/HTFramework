@@ -10,6 +10,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
+#import "TableSection.h"
 
 @protocol TableItemDisplay <NSObject>
 @required
@@ -18,7 +19,14 @@
 
 @interface ListViewController : AbstractGenericViewController 
 {
+	NSMutableArray *sections;
 	NSArray	*rowItems;
 }
-@property (nonatomic, retain) NSArray *rowItems;
+@property (nonatomic, retain) NSArray *sections;
+
+- (void)setRowItems:(NSArray*)items;
+- (void)setRowItems:(NSArray*)items forSection:(TableSection*)section;
+- (NSArray*)rowItems;
+
+
 @end

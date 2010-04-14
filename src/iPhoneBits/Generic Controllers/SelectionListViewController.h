@@ -11,7 +11,6 @@
 #import "AbstractGenericViewController.h"
 #import "ListViewController.h"
 
-
 @protocol SelectionListViewControllerDelegate <NSObject>
 @required
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;

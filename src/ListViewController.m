@@ -11,7 +11,7 @@
 
 
 @implementation ListViewController
-@synthesize rowItems;
+@synthesize sections;
 
 
 - (void)dealloc 
@@ -20,16 +20,42 @@
     [super dealloc];
 }
 
+- (void)setRowItems:(NSArray*)items{
+	TableSection *sectionToUpdate;
+	if (self.sections == nil){
+		self.sections = [NSMutableArray array];
+		sectionToUpdate = [[TableSection alloc] init];
+		sectionToUpdate.title = @"Untitled Section";
+		[sections addObject:sectionToUpdate];
+	} else {
+		sectionToUpdate = [sections objectAtIndex:0];
+	}
+	[self setRowItems:items forSection:sectionToUpdate];
+}
+
+- (void)setRowItems:(NSArray*)items forSection:(TableSection*)section{
+	NSLog(@"called setRowItems with %@ for section %@", items, section);
+	section.items = items;
+}
+
+- (NSArray*)rowItems{
+	return [[sections objectAtIndex:0] items];
+}
 
 #pragma mark -
 #pragma mark Tableview methods
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+	NSLog(@"numberOfSectionsInTableView, returning %i", [sections count]);
+	return [sections count];
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return [rowItems count];
+	TableSection *ts = [sections objectAtIndex:section];
+    return [ts.items count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    
+	NSLog(@"cellForRowAtIndexPath: %i, %i:", indexPath.section, indexPath.row);
     static NSString *SelectionListCellIdentifier = @"ListCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
@@ -40,9 +66,9 @@
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-	NSUInteger row = [indexPath row];
+	TableSection *ts = [sections objectAtIndex:indexPath.section];
 	
-	NSObject<TableItemDisplay> *itemForRow = [rowItems objectAtIndex:row];
+	NSObject<TableItemDisplay> *itemForRow = [ts.items objectAtIndex:indexPath.row];
 	
 	if ([itemForRow isKindOfClass:[NSString class]])
 		cell.textLabel.text = (NSString*)itemForRow;
