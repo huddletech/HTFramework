@@ -48,6 +48,10 @@
 	NSLog(@"numberOfSectionsInTableView, returning %i", [sections count]);
 	return [sections count];
 }
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+	TableSection *ts = [sections objectAtIndex:section];
+	return ts.title;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
 	TableSection *ts = [sections objectAtIndex:section];

@@ -22,7 +22,7 @@
 	NSMutableArray *sections;
 	NSArray	*rowItems;
 }
-@property (nonatomic, retain) NSArray *sections;
+@property (nonatomic, retain) NSMutableArray *sections;
 
 - (void)setRowItems:(NSArray*)items;
 - (void)setRowItems:(NSArray*)items forSection:(TableSection*)section;
