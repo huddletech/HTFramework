@@ -11,12 +11,12 @@
 
 
 @implementation ListViewController
-@synthesize list;
+@synthesize rowItems;
 
 
 - (void)dealloc 
 {
-	[list release];
+	[rowItems release];
     [super dealloc];
 }
 
@@ -25,7 +25,7 @@
 #pragma mark Tableview methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return [list count];
+    return [rowItems count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -42,7 +42,7 @@
     
 	NSUInteger row = [indexPath row];
 	
-	NSObject<TableItemDisplay> *itemForRow = [list objectAtIndex:row];
+	NSObject<TableItemDisplay> *itemForRow = [rowItems objectAtIndex:row];
 	
 	if ([itemForRow isKindOfClass:[NSString class]])
 		cell.textLabel.text = (NSString*)itemForRow;

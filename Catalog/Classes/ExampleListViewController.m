@@ -23,7 +23,7 @@
 	ExampleTableItem *item1 = [ExampleTableItem tableItemWithName:@"X"];
 	ExampleTableItem *item2 = [ExampleTableItem tableItemWithName:@"Y"];
 	ExampleTableItem *item3 = [ExampleTableItem tableItemWithName:@"Z"];
-	self.list = [NSArray arrayWithObjects:item1, item2, item3, nil];
+	self.rowItems = [NSArray arrayWithObjects:item1, item2, item3, nil];
 	
 	// AbstractGenericViewController has Save and Cancel buttons by default, but since
 	// we're showing a static list here there's no need for them

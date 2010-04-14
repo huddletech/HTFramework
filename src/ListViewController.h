@@ -18,7 +18,7 @@
 
 @interface ListViewController : AbstractGenericViewController 
 {
-	NSArray	*list;
+	NSArray	*rowItems;
 }
-@property (nonatomic, retain) NSArray *list;
+@property (nonatomic, retain) NSArray *rowItems;
 @end

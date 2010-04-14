@@ -19,7 +19,7 @@
 
 -(IBAction)save
 {
-    [self.delegate rowChosen:[lastIndexPath row] fromArray:list];
+    [self.delegate rowChosen:[lastIndexPath row] fromArray:rowItems];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -35,7 +35,7 @@
 - (void)viewWillAppear:(BOOL)animated 
 {
 	// Check to see if user has indicated a row to be selected, and set it
-	if (initialSelection > - 1 && initialSelection < [list count])
+	if (initialSelection > - 1 && initialSelection < [rowItems count])
 	{
 		NSUInteger newIndex[] = {0, initialSelection};
 		NSIndexPath *newPath = [[NSIndexPath alloc] initWithIndexes:newIndex length:2];
@@ -70,7 +70,7 @@
     
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];
-	cell.textLabel.text = [list objectAtIndex:row];
+	cell.textLabel.text = [rowItems objectAtIndex:row];
 	cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 
     return cell;
