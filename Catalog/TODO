@@ -1,9 +1,6 @@
 LongTextFieldViewController
 * fix dimensions for iPad
 
-EditableSelectionListViewController
-* fix crash when saving Other value
-
 DateViewController
 * fix vertical layout for iPad
 

@@ -146,7 +146,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
 		EditableSelectionListViewController *controller = [[EditableSelectionListViewController alloc] init];
 		controller.delegate = self;
-		controller.list = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		controller.list = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		controller.initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
