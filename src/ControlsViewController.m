@@ -58,6 +58,18 @@ static NSString *kSectionTitleKey = @"sectionTitleKey";
 static NSString *kLabelKey = @"labelKey";
 static NSString *kViewKey = @"viewKey";
 
+float switchLeftOffset = 198.0;
+float switchTopOffset = 10.0;
+float switchWidth = 94.0;
+float switchHeight = 27.0;
+float sliderLeftOffset = 174.0;
+float sliderTopOffset = 12.0;
+float sliderWidth = 120.0;
+float progressBarLeftOffset = 126.0;
+float progressBarTopOffset = 20.0;
+float progressIndLeftOffset = 265.0;
+float progressIndTopOffset = 12.0;
+
 #pragma mark -
 
 @implementation ControlsViewController
@@ -197,11 +209,6 @@ static NSString *kViewKey = @"viewKey";
 {
     if (switchCtl == nil) 
     {
-		float switchLeftOffset = 198.0;
-		float switchTopOffset = 12.0;
-		float switchWidth = 94.0;
-		float switchHeight = 27.0;
-		
         CGRect frame = CGRectMake(switchLeftOffset, switchTopOffset, switchWidth, switchHeight);
         switchCtl = [[UISwitch alloc] initWithFrame:frame];
         [switchCtl addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
@@ -220,10 +227,6 @@ static NSString *kViewKey = @"viewKey";
 {
     if (sliderCtl == nil) 
     {
-		float sliderLeftOffset = 174.0;
-		float sliderTopOffset = 12.0;
-		float sliderWidth = 120.0;
-		
         CGRect frame = CGRectMake(sliderLeftOffset, sliderTopOffset, sliderWidth, kSliderHeight);
         sliderCtl = [[UISlider alloc] initWithFrame:frame];
         [sliderCtl addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
@@ -254,9 +257,6 @@ static NSString *kViewKey = @"viewKey";
 {
     if (progressInd == nil)
     {
-		float progressIndLeftOffset = 265.0;
-		float progressIndTopOffset = 12.0;
-		
         CGRect frame = CGRectMake(progressIndLeftOffset, progressIndTopOffset, kProgressIndicatorSize, kProgressIndicatorSize);
         progressInd = [[UIActivityIndicatorView alloc] initWithFrame:frame];
         [progressInd startAnimating];
@@ -276,9 +276,6 @@ static NSString *kViewKey = @"viewKey";
 {
     if (progressBar == nil) 
     {
-		float progressBarLeftOffset = 126.0;
-		float progressBarTopOffset = 20.0;
-		
         CGRect frame = CGRectMake(progressBarLeftOffset, progressBarTopOffset, kUIProgressBarWidth, kUIProgressBarHeight);
         progressBar = [[UIProgressView alloc] initWithFrame:frame];
         progressBar.progressViewStyle = UIProgressViewStyleDefault;
