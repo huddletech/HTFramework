@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0013046A117646CA00D67E55 /* ControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00130469117646CA00D67E55 /* ControlsViewController.m */; };
 		0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3BE1173CBD3003066B2 /* UIColor-Table.m */; };
 		0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */; };
 		0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C51173CBD3003066B2 /* DateViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00130468117646CA00D67E55 /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsViewController.h; sourceTree = "<group>"; };
+		00130469117646CA00D67E55 /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsViewController.m; sourceTree = "<group>"; };
 		0024F3BD1173CBD3003066B2 /* UIColor-Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Table.h"; sourceTree = "<group>"; };
 		0024F3BE1173CBD3003066B2 /* UIColor-Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Table.m"; sourceTree = "<group>"; };
 		0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGenericViewController.h; sourceTree = "<group>"; };
@@ -87,9 +90,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00130465117646B200D67E55 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				00130466117646B900D67E55 /* UICatalog */,
+			);
+			name = Apple;
+			sourceTree = "<group>";
+		};
+		00130466117646B900D67E55 /* UICatalog */ = {
+			isa = PBXGroup;
+			children = (
+				00130468117646CA00D67E55 /* ControlsViewController.h */,
+				00130469117646CA00D67E55 /* ControlsViewController.m */,
+			);
+			name = UICatalog;
+			sourceTree = "<group>";
+		};
 		0024F3B21173CBD3003066B2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				00130465117646B200D67E55 /* Apple */,
 				00FC9A571174F6FF006FE2E1 /* ListViewController.h */,
 				00FC9A581174F6FF006FE2E1 /* ListViewController.m */,
 				0024F3B31173CBD3003066B2 /* iPhoneBits */,
@@ -292,6 +313,7 @@
 				00FC9A781174F858006FE2E1 /* ExampleListViewController.m in Sources */,
 				00FC9C2911751499006FE2E1 /* ExampleTableItem.m in Sources */,
 				00FC9D4D11753472006FE2E1 /* HTStyle.m in Sources */,
+				0013046A117646CA00D67E55 /* ControlsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

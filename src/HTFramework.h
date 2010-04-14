@@ -6,3 +6,4 @@
 #import "TextFieldEditingViewController.h"
 #import "EditableSelectionListViewController.h"
 #import "ExampleListViewController.h"
+#import "ControlsViewController.h"

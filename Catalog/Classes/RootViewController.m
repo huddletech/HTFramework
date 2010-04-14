@@ -26,6 +26,7 @@
 					                         @"TextFieldEditingViewController",
 					                         @"EditableSelectionListViewController",
 					                         @"ListViewController",
+					                         @"Apple Controls",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -152,6 +153,10 @@
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"ListViewController"]){
 		ExampleListViewController *controller = [[ExampleListViewController alloc] init];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
+	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
+		ControlsViewController *controller = [[ControlsViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
