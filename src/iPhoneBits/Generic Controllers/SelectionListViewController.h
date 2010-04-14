@@ -25,7 +25,6 @@
 	id <SelectionListViewControllerDelegate>	delegate;
 }
 @property (nonatomic, retain) NSIndexPath *lastIndexPath;
-@property (nonatomic, retain) NSArray *list;
 @property NSInteger initialSelection;
 @property (nonatomic, assign) id <SelectionListViewControllerDelegate> delegate;
 @end

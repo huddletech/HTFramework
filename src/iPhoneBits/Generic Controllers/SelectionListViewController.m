@@ -11,7 +11,6 @@
 
 
 @implementation SelectionListViewController
-@synthesize list;
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;
