@@ -86,11 +86,11 @@
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:DateCellIdentifier] autorelease];
 		cell.textLabel.font = [HTStyle datePickerFont];
 		cell.textLabel.textColor = [HTStyle datePickerTextColor];
+		cell.textLabel.textAlignment = UITextAlignmentCenter;
     }
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	[formatter setDateStyle:NSDateFormatterFullStyle];
-	cell.textLabel.textAlignment = UITextAlignmentCenter;
 	cell.textLabel.text = [formatter stringFromDate:date];
 	[formatter release];
 	
