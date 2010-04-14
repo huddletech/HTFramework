@@ -5,7 +5,7 @@ A framework of re-usable components for iPhone OS development
 
 by Andy Waite <andy@huddletech.com>
 
-Portions copyright Jeff LeMarche ( http://iphonebits.googlecode.com/ )
+Portions copyright Jeff LeMarche ( http://iphonebits.googlecode.com/ ) and Apple Inc.
 
 Aims
 ----
