@@ -74,11 +74,16 @@
 	
 	ProgressCell *progressCell = [[ProgressCell alloc] initWithTitle:@"Progress"];
 	
+	TableControlItem *accessoryCell = [[TableControlItem alloc] initWithTitle:@"Hello"];
+	accessoryCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	accessoryCell.detail = @"Goodbye";
+	
 	self.dataSourceArray = [NSArray arrayWithObjects:
 							switchCell,
 							sliderCell,
 							activityCell,
 							progressCell,
+							accessoryCell,
 							nil];
 	[switchCell release];
 	[sliderCell release];
@@ -119,7 +124,7 @@
 	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kDisplayCell_ID];
 	if (cell == nil)
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kDisplayCell_ID] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kDisplayCell_ID] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 	else
@@ -136,6 +141,8 @@
 	cell.textLabel.text = [controlItem title];
 
 	cell.accessoryView = [controlItem control];
+	cell.accessoryType = [controlItem accessoryType];
+	cell.detailTextLabel.text = controlItem.detail;
 	 
 	return cell;
 }

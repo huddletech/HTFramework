@@ -11,11 +11,13 @@
 
 
 @interface TableControlItem : NSObject {
-	NSString *title;
+	NSString *title, *detail;
 	UIControl *control;
+	UITableViewCellAccessoryType accessoryType;
 }
-@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *title, *detail;
 @property (nonatomic, retain) UIControl *control;
+@property (nonatomic) UITableViewCellAccessoryType accessoryType;
 
 
 

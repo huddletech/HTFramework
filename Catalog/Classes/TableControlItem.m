@@ -10,8 +10,9 @@
 
 
 @implementation TableControlItem
-@synthesize title;
+@synthesize title, detail;
 @synthesize control;
+@synthesize accessoryType;
 
 - (id) initWithTitle:(NSString*)theTitle{
 	if (self = [super init])
