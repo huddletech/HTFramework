@@ -52,10 +52,6 @@
 
 #define kViewTag				1		// for tagging our embedded controls for removal at cell recycle time
 
-static NSString *kSectionTitleKey = @"sectionTitleKey";
-static NSString *kLabelKey = @"labelKey";
-static NSString *kViewKey = @"viewKey";
-
 #pragma mark -
 
 @implementation ControlsViewController
@@ -64,13 +60,7 @@ static NSString *kViewKey = @"viewKey";
 
 - (void)dealloc
 {	
-	[switchCtl release];
-	[sliderCtl release];
-	[progressInd release];
-	[progressBar release];
-	
 	[dataSourceArray release];
-	
 	[super dealloc];
 }
 
@@ -79,31 +69,70 @@ static NSString *kViewKey = @"viewKey";
     [super viewDidLoad];
 	self.title = NSLocalizedString(@"ControlsTitle", @"");
 
+	TableControlItem *tci1 = [[TableControlItem alloc] init];
+	tci1.title = @"Standard Switch";
+	tci1.control = [[UISwitch alloc] init];
+	[tci1.control addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
+	// in case the parent view draws with a custom color or gradient, use a transparent color
+	tci1.control.backgroundColor = [UIColor clearColor];
+	[tci1.control setAccessibilityLabel:NSLocalizedString(@"StandardSwitch", @"")];
+	tci1.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
+	
+	TableControlItem *tci2 = [[TableControlItem alloc] init];
+	tci2.title = @"Standard Slider";
+	tci2.control = [[UISlider alloc] init];
+	[tci2.control addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
+	
+	// in case the parent view draws with a custom color or gradient, use a transparent color
+	tci2.control.backgroundColor = [UIColor clearColor];
+	
+	((UISlider*)tci2.control).minimumValue = 0.0;
+	((UISlider*)tci2.control).maximumValue = 100.0;
+	((UISlider*)tci2.control).continuous = YES;
+	((UISlider*)tci2.control).value = 50.0;
+	
+	// Add an accessibility label that describes the slider.
+	[tci2.control setAccessibilityLabel:NSLocalizedString(@"StandardSlider", @"")];
+	
+	tci2.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
+	
+	TableControlItem *tci3 = [[TableControlItem alloc] init];
+	tci3.title = @"Style Gray";
+	tci3.control = [[UIActivityIndicatorView alloc] init];
+	[((UIActivityIndicatorView*)tci3.control) startAnimating];
+	((UIActivityIndicatorView*)tci3.control).activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+	[tci3.control sizeToFit]; // needed?
+	tci3.control.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |
+									UIViewAutoresizingFlexibleRightMargin |
+									UIViewAutoresizingFlexibleTopMargin |
+									UIViewAutoresizingFlexibleBottomMargin);
+	
+	tci3.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
+    
+	TableControlItem *tci4 = [[TableControlItem alloc] init];
+	tci4.title = @"Standard Slider";
+	tci4.control = [[UIProgressView alloc] init];	
+	CGRect frame = tci4.control.frame;
+	// need to set these or it doesn't appear for some reason
+	frame.size.width = kUIProgressBarWidth;
+	frame.size.height = kUIProgressBarHeight;
+	((UIProgressView*)tci4.control).frame = frame;
+	((UIProgressView*)tci4.control).progressViewStyle = UIProgressViewStyleDefault;
+	((UIProgressView*)tci4.control).progress = 0.5;
+	
+	tci4.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
+    
+	
 	self.dataSourceArray = [NSArray arrayWithObjects:
-							[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"UISwitch", kSectionTitleKey,
-								 @"Standard Switch", kLabelKey,
-								 self.switchCtl, kViewKey,
-							 nil],
-
-							[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"UISlider", kSectionTitleKey,
-								 @"Standard Slider", kLabelKey,
-								 self.sliderCtl, kViewKey,
-							 nil],
-							
-							[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"UIActivityIndicatorView", kSectionTitleKey,
-								 @"Style Gray", kLabelKey,
-								 self.progressInd, kViewKey,
-							 nil],
-							
-							[NSDictionary dictionaryWithObjectsAndKeys:
-								 @"UIProgressView", kSectionTitleKey,
-								 @"Style Default", kLabelKey,
-								 self.progressBar, kViewKey,
-							 nil],
+							tci1,
+							tci2,
+							tci3,
+							tci4,
 							nil];
+	[tci1 release];
+	[tci2 release];
+	[tci3 release];
+	[tci4 release];
 }
 
 // called after the view controller's view is released and set to nil.
@@ -113,19 +142,6 @@ static NSString *kViewKey = @"viewKey";
 - (void)viewDidUnload 
 {
     [super viewDidUnload];
-	
-	// release the controls and set them nil in case they were ever created
-	// note: we can't use "self.xxx = nil" since they are read only properties
-	//
-	[switchCtl release];
-    switchCtl = nil;
-    [sliderCtl release];
-    sliderCtl = nil;
-    [progressInd release];
-    progressInd = nil;
-    [progressBar release];
-    progressBar = nil;
-	
 	self.dataSourceArray = nil;	// this will release and set to nil
 }
 
@@ -136,11 +152,6 @@ static NSString *kViewKey = @"viewKey";
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return [self.dataSourceArray count];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-	return [[self.dataSourceArray objectAtIndex: section] valueForKey:kSectionTitleKey];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -169,15 +180,20 @@ static NSString *kViewKey = @"viewKey";
 			[viewToRemove removeFromSuperview];
 	}
 	
-	cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kLabelKey];
+	cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] title];
 	
-	UIControl *control = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kViewKey];
-	//[cell.contentView addSubview:control];
+	UIControl *control = [[self.dataSourceArray objectAtIndex: indexPath.section] control];
 
 	cell.accessoryView = control;
-	
+	 
 	return cell;
 }
+
+- (void)sliderAction:(id)sender{
+	UISlider *slider = (UISlider*)sender;
+	NSLog(@"slider moved to %f", slider.value);
+}
+
 
 - (void)switchAction:(id)sender
 {
@@ -187,92 +203,6 @@ static NSString *kViewKey = @"viewKey";
 - (void)pageAction:(id)sender
 {
 	NSLog(@"pageAction: current page = %d", [sender currentPage]);
-}
-
-
-#pragma mark -
-#pragma mark Lazy creation of controls
-
-- (UISwitch *)switchCtl
-{
-    if (switchCtl == nil) 
-    {
-        switchCtl = [[UISwitch alloc] init];
-        [switchCtl addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-        
-        // in case the parent view draws with a custom color or gradient, use a transparent color
-        switchCtl.backgroundColor = [UIColor clearColor];
-		
-		[switchCtl setAccessibilityLabel:NSLocalizedString(@"StandardSwitch", @"")];
-		
-		switchCtl.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    }
-    return switchCtl;
-}
-
-- (UISlider *)sliderCtl
-{
-    if (sliderCtl == nil) 
-    {
-        sliderCtl = [[UISlider alloc] init];
-        [sliderCtl addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
-        
-        // in case the parent view draws with a custom color or gradient, use a transparent color
-        sliderCtl.backgroundColor = [UIColor clearColor];
-        
-        sliderCtl.minimumValue = 0.0;
-        sliderCtl.maximumValue = 100.0;
-        sliderCtl.continuous = YES;
-        sliderCtl.value = 50.0;
-
-		// Add an accessibility label that describes the slider.
-		[sliderCtl setAccessibilityLabel:NSLocalizedString(@"StandardSlider", @"")];
-		
-		sliderCtl.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    }
-    return sliderCtl;
-}
-
-
-- (void)sliderAction:(id)sender{
-	UISlider *slider = (UISlider*)sender;
-	NSLog(@"slider moved to %f", slider.value);
-}
-
-- (UIActivityIndicatorView *)progressInd
-{
-    if (progressInd == nil)
-    {
-        progressInd = [[UIActivityIndicatorView alloc] init];
-        [progressInd startAnimating];
-        progressInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-        [progressInd sizeToFit];
-        progressInd.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |
-                                        UIViewAutoresizingFlexibleRightMargin |
-                                        UIViewAutoresizingFlexibleTopMargin |
-                                        UIViewAutoresizingFlexibleBottomMargin);
-		
-		progressInd.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    }
-    return progressInd;
-}
-
-- (UIProgressView *)progressBar
-{
-    if (progressBar == nil) 
-    {
-        progressBar = [[UIProgressView alloc] init];
-        CGRect frame = progressBar.frame;
-		// need to set these or it doesn't appear for some reason
-		frame.size.width = kUIProgressBarWidth;
-		frame.size.height = kUIProgressBarHeight;
-		progressBar.frame = frame;
-		progressBar.progressViewStyle = UIProgressViewStyleDefault;
-        progressBar.progress = 0.5;
-		
-		progressBar.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    }
-    return progressBar;
 }
 
 @end

@@ -46,21 +46,12 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "TableControlItem.h"
 
 @interface ControlsViewController : UITableViewController
 {
-	UISwitch				*switchCtl;
-	UISlider				*sliderCtl;
-	UIActivityIndicatorView	*progressInd;
-	UIProgressView			*progressBar;
-	
 	NSArray					*dataSourceArray;
 }
-
-@property (nonatomic, retain, readonly) UISwitch *switchCtl;
-@property (nonatomic, retain, readonly) UISlider *sliderCtl;
-@property (nonatomic, retain, readonly) UIActivityIndicatorView *progressInd;
-@property (nonatomic, retain, readonly) UIProgressView *progressBar;
 
 @property (nonatomic, retain) NSArray *dataSourceArray;
 
