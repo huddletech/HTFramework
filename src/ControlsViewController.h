@@ -46,9 +46,13 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "TableControlItem.h"
+#import "SwitchCell.h"
+#import "ActivityCell.h"
+#import "ProgressCell.h"
+#import "SliderCell.h"
 
-@interface ControlsViewController : UITableViewController
+
+@interface ControlsViewController : UITableViewController <UISwitchDelegate>
 {
 	NSArray					*dataSourceArray;
 }

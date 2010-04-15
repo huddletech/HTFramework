@@ -17,6 +17,10 @@
 		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
 		004FE80E1176511800264407 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FE80D1176511800264407 /* TableSection.m */; };
 		004FEC3A1177AB1600264407 /* TableControlItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FEC391177AB1600264407 /* TableControlItem.m */; };
+		004FECC01177B4DD00264407 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FECBF1177B4DD00264407 /* SwitchCell.m */; };
+		004FED521177C31A00264407 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FED511177C31A00264407 /* ActivityCell.m */; };
+		004FED831177C4AD00264407 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FED821177C4AD00264407 /* ProgressCell.m */; };
+		004FED9B1177C59F00264407 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FED9A1177C59F00264407 /* SliderCell.m */; };
 		00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A581174F6FF006FE2E1 /* ListViewController.m */; };
 		00FC9A781174F858006FE2E1 /* ExampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A771174F858006FE2E1 /* ExampleListViewController.m */; };
 		00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README.markdown */; };
@@ -55,6 +59,14 @@
 		004FE80D1176511800264407 /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSection.m; sourceTree = "<group>"; };
 		004FEC381177AB1600264407 /* TableControlItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableControlItem.h; sourceTree = "<group>"; };
 		004FEC391177AB1600264407 /* TableControlItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableControlItem.m; sourceTree = "<group>"; };
+		004FECBE1177B4DD00264407 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		004FECBF1177B4DD00264407 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		004FED501177C31A00264407 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
+		004FED511177C31A00264407 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
+		004FED811177C4AD00264407 /* ProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressCell.h; sourceTree = "<group>"; };
+		004FED821177C4AD00264407 /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressCell.m; sourceTree = "<group>"; };
+		004FED991177C59F00264407 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		004FED9A1177C59F00264407 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
 		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		00FC9A761174F858006FE2E1 /* ExampleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleListViewController.h; sourceTree = "<group>"; };
@@ -188,6 +200,14 @@
 				00FC9C2811751499006FE2E1 /* ExampleTableItem.m */,
 				004FEC381177AB1600264407 /* TableControlItem.h */,
 				004FEC391177AB1600264407 /* TableControlItem.m */,
+				004FECBE1177B4DD00264407 /* SwitchCell.h */,
+				004FECBF1177B4DD00264407 /* SwitchCell.m */,
+				004FED501177C31A00264407 /* ActivityCell.h */,
+				004FED511177C31A00264407 /* ActivityCell.m */,
+				004FED811177C4AD00264407 /* ProgressCell.h */,
+				004FED821177C4AD00264407 /* ProgressCell.m */,
+				004FED991177C59F00264407 /* SliderCell.h */,
+				004FED9A1177C59F00264407 /* SliderCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -326,6 +346,10 @@
 				0013046A117646CA00D67E55 /* ControlsViewController.m in Sources */,
 				004FE80E1176511800264407 /* TableSection.m in Sources */,
 				004FEC3A1177AB1600264407 /* TableControlItem.m in Sources */,
+				004FECC01177B4DD00264407 /* SwitchCell.m in Sources */,
+				004FED521177C31A00264407 /* ActivityCell.m in Sources */,
+				004FED831177C4AD00264407 /* ProgressCell.m in Sources */,
+				004FED9B1177C59F00264407 /* SliderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,11 +46,7 @@
  */
 
 #import "ControlsViewController.h"
-
-#define kUIProgressBarHeight	 9.0 // obtained from Interface Builder (fixed)
-#define kUIProgressBarWidth		 150.0 // obtained from Interface Builder (default)
-
-#define kViewTag				1		// for tagging our embedded controls for removal at cell recycle time
+#import "SwitchCell.h"
 
 #pragma mark -
 
@@ -67,72 +63,27 @@
 - (void)viewDidLoad
 {	
     [super viewDidLoad];
-	self.title = NSLocalizedString(@"ControlsTitle", @"");
 
-	TableControlItem *tci1 = [[TableControlItem alloc] init];
-	tci1.title = @"Standard Switch";
-	tci1.control = [[UISwitch alloc] init];
-	[tci1.control addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
-	// in case the parent view draws with a custom color or gradient, use a transparent color
-	tci1.control.backgroundColor = [UIColor clearColor];
-	[tci1.control setAccessibilityLabel:NSLocalizedString(@"StandardSwitch", @"")];
-	tci1.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
+	SwitchCell *switchCell = [[SwitchCell alloc] initWithTitle:@"Standard Switch"];
+	switchCell.delegate = self;
 	
-	TableControlItem *tci2 = [[TableControlItem alloc] init];
-	tci2.title = @"Standard Slider";
-	tci2.control = [[UISlider alloc] init];
-	[tci2.control addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
+	SliderCell *sliderCell = [[SliderCell alloc] initWithTitle:@"Slider"];
+	sliderCell.delegate = self;
 	
-	// in case the parent view draws with a custom color or gradient, use a transparent color
-	tci2.control.backgroundColor = [UIColor clearColor];
+	ActivityCell *activityCell = [[ActivityCell alloc] initWithTitle:@"Activity Indicator"];
 	
-	((UISlider*)tci2.control).minimumValue = 0.0;
-	((UISlider*)tci2.control).maximumValue = 100.0;
-	((UISlider*)tci2.control).continuous = YES;
-	((UISlider*)tci2.control).value = 50.0;
-	
-	// Add an accessibility label that describes the slider.
-	[tci2.control setAccessibilityLabel:NSLocalizedString(@"StandardSlider", @"")];
-	
-	tci2.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-	
-	TableControlItem *tci3 = [[TableControlItem alloc] init];
-	tci3.title = @"Style Gray";
-	tci3.control = [[UIActivityIndicatorView alloc] init];
-	[((UIActivityIndicatorView*)tci3.control) startAnimating];
-	((UIActivityIndicatorView*)tci3.control).activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-	[tci3.control sizeToFit]; // needed?
-	tci3.control.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin |
-									UIViewAutoresizingFlexibleRightMargin |
-									UIViewAutoresizingFlexibleTopMargin |
-									UIViewAutoresizingFlexibleBottomMargin);
-	
-	tci3.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    
-	TableControlItem *tci4 = [[TableControlItem alloc] init];
-	tci4.title = @"Standard Slider";
-	tci4.control = [[UIProgressView alloc] init];	
-	CGRect frame = tci4.control.frame;
-	// need to set these or it doesn't appear for some reason
-	frame.size.width = kUIProgressBarWidth;
-	frame.size.height = kUIProgressBarHeight;
-	((UIProgressView*)tci4.control).frame = frame;
-	((UIProgressView*)tci4.control).progressViewStyle = UIProgressViewStyleDefault;
-	((UIProgressView*)tci4.control).progress = 0.5;
-	
-	tci4.control.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
-    
+	ProgressCell *progressCell = [[ProgressCell alloc] initWithTitle:@"Progress"];
 	
 	self.dataSourceArray = [NSArray arrayWithObjects:
-							tci1,
-							tci2,
-							tci3,
-							tci4,
+							switchCell,
+							sliderCell,
+							activityCell,
+							progressCell,
 							nil];
-	[tci1 release];
-	[tci2 release];
-	[tci3 release];
-	[tci4 release];
+	[switchCell release];
+	[sliderCell release];
+	[activityCell release];
+	[progressCell release];
 }
 
 // called after the view controller's view is released and set to nil.
@@ -151,12 +102,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return [self.dataSourceArray count];
+	return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 1;
+	return [self.dataSourceArray count];
 }
 
 
@@ -180,11 +131,11 @@
 			[viewToRemove removeFromSuperview];
 	}
 	
-	cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] title];
+	TableControlItem *controlItem = [self.dataSourceArray objectAtIndex: indexPath.row];
 	
-	UIControl *control = [[self.dataSourceArray objectAtIndex: indexPath.section] control];
+	cell.textLabel.text = [controlItem title];
 
-	cell.accessoryView = control;
+	cell.accessoryView = [controlItem control];
 	 
 	return cell;
 }
@@ -198,11 +149,6 @@
 - (void)switchAction:(id)sender
 {
 	NSLog(@"switchAction: value = %d", [sender isOn]);
-}
-
-- (void)pageAction:(id)sender
-{
-	NSLog(@"pageAction: current page = %d", [sender currentPage]);
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#define kViewTag				1		// for tagging our embedded controls for removal at cell recycle time
 
 
 @interface TableControlItem : NSObject {
@@ -15,5 +16,9 @@
 }
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) UIControl *control;
+
+
+
+- (id) initWithTitle:(NSString*)theTitle;
 
 @end

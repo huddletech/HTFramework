@@ -13,6 +13,12 @@
 @synthesize title;
 @synthesize control;
 
-
+- (id) initWithTitle:(NSString*)theTitle{
+	if (self = [super init])
+	{
+		self.title = theTitle;
+	}
+	return self;	
+}
 
 @end
