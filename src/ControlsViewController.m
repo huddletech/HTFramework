@@ -47,28 +47,14 @@
 
 #import "ControlsViewController.h"
 
-#define kSliderHeight			7.0
-#define kProgressIndicatorSize	40.0
-#define kUIProgressBarWidth		160.0
-#define kUIProgressBarHeight	24.0
+#define kUIProgressBarHeight	 9.0 // obtained from Interface Builder (fixed)
+#define kUIProgressBarWidth		 150.0 // obtained from Interface Builder (default)
 
 #define kViewTag				1		// for tagging our embedded controls for removal at cell recycle time
 
 static NSString *kSectionTitleKey = @"sectionTitleKey";
 static NSString *kLabelKey = @"labelKey";
 static NSString *kViewKey = @"viewKey";
-
-float switchLeftOffset = 198.0;
-float switchTopOffset = 10.0;
-float switchWidth = 94.0;
-float switchHeight = 27.0;
-float sliderLeftOffset = 174.0;
-float sliderTopOffset = 12.0;
-float sliderWidth = 120.0;
-float progressBarLeftOffset = 126.0;
-float progressBarTopOffset = 20.0;
-float progressIndLeftOffset = 265.0;
-float progressIndTopOffset = 12.0;
 
 #pragma mark -
 
@@ -186,8 +172,10 @@ float progressIndTopOffset = 12.0;
 	cell.textLabel.text = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kLabelKey];
 	
 	UIControl *control = [[self.dataSourceArray objectAtIndex: indexPath.section] valueForKey:kViewKey];
-	[cell.contentView addSubview:control];
+	//[cell.contentView addSubview:control];
 
+	cell.accessoryView = control;
+	
 	return cell;
 }
 
@@ -209,8 +197,7 @@ float progressIndTopOffset = 12.0;
 {
     if (switchCtl == nil) 
     {
-        CGRect frame = CGRectMake(switchLeftOffset, switchTopOffset, switchWidth, switchHeight);
-        switchCtl = [[UISwitch alloc] initWithFrame:frame];
+        switchCtl = [[UISwitch alloc] init];
         [switchCtl addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
         
         // in case the parent view draws with a custom color or gradient, use a transparent color
@@ -227,8 +214,7 @@ float progressIndTopOffset = 12.0;
 {
     if (sliderCtl == nil) 
     {
-        CGRect frame = CGRectMake(sliderLeftOffset, sliderTopOffset, sliderWidth, kSliderHeight);
-        sliderCtl = [[UISlider alloc] initWithFrame:frame];
+        sliderCtl = [[UISlider alloc] init];
         [sliderCtl addTarget:self action:@selector(sliderAction:) forControlEvents:UIControlEventValueChanged];
         
         // in case the parent view draws with a custom color or gradient, use a transparent color
@@ -257,8 +243,7 @@ float progressIndTopOffset = 12.0;
 {
     if (progressInd == nil)
     {
-        CGRect frame = CGRectMake(progressIndLeftOffset, progressIndTopOffset, kProgressIndicatorSize, kProgressIndicatorSize);
-        progressInd = [[UIActivityIndicatorView alloc] initWithFrame:frame];
+        progressInd = [[UIActivityIndicatorView alloc] init];
         [progressInd startAnimating];
         progressInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
         [progressInd sizeToFit];
@@ -276,9 +261,13 @@ float progressIndTopOffset = 12.0;
 {
     if (progressBar == nil) 
     {
-        CGRect frame = CGRectMake(progressBarLeftOffset, progressBarTopOffset, kUIProgressBarWidth, kUIProgressBarHeight);
-        progressBar = [[UIProgressView alloc] initWithFrame:frame];
-        progressBar.progressViewStyle = UIProgressViewStyleDefault;
+        progressBar = [[UIProgressView alloc] init];
+        CGRect frame = progressBar.frame;
+		// need to set these or it doesn't appear for some reason
+		frame.size.width = kUIProgressBarWidth;
+		frame.size.height = kUIProgressBarHeight;
+		progressBar.frame = frame;
+		progressBar.progressViewStyle = UIProgressViewStyleDefault;
         progressBar.progress = 0.5;
 		
 		progressBar.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
