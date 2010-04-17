@@ -6,11 +6,11 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "ExampleList.h"
+#import "BasicList.h"
 #import "ExampleTableItem.h"
 
 
-@implementation ExampleList
+@implementation BasicList
 
 - (void)viewWillAppear:(BOOL)animated 
 {

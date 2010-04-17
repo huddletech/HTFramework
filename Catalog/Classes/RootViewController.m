@@ -19,7 +19,7 @@
 	catalogSections = [NSArray arrayWithObject:@"Originals from iphonebits"];
 	[catalogSections retain];
 	
-	catalogItems = [NSArray arrayWithObjects:@"Example List",
+	catalogItems = [NSArray arrayWithObjects:@"Basic List",
 					                         @"AbstractGenericViewController",
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
@@ -152,8 +152,8 @@
 		controller.initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
-	} else if ([selectedItemLabel isEqualToString:@"Example List"]){
-		ExampleList *controller = [[ExampleList alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
+		BasicList *controller = [[BasicList alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
