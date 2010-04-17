@@ -115,60 +115,54 @@
 
 	NSString *selectedItemLabel = [catalogItems objectAtIndex:indexPath.row];
 	
+	UIViewController *controller = nil;
+	
 	if ([selectedItemLabel isEqualToString:@"AbstractGenericViewController"]){
-		AbstractGenericViewController *controller = [[AbstractGenericViewController alloc] init];
+		controller = [[AbstractGenericViewController alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
-		DateViewController *controller = [[DateViewController alloc] init];
-		controller.delegate = self;
+		controller = [[DateViewController alloc] init];
+		((DateViewController*)controller).delegate = self;
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
-		SelectionListViewController *controller = [[SelectionListViewController alloc] init];
-		controller.delegate = self;
-		controller.rowItems = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
-		controller.initialSelection = 1;
+		controller = [[SelectionListViewController alloc] init];
+		((SelectionListViewController*)controller).delegate = self;
+		((SelectionListViewController*)controller).rowItems = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((SelectionListViewController*)controller).initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
-		LongTextFieldViewController *controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
-		controller.delegate = self;
-		controller.string = @"Pre-populated text";
+		controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		((LongTextFieldViewController*)controller).delegate = self;
+		((LongTextFieldViewController*)controller).string = @"Pre-populated text";
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"TextFieldEditingViewController"]){
-		TextFieldEditingViewController *controller = [[TextFieldEditingViewController alloc] initWithStyle:UITableViewStyleGrouped];
-		controller.delegate = self;
-		controller.fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
-		controller.fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
-		controller.fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
+		controller = (TextFieldEditingViewController*)[[TextFieldEditingViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		((TextFieldEditingViewController*)controller).delegate = self;
+		((TextFieldEditingViewController*)controller).fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((TextFieldEditingViewController*)controller).fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
+		((TextFieldEditingViewController*)controller).fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
-		EditableSelectionListViewController *controller = [[EditableSelectionListViewController alloc] init];
-		controller.delegate = self;
-		controller.list = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
-		controller.initialSelection = 1;
+		controller = [[EditableSelectionListViewController alloc] init];
+		((EditableSelectionListViewController*)controller).delegate = self;
+		((EditableSelectionListViewController*)controller).list = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((EditableSelectionListViewController*)controller).initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
-		BasicList *controller = [[BasicList alloc] init];
+		controller = [[BasicList alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
-		ControlsViewController *controller = [[ControlsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		controller = [[ControlsViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
-		SelectionListViewController *controller = [[SelectionListViewController alloc] init];
-		controller.delegate = self;
-		controller.rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
-		controller.initialSelection = 1;
-		controller.showAddButton = YES;
+		controller = [[SelectionListViewController alloc] init];
+		((SelectionListViewController*)controller).delegate = self;
+		((SelectionListViewController*)controller).rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((SelectionListViewController*)controller).initialSelection = 1;
+		((SelectionListViewController*)controller).showAddButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
-		[controller release];
 	}
+	[controller release];
 }
 
 
