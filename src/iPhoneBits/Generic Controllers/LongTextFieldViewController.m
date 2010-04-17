@@ -13,7 +13,6 @@
 @implementation LongTextFieldViewController
 @synthesize string;
 @synthesize textView;
-@synthesize delegate;
 @synthesize keyboardHeight, reloadedTable;
 
 
@@ -34,9 +33,7 @@
 
 -(void) keyboardWillShow:(NSNotification *) notification
 {
-	if (reloadedTable){
-		self.textView.backgroundColor = [UIColor yellowColor];
-	} else {
+	if (!reloadedTable){
 		keyboardHeight = [[[notification userInfo] objectForKey:UIKeyboardBoundsUserInfoKey] CGRectValue].size.height;
 		CGRect frame = textView.frame;
 		float newHeight = self.view.frame.size.height - 2*[self margin] - keyboardHeight;
@@ -78,7 +75,6 @@
 		theTextView.editable = YES;
 		theTextView.text = string;
 		theTextView.font = [HTStyle longTextFieldFont];
-		[theTextView becomeFirstResponder];
 		self.textView = theTextView;
 		[[cell contentView] addSubview:theTextView];
 		[theTextView release];
