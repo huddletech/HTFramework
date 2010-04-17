@@ -10,9 +10,9 @@
 
 
 @interface TableSection : NSObject {
-	NSArray *items;
+	NSMutableArray *items;
 	NSString *title;
 }
-@property (nonatomic, retain) NSArray *items;
+@property (nonatomic, retain) NSMutableArray *items;
 @property (nonatomic, retain) NSString *title;
 @end

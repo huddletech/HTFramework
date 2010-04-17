@@ -27,6 +27,7 @@
 					                         @"EditableSelectionListViewController",
 					                         @"ListViewController",
 					                         @"Apple Controls",
+											 @"Editable List",
 					                         nil];
 	[catalogItems retain];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -157,6 +158,14 @@
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
 		ControlsViewController *controller = [[ControlsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
+	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
+		SelectionListViewController *controller = [[SelectionListViewController alloc] init];
+		controller.delegate = self;
+		controller.rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+		controller.initialSelection = 1;
+		controller.showEditButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}

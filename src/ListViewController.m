@@ -33,7 +33,7 @@
 	[self setRowItems:items forSection:sectionToUpdate];
 }
 
-- (void)setRowItems:(NSArray*)items forSection:(TableSection*)section{
+- (void)setRowItems:(NSMutableArray*)items forSection:(TableSection*)section{
 	NSLog(@"called setRowItems with %@ for section %@", items, section);
 	section.items = items;
 }
@@ -81,6 +81,14 @@
 	}
 	
     return cell;
+}
+
+#pragma mark - #pragma mark Table View Data Source Methods
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+	TableSection *sectionToDeleteFrom = [sections objectAtIndex:indexPath.section];
+	[sectionToDeleteFrom.items removeObjectAtIndex:indexPath.row];
+	[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 @end

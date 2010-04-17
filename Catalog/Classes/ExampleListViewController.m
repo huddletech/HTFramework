@@ -27,12 +27,13 @@
 	
 	TableSection *section2 = [[TableSection alloc] init];
 	section2.title = @"Numbers";
-	section2.items = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
+	section2.items = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
 	[self.sections addObject:section2];
 	[section2 release];
 	
 	// AbstractGenericViewController has Save and Cancel buttons by default, but since
 	// we're showing a static list here there's no need for them
+
 	[super viewWillAppear:animated];
 }
 
