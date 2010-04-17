@@ -16,11 +16,11 @@
 
 - (void)dealloc 
 {
-	[rowItems release];
+	[items release];
     [super dealloc];
 }
 
-- (void)setRowItems:(NSArray*)items{
+- (void)setItems:(NSArray*)theItems{
 	TableSection *sectionToUpdate;
 	if (self.sections == nil){
 		self.sections = [NSMutableArray array];
@@ -30,15 +30,15 @@
 	} else {
 		sectionToUpdate = [sections objectAtIndex:0];
 	}
-	[self setRowItems:items forSection:sectionToUpdate];
+	[self setItems:theItems forSection:sectionToUpdate];
 }
 
-- (void)setRowItems:(NSMutableArray*)items forSection:(TableSection*)section{
-	NSLog(@"called setRowItems with %@ for section %@", items, section);
-	section.items = items;
+- (void)setItems:(NSMutableArray*)theItems forSection:(TableSection*)section{
+	NSLog(@"called setItems with %@ for section %@", theItems, section);
+	section.items = theItems;
 }
 
-- (NSArray*)rowItems{
+- (NSArray*)items{
 	return [[sections objectAtIndex:0] items];
 }
 

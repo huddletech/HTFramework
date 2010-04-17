@@ -123,7 +123,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
 		controller = [[SelectionListViewController alloc] init];
 		((SelectionListViewController*)controller).delegate = self;
-		((SelectionListViewController*)controller).rowItems = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((SelectionListViewController*)controller).items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((SelectionListViewController*)controller).initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
@@ -141,7 +141,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
 		controller = [[EditableSelectionListViewController alloc] init];
 		((EditableSelectionListViewController*)controller).delegate = self;
-		((EditableSelectionListViewController*)controller).rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((EditableSelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((EditableSelectionListViewController*)controller).initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
@@ -153,7 +153,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
 		controller = [[SelectionListViewController alloc] init];
 		((SelectionListViewController*)controller).delegate = self;
-		((SelectionListViewController*)controller).rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((SelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((SelectionListViewController*)controller).initialSelection = 1;
 		((SelectionListViewController*)controller).showAddButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];

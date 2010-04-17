@@ -23,7 +23,7 @@
 	ExampleTableItem *item1 = [ExampleTableItem tableItemWithName:@"X"];
 	ExampleTableItem *item2 = [ExampleTableItem tableItemWithName:@"Y"];
 	ExampleTableItem *item3 = [ExampleTableItem tableItemWithName:@"Z"];
-	self.rowItems = [NSArray arrayWithObjects:item1, item2, item3, nil];
+	self.items = [NSArray arrayWithObjects:item1, item2, item3, nil];
 	
 	TableSection *section2 = [[TableSection alloc] init];
 	section2.title = @"Numbers";

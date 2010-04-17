@@ -20,13 +20,13 @@
 @interface ListViewController : AbstractGenericViewController 
 {
 	NSMutableArray *sections;
-	NSMutableArray	*rowItems;
+	NSMutableArray	*items;
 }
 @property (nonatomic, retain) NSMutableArray *sections;
 
-- (void)setRowItems:(NSArray*)items;
-- (void)setRowItems:(NSArray*)items forSection:(TableSection*)section;
-- (NSArray*)rowItems;
+- (void)setItems:(NSArray*)items;
+- (void)setItems:(NSArray*)items forSection:(TableSection*)section;
+- (NSArray*)items;
 
 
 @end

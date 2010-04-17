@@ -18,7 +18,7 @@
 
 -(IBAction)save
 {
-    [self.delegate rowChosen:[lastIndexPath row] fromArray:rowItems];
+    [self.delegate rowChosen:[lastIndexPath row] fromArray:items];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -34,7 +34,7 @@
 - (void)viewWillAppear:(BOOL)animated 
 {
 	// Check to see if user has indicated a row to be selected, and set it
-	if (initialSelection > - 1 && initialSelection < [rowItems count])
+	if (initialSelection > - 1 && initialSelection < [items count])
 	{
 		NSUInteger newIndex[] = {0, initialSelection};
 		NSIndexPath *newPath = [[NSIndexPath alloc] initWithIndexes:newIndex length:2];
