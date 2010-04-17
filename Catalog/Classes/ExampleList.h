@@ -10,7 +10,7 @@
 #import "ListViewController.h"
 
 
-@interface ExampleListViewController : ListViewController {
+@interface ExampleList : ListViewController {
 
 }
 

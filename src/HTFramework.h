@@ -5,6 +5,6 @@
 #import "LongTextFieldViewController.h";
 #import "TextFieldEditingViewController.h"
 #import "EditableSelectionListViewController.h"
-#import "ExampleListViewController.h"
+#import "ExampleList.h"
 #import "ControlsViewController.h"
 #import "TableSection.h"

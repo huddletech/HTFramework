@@ -19,13 +19,13 @@
 	catalogSections = [NSArray arrayWithObject:@"Originals from iphonebits"];
 	[catalogSections retain];
 	
-	catalogItems = [NSArray arrayWithObjects:@"AbstractGenericViewController",
+	catalogItems = [NSArray arrayWithObjects:@"Example List",
+					                         @"AbstractGenericViewController",
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
 					                         @"EditableSelectionListViewController",
-					                         @"ListViewController",
 					                         @"Apple Controls",
 											 @"Editable List",
 					                         nil];
@@ -152,8 +152,8 @@
 		controller.initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
-	} else if ([selectedItemLabel isEqualToString:@"ListViewController"]){
-		ExampleListViewController *controller = [[ExampleListViewController alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Example List"]){
+		ExampleList *controller = [[ExampleList alloc] init];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
