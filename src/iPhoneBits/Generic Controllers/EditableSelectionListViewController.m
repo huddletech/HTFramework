@@ -11,13 +11,12 @@
 
 
 @implementation EditableSelectionListViewController
-@synthesize list;
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;
 -(IBAction)save
 {
-    [self.delegate rowChosen:[lastIndexPath row] fromArray:list];
+    [self.delegate rowChosen:[lastIndexPath row] fromArray:nil]; // TODO fix this
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark -
@@ -29,7 +28,10 @@
 - (void)viewWillAppear:(BOOL)animated 
 {
 	// Check to see if user has indicated a row to be selected, and set it
-	if (initialSelection > - 1 && initialSelection < [list count])
+	
+	TableSection *firstSection = [self.sections objectAtIndex:0];
+	
+	if (initialSelection > - 1 && initialSelection < [firstSection.items count])
 	{
 		NSUInteger newIndex[] = {0, initialSelection};
 		NSIndexPath *newPath = [[NSIndexPath alloc] initWithIndexes:newIndex length:2];
@@ -41,16 +43,18 @@
 }
 - (void)dealloc 
 {
-	[list release];
 	[lastIndexPath release];
     [super dealloc];
 }
 #pragma mark -
 #pragma mark Tableview methods
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return [list count] + 1;
+    return [super tableView:tableView numberOfRowsInSection:section] + 1;
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     
@@ -65,26 +69,34 @@
     
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];
-	if (row >= [list count])
+	
+	TableSection *firstSection = [self.sections objectAtIndex:0];
+	
+	if (row >= [firstSection.items count])
 	{
 		cell.textLabel.text = NSLocalizedString(@"Other…", @"Other…");
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
 	else
 	{
-		cell.textLabel.text = [list objectAtIndex:row];
+		
+		TableSection *firstSection = [self.sections objectAtIndex:0];
+		cell.textLabel.text = [firstSection.items objectAtIndex:row];
 		cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 		
 	}
 	
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
 	int newRow = [indexPath row];
 	int oldRow = [lastIndexPath row];
 	
-	if (newRow < [list count])
+	TableSection *firstSection = [self.sections objectAtIndex:0];
+	
+	if (newRow < [firstSection.items count])
 	{
 		if (newRow != oldRow)
 		{
@@ -104,6 +116,7 @@
 		controller.fieldNames = [NSArray arrayWithObject:NSLocalizedString(@"New Item", @"New Item")];
 		controller.fieldValues = [NSArray arrayWithObject:@""];
 		controller.delegate = self;
+		controller.showSaveButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
@@ -118,11 +131,14 @@
 - (void)valuesDidChange:(NSDictionary *)newValues
 {
 	NSString *newVal = [newValues objectForKey:@"newValue"];
-	[list addObject:newVal];
+	
+	TableSection *firstSection = [self.sections objectAtIndex:0];
+	
+	[firstSection.items addObject:newVal];
 	//[self.tableView reloadData];
 	
-	[list sortUsingSelector:@selector(compare:)];
-	NSUInteger theIndices[] = {0, [list indexOfObject:newVal]};
+	[firstSection.items sortUsingSelector:@selector(compare:)];
+	NSUInteger theIndices[] = {0, [firstSection.items indexOfObject:newVal]};
 	NSIndexPath *theIndexPath = [[NSIndexPath alloc] initWithIndexes:theIndices length:2];
 	[self performSelector:@selector(selectRow:) withObject:theIndexPath afterDelay:0.05];
 	//	[self tableView:self.tableView didSelectRowAtIndexPath:theIndexPath];

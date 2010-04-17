@@ -8,7 +8,7 @@
 //  Modifications by Andy Waite
 
 #import <UIKit/UIKit.h>
-#import "AbstractGenericViewController.h"
+#import "ListViewController.h"
 #import "TextFieldEditingViewController.h"
 
 @protocol EditableSelectionListViewControllerDelegate <NSObject>
@@ -16,16 +16,14 @@
 - (void)rowChosen:(NSInteger)row fromArray:(NSMutableArray *)theList;
 @end
 
-@interface EditableSelectionListViewController : AbstractGenericViewController <TextFieldEditingViewControllerDelegate>
+@interface EditableSelectionListViewController : ListViewController <TextFieldEditingViewControllerDelegate>
 {
-	NSMutableArray	*list;
 	NSIndexPath		*lastIndexPath;
 	NSInteger		initialSelection;
 	
 	id <EditableSelectionListViewControllerDelegate>	delegate;
 }
 @property (nonatomic, retain) NSIndexPath *lastIndexPath;
-@property (nonatomic, retain) NSArray *list;
 @property NSInteger initialSelection;
 @property (nonatomic, assign) id <EditableSelectionListViewControllerDelegate> delegate;
 @end

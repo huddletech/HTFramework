@@ -141,7 +141,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
 		controller = [[EditableSelectionListViewController alloc] init];
 		((EditableSelectionListViewController*)controller).delegate = self;
-		((EditableSelectionListViewController*)controller).list = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+		((EditableSelectionListViewController*)controller).rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((EditableSelectionListViewController*)controller).initialSelection = 1;
 		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
