@@ -20,7 +20,6 @@
 	[catalogSections retain];
 	
 	catalogItems = [NSArray arrayWithObjects:@"Basic List",
-					                         @"AbstractGenericViewController",
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
 					                         @"LongTextFieldViewController",
@@ -117,10 +116,7 @@
 	
 	UIViewController *controller = nil;
 	
-	if ([selectedItemLabel isEqualToString:@"AbstractGenericViewController"]){
-		controller = [[AbstractGenericViewController alloc] init];
-		[self.navigationController pushViewController:controller animated:YES];
-	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
+	if ([selectedItemLabel isEqualToString:@"DateViewController"]){
 		controller = [[DateViewController alloc] init];
 		((DateViewController*)controller).delegate = self;
 		[self.navigationController pushViewController:controller animated:YES];
