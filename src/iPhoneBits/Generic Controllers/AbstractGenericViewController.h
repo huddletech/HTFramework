@@ -12,11 +12,13 @@
 
 @interface AbstractGenericViewController : UITableViewController 
 {
-	BOOL hideCancelButton;
-	BOOL hideSaveButton;
+	BOOL showCancelButton;
+	BOOL showSaveButton;
+	BOOL showEditButton;
 }
 -(IBAction)cancel;
-@property (nonatomic) BOOL hideCancelButton;
-@property (nonatomic) BOOL hideSaveButton;
+@property (nonatomic) BOOL showCancelButton;
+@property (nonatomic) BOOL showSaveButton;
+@property (nonatomic) BOOL showEditButton;
 
 @end

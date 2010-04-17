@@ -33,8 +33,6 @@
 	
 	// AbstractGenericViewController has Save and Cancel buttons by default, but since
 	// we're showing a static list here there's no need for them
-	self.hideSaveButton = YES;
-	self.hideCancelButton = YES;
 	[super viewWillAppear:animated];
 }
 
