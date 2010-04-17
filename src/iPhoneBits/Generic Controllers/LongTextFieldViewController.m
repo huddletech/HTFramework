@@ -14,20 +14,39 @@
 @synthesize string;
 @synthesize textView;
 @synthesize delegate;
+@synthesize keyboardHeight, reloadedTable;
+
+
 - (void)save
 {
 	[self.delegate takeNewString:textView.text];
 	[self.navigationController popViewControllerAnimated:YES];
 }
+
 #pragma mark -
 - (void)viewDidLoad 
 {
+	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	[nc addObserver:self selector:@selector(keyboardWillShow:) name: UIKeyboardWillShowNotification object:nil];	
     [super viewDidLoad];
 }
-- (void)viewDidAppear:(BOOL)animated 
+
+
+-(void) keyboardWillShow:(NSNotification *) notification
 {
-	[textView becomeFirstResponder];
+	if (reloadedTable){
+		self.textView.backgroundColor = [UIColor yellowColor];
+	} else {
+		keyboardHeight = [[[notification userInfo] objectForKey:UIKeyboardBoundsUserInfoKey] CGRectValue].size.height;
+		CGRect frame = textView.frame;
+		float newHeight = self.view.frame.size.height - 2*[self margin] - keyboardHeight;
+		frame.size.height = newHeight;
+		textView.frame = frame;
+		[self.tableView reloadData];
+		reloadedTable = YES;
+	}
 }
+
 - (void)dealloc 
 {
 	[string release];
@@ -38,50 +57,53 @@
 #pragma mark Tableview methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 1;
+	return 1;
 }
+
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    
     static NSString *LongTextFieldCellIdentifier = @"LongTextFieldCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LongTextFieldCellIdentifier];
     
-	float textViewHeight = 161.0;
-	float textViewWidth = 280.0;
-	float textViewOffset = 10.0;
+	CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+	float textViewWidth = screenRect.size.width - [self margin] * 2;
 	
 	if (cell == nil) 
 	{
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:LongTextFieldCellIdentifier] autorelease];
-		UITextView *theTextView = [[UITextView alloc] initWithFrame:CGRectMake(textViewOffset, textViewOffset, textViewWidth, textViewHeight)];
+		UITextView *theTextView = [[UITextView alloc] initWithFrame:CGRectMake(kTextViewOffset, kTextViewOffset, textViewWidth, 0)];
 		theTextView.editable = YES;
 		theTextView.text = string;
 		theTextView.font = [HTStyle longTextFieldFont];
-		//[theTextView becomeFirstResponder];
+		[theTextView becomeFirstResponder];
 		self.textView = theTextView;
 		[[cell contentView] addSubview:theTextView];
 		[theTextView release];
     }
 	// This doesn't work - no matter where I put it. It's almost as if this property is readonly
-	textView.selectedRange = NSMakeRange([string length], 0);;
+	textView.selectedRange = NSMakeRange([string length], 0);
 
+	[textView becomeFirstResponder];
 	
     return cell;
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	return nil;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	// Nothing for now
-}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 181.0;
+	if (reloadedTable){
+		return self.view.frame.size.height - keyboardHeight - [self margin];
+	} else {
+		return 0;
+	}
+
 }
+
+- (float) margin{
+	return 20.0; // on iPad this varies depending on width (up to 45?)
+}
+
 @end
 	
