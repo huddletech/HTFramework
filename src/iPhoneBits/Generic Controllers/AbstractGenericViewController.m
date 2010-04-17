@@ -14,7 +14,7 @@
 @synthesize showCancelButton, showSaveButton, showEditButton, showAddButton;
 - (void)viewWillAppear:(BOOL)animated 
 {
-	UIBarButtonItem *button;
+	UIBarButtonItem *button = nil;
 	if (showCancelButton){
 		button = [[UIBarButtonItem alloc]
 									   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
