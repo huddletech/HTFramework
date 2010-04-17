@@ -165,7 +165,7 @@
 		controller.delegate = self;
 		controller.rowItems = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		controller.initialSelection = 1;
-		controller.showEditButton = YES;
+		controller.showAddButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}

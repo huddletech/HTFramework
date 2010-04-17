@@ -11,37 +11,50 @@
 
 
 @implementation AbstractGenericViewController
-@synthesize showCancelButton, showSaveButton, showEditButton;
+@synthesize showCancelButton, showSaveButton, showEditButton, showAddButton;
 - (void)viewWillAppear:(BOOL)animated 
 {
+	UIBarButtonItem *button;
 	if (showCancelButton){
-		UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
+		button = [[UIBarButtonItem alloc]
 									   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 									   target:self
 									   action:@selector(cancel)];
-		self.navigationItem.leftBarButtonItem = cancelButton;
-		[cancelButton release];
+		self.navigationItem.leftBarButtonItem = button;
 	}
 	if (showSaveButton){
-		UIBarButtonItem *saveButton = [[UIBarButtonItem alloc]
+		button = [[UIBarButtonItem alloc]
 									   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
 									   target:self
 									   action:@selector(save)];
 		
-		self.navigationItem.rightBarButtonItem = saveButton;
-		[saveButton release];
+		self.navigationItem.rightBarButtonItem = button;
 	}
 	if (showEditButton){
-		UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
+		button = [[UIBarButtonItem alloc]
 									   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
 									   target:self
 									   action:@selector(editAction)];
 		
-		self.navigationItem.rightBarButtonItem = editButton;
-		[editButton release];
+		self.navigationItem.rightBarButtonItem = button;
 	}
+	if (showAddButton){
+		button = [[UIBarButtonItem alloc]
+									   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+									   target:self
+									   action:@selector(addAction)];
+		
+		self.navigationItem.rightBarButtonItem = button;
+		
+	}
+	[button release];
 	[super viewWillAppear:animated];
 }
+
+-(void)addAction{
+	NSLog(@"addAction called");
+}
+
 -(void)editAction{
 	// toggle mode
 	
