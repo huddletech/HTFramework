@@ -3,7 +3,7 @@
 //  Catalog
 //
 //  Created by Andy Waite on 12/04/2010.
-//  Copyright __MyCompanyName__ 2010. All rights reserved.
+//  Copyright HuddleTech 2010. All rights reserved.
 //
 
 @interface CatalogAppDelegate : NSObject <UIApplicationDelegate> {

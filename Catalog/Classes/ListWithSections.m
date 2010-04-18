@@ -3,7 +3,7 @@
 //  Catalog
 //
 //  Created by Andy Waite on 13/04/2010.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 HuddleTech. All rights reserved.
 //
 
 #import "ListWithSections.h"
