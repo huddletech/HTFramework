@@ -49,8 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00130468117646CA00D67E55 /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsViewController.h; sourceTree = "<group>"; };
-		00130469117646CA00D67E55 /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsViewController.m; sourceTree = "<group>"; };
+		00130468117646CA00D67E55 /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlsViewController.h; path = ../../ControlsViewController.h; sourceTree = "<group>"; };
+		00130469117646CA00D67E55 /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControlsViewController.m; path = ../../ControlsViewController.m; sourceTree = "<group>"; };
 		0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGenericViewController.h; sourceTree = "<group>"; };
 		0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGenericViewController.m; sourceTree = "<group>"; };
 		0024F3C41173CBD3003066B2 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		00E4951C117B5E02002FF4C6 /* StyledTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTable.h; sourceTree = "<group>"; };
 		00E4951D117B5E02002FF4C6 /* StyledTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTable.m; sourceTree = "<group>"; };
 		00E4953F117B5F22002FF4C6 /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBackground.png; sourceTree = "<group>"; };
-		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
-		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../../ListViewController.h; sourceTree = "<group>"; };
+		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../../ListViewController.m; sourceTree = "<group>"; };
 		00FC9A761174F858006FE2E1 /* ListWithSections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListWithSections.h; sourceTree = "<group>"; };
 		00FC9A771174F858006FE2E1 /* ListWithSections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListWithSections.m; sourceTree = "<group>"; };
 		00FC9A9E1174F966006FE2E1 /* HTFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFramework.h; sourceTree = "<group>"; };
@@ -137,31 +137,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00130465117646B200D67E55 /* Apple */ = {
-			isa = PBXGroup;
-			children = (
-				00130466117646B900D67E55 /* UICatalog */,
-			);
-			name = Apple;
-			sourceTree = "<group>";
-		};
-		00130466117646B900D67E55 /* UICatalog */ = {
-			isa = PBXGroup;
-			children = (
-				00130468117646CA00D67E55 /* ControlsViewController.h */,
-				00130469117646CA00D67E55 /* ControlsViewController.m */,
-			);
-			name = UICatalog;
-			sourceTree = "<group>";
-		};
 		0024F3B21173CBD3003066B2 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				0024F3C11173CBD3003066B2 /* TableViewControllers */,
-				00130465117646B200D67E55 /* Apple */,
 				00E48E51117A78CE002FF4C6 /* Cells */,
-				00FC9A571174F6FF006FE2E1 /* ListViewController.h */,
-				00FC9A581174F6FF006FE2E1 /* ListViewController.m */,
 				00FC9A9E1174F966006FE2E1 /* HTFramework.h */,
 				00FC9D4B11753472006FE2E1 /* HTStyle.h */,
 				00FC9D4C11753472006FE2E1 /* HTStyle.m */,
@@ -177,10 +157,14 @@
 			children = (
 				0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */,
 				0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */,
-				0024F3C41173CBD3003066B2 /* DateViewController.h */,
-				0024F3C51173CBD3003066B2 /* DateViewController.m */,
 				0024F3C61173CBD3003066B2 /* AppendableSelectionListViewController.h */,
 				0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */,
+				00130468117646CA00D67E55 /* ControlsViewController.h */,
+				00130469117646CA00D67E55 /* ControlsViewController.m */,
+				0024F3C41173CBD3003066B2 /* DateViewController.h */,
+				0024F3C51173CBD3003066B2 /* DateViewController.m */,
+				00FC9A571174F6FF006FE2E1 /* ListViewController.h */,
+				00FC9A581174F6FF006FE2E1 /* ListViewController.m */,
 				0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */,
 				0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */,
 				0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */,
