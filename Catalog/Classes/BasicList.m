@@ -12,8 +12,7 @@
 
 @implementation BasicList
 
-- (void)viewWillAppear:(BOOL)animated 
-{
+- (void)viewDidLoad{
 	// you can provide a list of items as either:
 	
 	// an array of strings
@@ -37,7 +36,7 @@
 	// AbstractGenericViewController has Save and Cancel buttons by default, but since
 	// we're showing a static list here there's no need for them
 
-	[super viewWillAppear:animated];
+	[super viewDidLoad];
 }
 
 @end
