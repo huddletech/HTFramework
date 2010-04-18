@@ -14,6 +14,7 @@
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;
+@synthesize returnAfterSelection;
 
 - (void)viewDidLoad
 {
@@ -120,7 +121,11 @@
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
-	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	if (returnAfterSelection){
+		[self doneAction];
+	} else {
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	}
 }
 #pragma mark -
 - (void)selectRow:(NSIndexPath *)theIndexPath

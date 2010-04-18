@@ -225,6 +225,8 @@
 				00E491DA117B302D002FF4C6 /* DatePicker.m */,
 				00E493EE117B4580002FF4C6 /* EditableList.h */,
 				00E493EF117B4580002FF4C6 /* EditableList.m */,
+				00FC9C2711751499006FE2E1 /* ExampleTableItem.h */,
+				00FC9C2811751499006FE2E1 /* ExampleTableItem.m */,
 				00E48F85117A8C1C002FF4C6 /* IndexedList.h */,
 				00E48F86117A8C1C002FF4C6 /* IndexedList.m */,
 				00E493AD117B4422002FF4C6 /* LongTextField.h */,
@@ -274,8 +276,6 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* CatalogAppDelegate.h */,
 				1D3623250D0F684500981E51 /* CatalogAppDelegate.m */,
-				00FC9C2711751499006FE2E1 /* ExampleTableItem.h */,
-				00FC9C2811751499006FE2E1 /* ExampleTableItem.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

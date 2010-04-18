@@ -13,11 +13,12 @@
 
 - (void)viewDidLoad
 {
-	[super viewDidLoad];
-	
 	self.delegate = self;
 	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 	self.initialSelection = 1;
+	self.returnAfterSelection = YES;
+	
+	[super viewDidLoad];
 }
 
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
