@@ -17,6 +17,13 @@
 	}
 	return self;
 }
+
+- (void)viewDidLoad
+{	
+	self.showDoneButton = YES;
+	[super viewDidLoad];
+}
+
 -(IBAction)textFieldDone:(id)sender
 {
 	UITableViewCell *cell = (UITableViewCell *)[[(UIView *)sender superview] superview];
@@ -53,7 +60,7 @@
 	[firstCellTextField becomeFirstResponder];
 	[super viewDidAppear:animated];
 }
--(IBAction)save
+-(void)doneAction
 {
 	if (textFieldBeingEdited != nil)
 		[changedValues replaceObjectAtIndex:textFieldBeingEdited.tag withObject:textFieldBeingEdited.text];
