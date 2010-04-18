@@ -65,7 +65,7 @@
 }
 
 -(void)doneAction{
-	NSLog(@"addAction called");
+	NSLog(@"doneAction called");
 }
 
 -(void)editAction{
