@@ -16,7 +16,7 @@
 @synthesize delegate;
 -(IBAction)save
 {
-    [self.delegate rowChosen:[lastIndexPath row] fromArray:nil]; // TODO fix this
+    [self.delegate rowChosen:[lastIndexPath row] fromArray:self.items];
     [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark -
@@ -29,9 +29,7 @@
 {
 	// Check to see if user has indicated a row to be selected, and set it
 	
-	TableSection *firstSection = [self.sections objectAtIndex:0];
-	
-	if (initialSelection > - 1 && initialSelection < [firstSection.items count])
+	if (initialSelection > - 1 && initialSelection < [self.items count])
 	{
 		NSUInteger newIndex[] = {0, initialSelection};
 		NSIndexPath *newPath = [[NSIndexPath alloc] initWithIndexes:newIndex length:2];
@@ -69,10 +67,8 @@
     
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];
-	
-	TableSection *firstSection = [self.sections objectAtIndex:0];
-	
-	if (row >= [firstSection.items count])
+		
+	if (row >= [self.items count])
 	{
 		cell.textLabel.text = NSLocalizedString(@"Other…", @"Other…");
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -80,8 +76,7 @@
 	else
 	{
 		
-		TableSection *firstSection = [self.sections objectAtIndex:0];
-		cell.textLabel.text = [firstSection.items objectAtIndex:row];
+		cell.textLabel.text = [self.items objectAtIndex:row];
 		cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 		
 	}
@@ -93,10 +88,8 @@
 {
 	int newRow = [indexPath row];
 	int oldRow = [lastIndexPath row];
-	
-	TableSection *firstSection = [self.sections objectAtIndex:0];
-	
-	if (newRow < [firstSection.items count])
+
+	if (newRow < [self.items count])
 	{
 		if (newRow != oldRow)
 		{
@@ -131,14 +124,12 @@
 - (void)valuesDidChange:(NSDictionary *)newValues
 {
 	NSString *newVal = [newValues objectForKey:@"newValue"];
-	
-	TableSection *firstSection = [self.sections objectAtIndex:0];
-	
-	[firstSection.items addObject:newVal];
+		
+	[self.items addObject:newVal];
 	//[self.tableView reloadData];
 	
-	[firstSection.items sortUsingSelector:@selector(compare:)];
-	NSUInteger theIndices[] = {0, [firstSection.items indexOfObject:newVal]};
+	[self.items sortUsingSelector:@selector(compare:)];
+	NSUInteger theIndices[] = {0, [self.items indexOfObject:newVal]};
 	NSIndexPath *theIndexPath = [[NSIndexPath alloc] initWithIndexes:theIndices length:2];
 	[self performSelector:@selector(selectRow:) withObject:theIndexPath afterDelay:0.05];
 	//	[self tableView:self.tableView didSelectRowAtIndexPath:theIndexPath];

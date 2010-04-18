@@ -66,12 +66,10 @@
 	{
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
 									   reuseIdentifier:SelectionListCellIdentifier] autorelease];}
-    
-	TableSection *firstSection = [sections objectAtIndex:0];
-	
+    	
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];
-	cell.textLabel.text = [firstSection.items objectAtIndex:row];
+	cell.textLabel.text = [self.items objectAtIndex:row];
 	cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 
     return cell;
