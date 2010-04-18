@@ -11,8 +11,13 @@
 
 @implementation IndexedList
 
-- (void)viewWillAppear:(BOOL)animated 
+- (void)viewDidLoad
 {
+	
+	// an indexed list displays the title of each section in a vertical list
+	
+	self.indexed = YES;
+	
 	NSArray *letters = [NSArray arrayWithObjects:@"A", @"B", @"C", @"D", @"E", @"F", nil];
 	
 	TableSection *section = nil;
@@ -21,9 +26,7 @@
 		section.items = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
 	}
 	
-	self.indexed = YES;
-	
-	[super viewWillAppear:animated];
+	[super viewDidLoad];
 }
 
 @end
