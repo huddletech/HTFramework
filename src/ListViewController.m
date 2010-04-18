@@ -48,14 +48,21 @@
 }
 
 - (void)setItems:(NSArray*)theItems{
-	NSLog(@"setItems: %@", theItems);
-	TableSection *sectionToUpdate = nil;
-	if ([[self sections] count] == 0){
-		sectionToUpdate = [self addSectionWithTitle:@""];
-	} else {
-		sectionToUpdate = [sections objectAtIndex:0];
+
+	for (NSObject* item in theItems){
+		[self addItem:item];
 	}
-	[sectionToUpdate addItems:theItems];
+	
+}
+
+- (void)addItem:(NSObject*)item{
+	TableSection *sectionToAddTo = nil;
+	if ([[self sections] count] == 0){
+		sectionToAddTo = [self addSectionWithTitle:@""];
+	} else {
+		sectionToAddTo = [sections objectAtIndex:0];
+	}
+	[sectionToAddTo addItem:item];
 }
 
 - (NSMutableArray*)sections{

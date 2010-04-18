@@ -18,6 +18,11 @@
 	
 	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 
+	// add some more items
+	
+	[self addItem:@"D"];
+	[self addItem:@"E"];
+	
 	[super viewDidLoad];
 }
 

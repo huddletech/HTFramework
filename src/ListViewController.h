@@ -32,5 +32,6 @@
 - (NSArray*)items;
 - (TableSection*)addSectionWithTitle:(NSString*)title;
 - (NSMutableArray*)sections;
+- (void)addItem:(NSObject*)item;
 
 @end
