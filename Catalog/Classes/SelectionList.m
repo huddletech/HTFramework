@@ -11,20 +11,18 @@
 
 @implementation SelectionList
 
-- (void)viewWillAppear:(BOOL)animated 
+- (void)viewDidLoad
 {
-	//((SelectionListViewController*)controller).delegate = self;
-	TableSection *s = [self addSectionWithTitle:@"x"];
+	[super viewDidLoad];
 	
-	[s addItem:@"A"];
-	//self.items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+	self.delegate = self;
+	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 	self.initialSelection = 1;
-	self.showSaveButton = YES;
-	
-	// AbstractGenericViewController has Save and Cancel buttons by default, but since
-	// we're showing a static list here there's no need for them
-	
-	[super viewWillAppear:animated];
+}
+
+- (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
+{
+    NSLog(@"You chose row %i from array %@", row, theList);
 }
 
 @end

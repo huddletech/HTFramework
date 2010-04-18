@@ -8,19 +8,14 @@
 //  Modifications by Andy Waite
 
 #import <UIKit/UIKit.h>
-#import "AbstractGenericViewController.h"
-#import "ListViewController.h"
+#import "AppendableSelectionListViewController.h"
 
 @protocol SelectionListViewControllerDelegate <NSObject>
 @required
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 @end
 
-@interface SelectionListViewController : ListViewController 
-{
-	NSIndexPath		*lastIndexPath;
-	NSInteger		initialSelection;	
-}
-@property (nonatomic, retain) NSIndexPath *lastIndexPath;
-@property NSInteger initialSelection;
+@interface SelectionListViewController : AppendableSelectionListViewController 
+
+
 @end
