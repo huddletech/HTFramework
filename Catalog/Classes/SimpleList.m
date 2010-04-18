@@ -13,17 +13,14 @@
 
 - (void)viewDidLoad
 {	
-	// creating a list is as simple as passing an array of string
-	
-	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+	// creating a list is as simple as passing an array of strings
+	self.items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 
 	// you can also add items individually
-	
 	[self addItem:@"D"];
 	[self addItem:@"E"];
 	
-	// when overriding you should always call super last
-	
+	// when overriding viewDidLoad you should always call the superclass's viewDidLoad last
 	[super viewDidLoad];
 }
 
