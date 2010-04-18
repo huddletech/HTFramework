@@ -92,12 +92,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
 	TableSection *ts = [sections objectAtIndex:section];
-	NSLog(@"numberOfRowsInSection %i", [ts.items count]);
     return [ts.items count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	NSLog(@"cellForRowAtIndexPath");
     static NSString *SelectionListCellIdentifier = @"ListCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
