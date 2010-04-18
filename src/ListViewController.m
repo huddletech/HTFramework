@@ -96,7 +96,6 @@
 	{
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
 									   reuseIdentifier:SelectionListCellIdentifier] autorelease];
-		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
 	TableSection *ts = [sections objectAtIndex:indexPath.section];
