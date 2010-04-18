@@ -50,14 +50,10 @@
 #import "ActivityCell.h"
 #import "ProgressCell.h"
 #import "SliderCell.h"
+#import "ListViewController.h"
 
+@interface ControlsViewController : ListViewController
 
-@interface ControlsViewController : UITableViewController
-{
-	NSArray					*dataSourceArray;
-}
-
-@property (nonatomic, retain) NSArray *dataSourceArray;
 
 @end
 

@@ -52,38 +52,15 @@
 
 @implementation ControlsViewController
 
-@synthesize dataSourceArray;
-
 - (void)dealloc
 {	
-	[dataSourceArray release];
 	[super dealloc];
-}
-
-
-// called after the view controller's view is released and set to nil.
-// For example, a memory warning which causes the view to be purged. Not invoked as a result of -dealloc.
-// So release any properties that are loaded in viewDidLoad or can be recreated lazily.
-//
-- (void)viewDidUnload 
-{
-    [super viewDidUnload];
-	self.dataSourceArray = nil;	// this will release and set to nil
 }
 
 
 #pragma mark -
 #pragma mark UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-	return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	return [self.dataSourceArray count];
-}
 
 
 // to determine which UITableViewCell to be used on a given row.
@@ -106,7 +83,7 @@
 			[viewToRemove removeFromSuperview];
 	}
 	
-	TableControlItem *controlItem = [self.dataSourceArray objectAtIndex: indexPath.row];
+	TableControlItem *controlItem = [self.items objectAtIndex: indexPath.row];
 	
 	cell.textLabel.text = [controlItem title];
 
