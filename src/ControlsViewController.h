@@ -52,7 +52,7 @@
 #import "SliderCell.h"
 
 
-@interface ControlsViewController : UITableViewController <UISwitchDelegate>
+@interface ControlsViewController : UITableViewController
 {
 	NSArray					*dataSourceArray;
 }

@@ -10,6 +10,7 @@
 #import "IndexedList.h"
 #import "SelectionList.h"
 #import "DatePicker.h"
+#import "Controls.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,

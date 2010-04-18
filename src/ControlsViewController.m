@@ -60,36 +60,6 @@
 	[super dealloc];
 }
 
-- (void)viewDidLoad
-{	
-    [super viewDidLoad];
-
-	SwitchCell *switchCell = [[SwitchCell alloc] initWithTitle:@"Standard Switch"];
-	switchCell.delegate = self;
-	
-	SliderCell *sliderCell = [[SliderCell alloc] initWithTitle:@"Slider"];
-	sliderCell.delegate = self;
-	
-	ActivityCell *activityCell = [[ActivityCell alloc] initWithTitle:@"Activity Indicator"];
-	
-	ProgressCell *progressCell = [[ProgressCell alloc] initWithTitle:@"Progress"];
-	
-	TableControlItem *accessoryCell = [[TableControlItem alloc] initWithTitle:@"Hello"];
-	accessoryCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	accessoryCell.detail = @"Goodbye";
-	
-	self.dataSourceArray = [NSArray arrayWithObjects:
-							switchCell,
-							sliderCell,
-							activityCell,
-							progressCell,
-							accessoryCell,
-							nil];
-	[switchCell release];
-	[sliderCell release];
-	[activityCell release];
-	[progressCell release];
-}
 
 // called after the view controller's view is released and set to nil.
 // For example, a memory warning which causes the view to be purged. Not invoked as a result of -dealloc.
@@ -145,17 +115,6 @@
 	cell.detailTextLabel.text = controlItem.detail;
 	 
 	return cell;
-}
-
-- (void)sliderAction:(id)sender{
-	UISlider *slider = (UISlider*)sender;
-	NSLog(@"slider moved to %f", slider.value);
-}
-
-
-- (void)switchAction:(id)sender
-{
-	NSLog(@"switchAction: value = %d", [sender isOn]);
 }
 
 @end

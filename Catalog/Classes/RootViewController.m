@@ -26,7 +26,7 @@
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
 					                         @"EditableSelectionListViewController",
-					                         @"Apple Controls",
+					                         @"Controls",
 											 @"Editable List",
 					                         nil];
 	[catalogItems retain];
@@ -141,8 +141,8 @@
 		controller.showSaveButton = YES;
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
 		controller = [[BasicList alloc] init];
-	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
-		controller = [[ControlsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	} else if ([selectedItemLabel isEqualToString:@"Controls"]){
+		controller = [[Controls alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
 		controller = [[SelectionListViewController alloc] init];
 		((SelectionListViewController*)controller).delegate = self;
