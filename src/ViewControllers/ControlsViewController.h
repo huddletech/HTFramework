@@ -54,6 +54,7 @@
 
 @interface ControlsViewController : ListViewController
 
+- (void)setupCell:(UITableViewCell*)cell fromTableControlItem:(TableControlItem*)controlItem;
 
 @end
 

@@ -85,13 +85,16 @@
 	
 	TableControlItem *controlItem = [self.items objectAtIndex: indexPath.row];
 	
-	cell.textLabel.text = [controlItem title];
+	[self setupCell:cell fromTableControlItem:controlItem];
+	 
+	return cell;
+}
 
+- (void)setupCell:(UITableViewCell*)cell fromTableControlItem:(TableControlItem*)controlItem{
+	cell.textLabel.text = [controlItem title];
 	cell.accessoryView = [controlItem control];
 	cell.accessoryType = [controlItem accessoryType];
 	cell.detailTextLabel.text = controlItem.detail;
-	 
-	return cell;
 }
 
 @end
