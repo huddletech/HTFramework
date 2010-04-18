@@ -17,12 +17,8 @@
 - (TableSection*)addSectionWithTitle:(NSString*)title{
 	TableSection *newSection = [[[TableSection alloc] init] autorelease];
 	newSection.title = title;
-	
-	if (sections == nil){
-		sections = [NSMutableArray array];
-		[sections retain];
-	}
-	[sections addObject:newSection];
+
+	[[self sections] addObject:newSection];
 	return newSection;
 }
 
@@ -54,14 +50,20 @@
 - (void)setItems:(NSArray*)theItems{
 	NSLog(@"setItems: %@", theItems);
 	TableSection *sectionToUpdate = nil;
-	if (sections == nil){
-		sections = [NSMutableArray array];
-		[sections retain];
+	if ([[self sections] count] == 0){
 		sectionToUpdate = [self addSectionWithTitle:@""];
 	} else {
 		sectionToUpdate = [sections objectAtIndex:0];
 	}
 	[sectionToUpdate addItems:theItems];
+}
+
+- (NSMutableArray*)sections{
+	if (sections == nil) {
+		sections = [NSMutableArray array];
+		[sections retain];
+	}
+	return sections;
 }
 
 - (NSArray*)items{

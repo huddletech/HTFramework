@@ -24,12 +24,13 @@
 	id delegate;
 	BOOL indexed;
 }
-//@property (nonatomic, retain, readonly) NSMutableArray *sections;
+
 @property (nonatomic, retain) id delegate;
 @property (nonatomic) BOOL indexed;
 
 - (void)setItems:(NSArray*)items;
 - (NSArray*)items;
 - (TableSection*)addSectionWithTitle:(NSString*)title;
+- (NSMutableArray*)sections;
 
 @end
