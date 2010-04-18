@@ -13,18 +13,21 @@
 @synthesize items, title;
 
 - (void) addItem:(NSObject*)item{
-	if (items == nil) {
-		items = [NSMutableArray arrayWithObject:item];
-		[items retain];
-	} else {
-		[items addObject:item];
-	}
+	[[self items] addObject:item];
 }
 
 - (void) addItems:(NSArray*)theItems{
 	for (NSObject *item in theItems){
 		[self addItem:item];
 	}
+}
+
+- (NSMutableArray*) items {
+	if (items == nil) {
+		items = [NSMutableArray array];
+		[items retain];
+	}
+	return items;
 }
 
 @end
