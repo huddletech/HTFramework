@@ -102,7 +102,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"Controls"]){
 		controller = [[Controls alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
-		controller = [[SelectionList alloc] init];
+		controller = [[EditableList alloc] init];
 	}
 	controller.title = selectedItemLabel;
 	[self.navigationController pushViewController:controller animated:YES];
@@ -120,11 +120,6 @@
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 {
     NSLog(@"You chose row %i from array %@", row, theList);
-}
-
-
-- (void)didDeleteRowAtIndexPath:indexPath{
-	NSLog(@"You deleted item at %@", indexPath);
 }
 	
 @end
