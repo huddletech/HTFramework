@@ -18,7 +18,7 @@
 
 -(IBAction)save
 {
-    [self.delegate rowChosen:[lastIndexPath row] fromArray:items];
+    [self.delegate rowChosen:[lastIndexPath row] fromArray:self.items];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -20,6 +20,7 @@
 	[catalogSections retain];
 	
 	catalogItems = [NSArray arrayWithObjects:@"Basic List",
+					                         @"Indexed List",
 					                         @"DateViewController",
 					                         @"SelectionListViewController",
 					                         @"LongTextFieldViewController",
@@ -114,9 +115,12 @@
 
 	NSString *selectedItemLabel = [catalogItems objectAtIndex:indexPath.row];
 	
-	UIViewController *controller = nil;
+	AbstractGenericViewController *controller = nil;
 	
-	if ([selectedItemLabel isEqualToString:@"DateViewController"]){
+	if ([selectedItemLabel isEqualToString:@"Indexed List"]){
+		controller = [[IndexedList alloc] init];
+		[self.navigationController pushViewController:controller animated:YES];
+	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
 		controller = [[DateViewController alloc] init];
 		((DateViewController*)controller).delegate = self;
 		[self.navigationController pushViewController:controller animated:YES];
@@ -125,6 +129,7 @@
 		((SelectionListViewController*)controller).delegate = self;
 		((SelectionListViewController*)controller).items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((SelectionListViewController*)controller).initialSelection = 1;
+		controller.showSaveButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
 		controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
@@ -143,6 +148,7 @@
 		((EditableSelectionListViewController*)controller).delegate = self;
 		((EditableSelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((EditableSelectionListViewController*)controller).initialSelection = 1;
+		controller.showSaveButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
 		controller = [[BasicList alloc] init];
@@ -155,7 +161,7 @@
 		((SelectionListViewController*)controller).delegate = self;
 		((SelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((SelectionListViewController*)controller).initialSelection = 1;
-		((SelectionListViewController*)controller).showAddButton = YES;
+		controller.showEditButton = YES;
 		[self.navigationController pushViewController:controller animated:YES];
 	}
 	[controller release];
@@ -235,5 +241,10 @@
 	NSLog(@"You took new date: %@", newDate);
 }
 
+
+- (void)didDeleteRowAtIndexPath:indexPath{
+	NSLog(@"You deleted item at %@", indexPath);
+}
+	
 @end
 

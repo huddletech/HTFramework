@@ -19,11 +19,8 @@
 @interface SelectionListViewController : ListViewController 
 {
 	NSIndexPath		*lastIndexPath;
-	NSInteger		initialSelection;
-	
-	id <SelectionListViewControllerDelegate>	delegate;
+	NSInteger		initialSelection;	
 }
 @property (nonatomic, retain) NSIndexPath *lastIndexPath;
 @property NSInteger initialSelection;
-@property (nonatomic, assign) id <SelectionListViewControllerDelegate> delegate;
 @end

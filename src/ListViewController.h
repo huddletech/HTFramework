@@ -21,8 +21,12 @@
 {
 	NSMutableArray *sections;
 	NSMutableArray	*items;
+	id delegate;
+	BOOL indexed;
 }
 @property (nonatomic, retain) NSMutableArray *sections;
+@property (nonatomic, retain) id delegate;
+@property (nonatomic) BOOL indexed;
 
 - (void)setItems:(NSArray*)items;
 - (void)setItems:(NSArray*)items forSection:(TableSection*)section;

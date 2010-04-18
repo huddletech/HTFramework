@@ -19,11 +19,8 @@
 @interface EditableSelectionListViewController : ListViewController <TextFieldEditingViewControllerDelegate>
 {
 	NSIndexPath		*lastIndexPath;
-	NSInteger		initialSelection;
-	
-	id <EditableSelectionListViewControllerDelegate>	delegate;
+	NSInteger		initialSelection;	
 }
 @property (nonatomic, retain) NSIndexPath *lastIndexPath;
 @property NSInteger initialSelection;
-@property (nonatomic, assign) id <EditableSelectionListViewControllerDelegate> delegate;
 @end

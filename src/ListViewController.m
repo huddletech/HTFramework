@@ -11,13 +11,28 @@
 
 
 @implementation ListViewController
-@synthesize sections;
+@synthesize sections, delegate, indexed;
 
 
 - (void)dealloc 
 {
 	[items release];
     [super dealloc];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+	
+	NSMutableArray *sectionTitles = [NSMutableArray arrayWithCapacity:[self.sections count]];
+	for (TableSection *section in self.sections){
+		[sectionTitles addObject:section.title];
+	}
+	
+	if (indexed)
+		return sectionTitles;
+	else {
+		return nil;
+	}
+
 }
 
 - (void)setItems:(NSArray*)theItems{
@@ -89,6 +104,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 	TableSection *sectionToDeleteFrom = [sections objectAtIndex:indexPath.section];
 	[sectionToDeleteFrom.items removeObjectAtIndex:indexPath.row];
 	[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [delegate didDeleteRowAtIndexPath:indexPath];
 }
 
 @end
