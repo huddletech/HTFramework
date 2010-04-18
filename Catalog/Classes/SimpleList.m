@@ -13,15 +13,16 @@
 
 - (void)viewDidLoad
 {	
-	// All tableviews contain at least one section. By default, items are added
-	// to the first section.
+	// creating a list is as simple as passing an array of string
 	
 	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 
-	// add some more items
+	// you can also add items individually
 	
 	[self addItem:@"D"];
 	[self addItem:@"E"];
+	
+	// when overriding you should always call super last
 	
 	[super viewDidLoad];
 }
