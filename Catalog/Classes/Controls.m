@@ -36,6 +36,7 @@
 							progressCell,
 							accessoryCell,
 							nil];
+	[accessoryCell release];
 	[switchCell release];
 	[sliderCell release];
 	[activityCell release];
