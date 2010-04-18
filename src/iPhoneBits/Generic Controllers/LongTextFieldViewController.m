@@ -14,6 +14,7 @@
 @synthesize string;
 @synthesize textView;
 @synthesize keyboardHeight, reloadedTable;
+@synthesize delegate;
 
 
 - (void)save
