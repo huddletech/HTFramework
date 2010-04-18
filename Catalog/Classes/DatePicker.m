@@ -13,7 +13,6 @@
 
 - (void)viewDidLoad {
 	self.delegate = self;
-	self.showSaveButton = YES;
 	[super viewDidLoad];
 }
 

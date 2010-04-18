@@ -49,6 +49,9 @@
     [self.view addSubview:datePicker];
 	
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+	
+	self.showSaveButton = YES;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
