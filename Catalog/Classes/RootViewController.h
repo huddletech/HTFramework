@@ -9,12 +9,12 @@
 #import "HTFramework.h"
 #import "IndexedList.h"
 #import "SelectionList.h"
+#import "DatePicker.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,
                                                        TextFieldEditingViewControllerDelegate,
-                                                       EditableSelectionListViewControllerDelegate,
-                                                       DateViewDelegate>{
+                                                       EditableSelectionListViewControllerDelegate>{
 	NSArray *catalogItems;
 	NSArray *catalogSections;													   
 }

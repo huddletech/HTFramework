@@ -21,7 +21,7 @@
 	
 	catalogItems = [NSArray arrayWithObjects:@"Basic List",
 					                         @"Indexed List",
-					                         @"DateViewController",
+					                         @"Date Picker",
 					                         @"Selection List",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
@@ -119,9 +119,8 @@
 	
 	if ([selectedItemLabel isEqualToString:@"Indexed List"]){
 		controller = [[IndexedList alloc] init];
-	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
-		controller = [[DateViewController alloc] init];
-		((DateViewController*)controller).delegate = self;
+	} else if ([selectedItemLabel isEqualToString:@"Date Picker"]){
+		controller = [[DatePicker alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Selection List"]){
 		controller = [[SelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
@@ -220,13 +219,6 @@
 
 - (void)valuesDidChange:(NSDictionary *)newValues{
 	NSLog(@"You changed values: %@", newValues);
-}
-
-
-#pragma mark DateViewDelegate methods
-
-- (void)takeNewDate:(NSDate *)newDate{
-	NSLog(@"You took new date: %@", newDate);
 }
 
 
