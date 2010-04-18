@@ -1,7 +1,7 @@
 HTFramework
 ===========
 
-A framework of re-usable components for iPhone OS development
+A framework of re-usable components for happier iPhone OS development
 
 by Andy Waite <andy@huddletech.com>
 
@@ -11,13 +11,18 @@ Aims
 ----
 
 * simple to extend and customise
-* independent of any persistence technique (CoreData, SQLPersistentObjects, UserDefaults, etc.)
+* independent of any data persistence technique
 * no private framework calls
 * iPad support
-* match the look and feel of iPhone OS and Apple's own apps
+* match the look and feel of iPhone OS and Apple's own apps by default
+* follow Apple Human Interface Guidelines
+* support MVC (Model View Controller) design
+* convention over configuration
 
 How to Use
 ----------
 
 0. Copy the src folder into your project.
 0. `#import "HTFramework.h"`
+
+Look in Catalog/Classes/Examples to see how each screen is built.
