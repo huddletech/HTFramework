@@ -25,7 +25,7 @@
 					                         @"Selection List",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
-					                         @"EditableSelectionListViewController",
+					                         @"Editable Selection List",
 					                         @"Controls",
 											 @"Editable List",
 					                         nil];
@@ -133,22 +133,14 @@
 		((TextFieldEditingViewController*)controller).fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((TextFieldEditingViewController*)controller).fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
 		((TextFieldEditingViewController*)controller).fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
-	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
-		controller = [[EditableSelectionListViewController alloc] init];
-		((EditableSelectionListViewController*)controller).delegate = self;
-		((EditableSelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
-		((EditableSelectionListViewController*)controller).initialSelection = 1;
-		controller.showSaveButton = YES;
+	} else if ([selectedItemLabel isEqualToString:@"Editable Selection List"]){
+		controller = [[EditableSelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
 		controller = [[BasicList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Controls"]){
 		controller = [[Controls alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
-		controller = [[SelectionListViewController alloc] init];
-		((SelectionListViewController*)controller).delegate = self;
-		((SelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
-		((SelectionListViewController*)controller).initialSelection = 1;
-		controller.showEditButton = YES;
+		controller = [[SelectionList alloc] init];
 	}
 	controller.title = selectedItemLabel;
 	[self.navigationController pushViewController:controller animated:YES];

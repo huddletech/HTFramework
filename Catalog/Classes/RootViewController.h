@@ -11,6 +11,7 @@
 #import "SelectionList.h"
 #import "DatePicker.h"
 #import "Controls.h"
+#import "EditableSelectionList.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,

@@ -14,6 +14,13 @@
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;
+
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+	self.showSaveButton = YES;
+}
+
 -(IBAction)save
 {
     [self.delegate rowChosen:[lastIndexPath row] fromArray:self.items];
