@@ -114,7 +114,6 @@
 	else {
 		cell.textLabel.text = [itemForRow descriptionForTable:self];
 	}
-	cell.backgroundColor = [UIColor clearColor];
 	
     return cell;
 }

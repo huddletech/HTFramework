@@ -25,7 +25,6 @@
 											 @"Text Field Editing",
 											 @"Controls",
 											 @"Editable List",
-							                 @"Styled Table",
 					                         nil];
 	[listViews addItems:listViewItems];
 	
