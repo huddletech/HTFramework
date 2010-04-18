@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0013046A117646CA00D67E55 /* ControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00130469117646CA00D67E55 /* ControlsViewController.m */; };
-		0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3BE1173CBD3003066B2 /* UIColor-Table.m */; };
 		0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */; };
 		0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C51173CBD3003066B2 /* DateViewController.m */; };
 		0024F3D61173CBD3003066B2 /* AppendableSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */; };
@@ -52,8 +51,6 @@
 /* Begin PBXFileReference section */
 		00130468117646CA00D67E55 /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsViewController.h; sourceTree = "<group>"; };
 		00130469117646CA00D67E55 /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsViewController.m; sourceTree = "<group>"; };
-		0024F3BD1173CBD3003066B2 /* UIColor-Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Table.h"; sourceTree = "<group>"; };
-		0024F3BE1173CBD3003066B2 /* UIColor-Table.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Table.m"; sourceTree = "<group>"; };
 		0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGenericViewController.h; sourceTree = "<group>"; };
 		0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGenericViewController.m; sourceTree = "<group>"; };
 		0024F3C41173CBD3003066B2 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
@@ -160,11 +157,11 @@
 		0024F3B21173CBD3003066B2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0024F3C11173CBD3003066B2 /* TableViewControllers */,
 				00130465117646B200D67E55 /* Apple */,
 				00E48E51117A78CE002FF4C6 /* Cells */,
 				00FC9A571174F6FF006FE2E1 /* ListViewController.h */,
 				00FC9A581174F6FF006FE2E1 /* ListViewController.m */,
-				0024F3B31173CBD3003066B2 /* iPhoneBits */,
 				00FC9A9E1174F966006FE2E1 /* HTFramework.h */,
 				00FC9D4B11753472006FE2E1 /* HTStyle.h */,
 				00FC9D4C11753472006FE2E1 /* HTStyle.m */,
@@ -175,25 +172,7 @@
 			path = ../src;
 			sourceTree = SOURCE_ROOT;
 		};
-		0024F3B31173CBD3003066B2 /* iPhoneBits */ = {
-			isa = PBXGroup;
-			children = (
-				0024F3B41173CBD3003066B2 /* Categories */,
-				0024F3C11173CBD3003066B2 /* Generic Controllers */,
-			);
-			path = iPhoneBits;
-			sourceTree = "<group>";
-		};
-		0024F3B41173CBD3003066B2 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				0024F3BD1173CBD3003066B2 /* UIColor-Table.h */,
-				0024F3BE1173CBD3003066B2 /* UIColor-Table.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		0024F3C11173CBD3003066B2 /* Generic Controllers */ = {
+		0024F3C11173CBD3003066B2 /* TableViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */,
@@ -209,7 +188,8 @@
 				0024F3CC1173CBD3003066B2 /* TextFieldEditingViewController.h */,
 				0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */,
 			);
-			path = "Generic Controllers";
+			name = TableViewControllers;
+			path = "iPhoneBits/Generic Controllers";
 			sourceTree = "<group>";
 		};
 		00E48E47117A781F002FF4C6 /* Examples */ = {
@@ -402,7 +382,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */,
 				0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */,
 				0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */,
 				0024F3D61173CBD3003066B2 /* AppendableSelectionListViewController.m in Sources */,

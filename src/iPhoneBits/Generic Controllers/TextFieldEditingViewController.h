@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
+#import "HTStyle.h"
 
 #define kDefaultLabelTag 50002
 

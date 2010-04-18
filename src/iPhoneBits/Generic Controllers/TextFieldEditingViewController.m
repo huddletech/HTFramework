@@ -1,5 +1,4 @@
 #import "TextFieldEditingViewController.h"
-#import "UIColor-Table.h"
 @implementation TextFieldEditingViewController
 @synthesize fieldNames;
 @synthesize fieldKeys;
@@ -124,7 +123,7 @@
 		label.textAlignment = UITextAlignmentRight;
 		label.tag = kDefaultLabelTag;
 		UIFont *font = [UIFont boldSystemFontOfSize:12.0];
-		label.textColor = [UIColor tableCellNonEditableTextColor];
+		label.textColor = [HTStyle tableCellNonEditableTextColor];
 		label.font = font;
 		[cell.contentView addSubview:label];
 		cell.backgroundColor = [UIColor whiteColor];
