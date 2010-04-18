@@ -150,6 +150,7 @@
 		((SelectionListViewController*)controller).initialSelection = 1;
 		controller.showEditButton = YES;
 	}
+	controller.title = selectedItemLabel;
 	[self.navigationController pushViewController:controller animated:YES];
 	[controller release];
 }
