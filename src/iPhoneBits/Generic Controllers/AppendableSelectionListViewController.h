@@ -16,7 +16,7 @@
 - (void)rowChosen:(NSInteger)row fromArray:(NSMutableArray *)theList;
 @end
 
-@interface EditableSelectionListViewController : ListViewController <TextFieldEditingViewControllerDelegate>
+@interface AppendableSelectionListViewController : ListViewController <TextFieldEditingViewControllerDelegate>
 {
 	NSIndexPath		*lastIndexPath;
 	NSInteger		initialSelection;	

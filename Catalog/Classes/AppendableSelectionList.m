@@ -6,10 +6,10 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "EditableSelectionList.h"
+#import "AppendableSelectionList.h"
 
 
-@implementation EditableSelectionList
+@implementation AppendableSelectionList
 
 - (void)viewDidLoad
 {

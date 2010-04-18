@@ -7,10 +7,10 @@
 //
 //  Modifications by Andy Waite
 
-#import "EditableSelectionListViewController.h"
+#import "AppendableSelectionListViewController.h"
 
 
-@implementation EditableSelectionListViewController
+@implementation AppendableSelectionListViewController
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;

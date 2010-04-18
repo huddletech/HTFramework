@@ -4,7 +4,7 @@
 #import "SelectionListViewController.h"
 #import "LongTextFieldViewController.h";
 #import "TextFieldEditingViewController.h"
-#import "EditableSelectionListViewController.h"
+#import "AppendableSelectionListViewController.h"
 #import "BasicList.h"
 #import "ControlsViewController.h"
 #import "TableSection.h"

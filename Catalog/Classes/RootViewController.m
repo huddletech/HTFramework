@@ -25,7 +25,7 @@
 					                         @"Selection List",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
-					                         @"Editable Selection List",
+					                         @"Appendable Selection List",
 					                         @"Controls",
 											 @"Editable List",
 					                         nil];
@@ -133,8 +133,8 @@
 		((TextFieldEditingViewController*)controller).fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((TextFieldEditingViewController*)controller).fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
 		((TextFieldEditingViewController*)controller).fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
-	} else if ([selectedItemLabel isEqualToString:@"Editable Selection List"]){
-		controller = [[EditableSelectionList alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Appendable Selection List"]){
+		controller = [[AppendableSelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
 		controller = [[BasicList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Controls"]){

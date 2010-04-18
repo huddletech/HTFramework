@@ -11,7 +11,7 @@
 		0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3BE1173CBD3003066B2 /* UIColor-Table.m */; };
 		0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */; };
 		0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C51173CBD3003066B2 /* DateViewController.m */; };
-		0024F3D61173CBD3003066B2 /* EditableSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C71173CBD3003066B2 /* EditableSelectionListViewController.m */; };
+		0024F3D61173CBD3003066B2 /* AppendableSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */; };
 		0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */; };
 		0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */; };
 		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
@@ -25,7 +25,7 @@
 		00E4913A117B2B42002FF4C6 /* SelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49139117B2B42002FF4C6 /* SelectionList.m */; };
 		00E491DB117B302D002FF4C6 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E491DA117B302D002FF4C6 /* DatePicker.m */; };
 		00E49214117B31E5002FF4C6 /* Controls.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49213117B31E5002FF4C6 /* Controls.m */; };
-		00E49251117B3384002FF4C6 /* EditableSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49250117B3384002FF4C6 /* EditableSelectionList.m */; };
+		00E49251117B3384002FF4C6 /* AppendableSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49250117B3384002FF4C6 /* AppendableSelectionList.m */; };
 		00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A581174F6FF006FE2E1 /* ListViewController.m */; };
 		00FC9A781174F858006FE2E1 /* BasicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A771174F858006FE2E1 /* BasicList.m */; };
 		00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README.markdown */; };
@@ -52,8 +52,8 @@
 		0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGenericViewController.m; sourceTree = "<group>"; };
 		0024F3C41173CBD3003066B2 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		0024F3C51173CBD3003066B2 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
-		0024F3C61173CBD3003066B2 /* EditableSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableSelectionListViewController.h; sourceTree = "<group>"; };
-		0024F3C71173CBD3003066B2 /* EditableSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableSelectionListViewController.m; sourceTree = "<group>"; };
+		0024F3C61173CBD3003066B2 /* AppendableSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppendableSelectionListViewController.h; sourceTree = "<group>"; };
+		0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppendableSelectionListViewController.m; sourceTree = "<group>"; };
 		0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongTextFieldViewController.h; sourceTree = "<group>"; };
 		0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongTextFieldViewController.m; sourceTree = "<group>"; };
 		0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionListViewController.h; sourceTree = "<group>"; };
@@ -80,8 +80,8 @@
 		00E491DA117B302D002FF4C6 /* DatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePicker.m; sourceTree = "<group>"; };
 		00E49212117B31E5002FF4C6 /* Controls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controls.h; sourceTree = "<group>"; };
 		00E49213117B31E5002FF4C6 /* Controls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controls.m; sourceTree = "<group>"; };
-		00E4924F117B3384002FF4C6 /* EditableSelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableSelectionList.h; sourceTree = "<group>"; };
-		00E49250117B3384002FF4C6 /* EditableSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableSelectionList.m; sourceTree = "<group>"; };
+		00E4924F117B3384002FF4C6 /* AppendableSelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppendableSelectionList.h; sourceTree = "<group>"; };
+		00E49250117B3384002FF4C6 /* AppendableSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppendableSelectionList.m; sourceTree = "<group>"; };
 		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		00FC9A761174F858006FE2E1 /* BasicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicList.h; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 				0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */,
 				0024F3C41173CBD3003066B2 /* DateViewController.h */,
 				0024F3C51173CBD3003066B2 /* DateViewController.m */,
-				0024F3C61173CBD3003066B2 /* EditableSelectionListViewController.h */,
-				0024F3C71173CBD3003066B2 /* EditableSelectionListViewController.m */,
+				0024F3C61173CBD3003066B2 /* AppendableSelectionListViewController.h */,
+				0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */,
 				0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */,
 				0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */,
 				0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */,
@@ -204,8 +204,8 @@
 				00E49213117B31E5002FF4C6 /* Controls.m */,
 				00E491D9117B302D002FF4C6 /* DatePicker.h */,
 				00E491DA117B302D002FF4C6 /* DatePicker.m */,
-				00E4924F117B3384002FF4C6 /* EditableSelectionList.h */,
-				00E49250117B3384002FF4C6 /* EditableSelectionList.m */,
+				00E4924F117B3384002FF4C6 /* AppendableSelectionList.h */,
+				00E49250117B3384002FF4C6 /* AppendableSelectionList.m */,
 				00E48F85117A8C1C002FF4C6 /* IndexedList.h */,
 				00E48F86117A8C1C002FF4C6 /* IndexedList.m */,
 				00E49138117B2B42002FF4C6 /* SelectionList.h */,
@@ -376,7 +376,7 @@
 				0024F3D21173CBD3003066B2 /* UIColor-Table.m in Sources */,
 				0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */,
 				0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */,
-				0024F3D61173CBD3003066B2 /* EditableSelectionListViewController.m in Sources */,
+				0024F3D61173CBD3003066B2 /* AppendableSelectionListViewController.m in Sources */,
 				0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */,
 				0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */,
 				0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */,
@@ -395,7 +395,7 @@
 				00E4913A117B2B42002FF4C6 /* SelectionList.m in Sources */,
 				00E491DB117B302D002FF4C6 /* DatePicker.m in Sources */,
 				00E49214117B31E5002FF4C6 /* Controls.m in Sources */,
-				00E49251117B3384002FF4C6 /* EditableSelectionList.m in Sources */,
+				00E49251117B3384002FF4C6 /* AppendableSelectionList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
