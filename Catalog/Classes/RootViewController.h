@@ -8,6 +8,7 @@
 
 #import "HTFramework.h"
 #import "IndexedList.h"
+#import "SelectionList.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,

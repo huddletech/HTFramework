@@ -11,8 +11,24 @@
 
 
 @implementation ListViewController
-@synthesize sections, delegate, indexed;
+@synthesize delegate, indexed;
 
+
+- (TableSection*)addSectionWithTitle:(NSString*)title{
+	TableSection *newSection = [[[TableSection alloc] init] autorelease];
+	newSection.title = title;
+	
+	if (sections == nil){
+		sections = [NSMutableArray array];
+		[sections retain];
+	}
+	[sections addObject:newSection];
+	return newSection;
+}
+
+- (void)viewWillLoad {    
+	[super viewDidLoad];
+}
 
 - (void)dealloc 
 {
@@ -22,8 +38,8 @@
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
 	
-	NSMutableArray *sectionTitles = [NSMutableArray arrayWithCapacity:[self.sections count]];
-	for (TableSection *section in self.sections){
+	NSMutableArray *sectionTitles = [NSMutableArray arrayWithCapacity:[sections count]];
+	for (TableSection *section in sections){
 		[sectionTitles addObject:section.title];
 	}
 	
@@ -36,21 +52,16 @@
 }
 
 - (void)setItems:(NSArray*)theItems{
-	TableSection *sectionToUpdate;
-	if (self.sections == nil){
-		self.sections = [NSMutableArray array];
-		sectionToUpdate = [[TableSection alloc] init];
-		sectionToUpdate.title = @"Untitled Section";
-		[sections addObject:sectionToUpdate];
+	NSLog(@"setItems: %@", theItems);
+	TableSection *sectionToUpdate = nil;
+	if (sections == nil){
+		sections = [NSMutableArray array];
+		[sections retain];
+		sectionToUpdate = [self addSectionWithTitle:@""];
 	} else {
 		sectionToUpdate = [sections objectAtIndex:0];
 	}
-	[self setItems:theItems forSection:sectionToUpdate];
-}
-
-- (void)setItems:(NSMutableArray*)theItems forSection:(TableSection*)section{
-	NSLog(@"called setItems with %@ for section %@", theItems, section);
-	section.items = theItems;
+	[sectionToUpdate addItems:theItems];
 }
 
 - (NSArray*)items{
@@ -60,21 +71,24 @@
 #pragma mark -
 #pragma mark Tableview methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-	NSLog(@"numberOfSectionsInTableView, returning %i", [sections count]);
 	return [sections count];
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 	TableSection *ts = [sections objectAtIndex:section];
-	return ts.title;
+	if (ts.title == nil)
+		return @"";
+	else
+		return ts.title;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
 	TableSection *ts = [sections objectAtIndex:section];
+	NSLog(@"numberOfRowsInSection %i", [ts.items count]);
     return [ts.items count];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	NSLog(@"cellForRowAtIndexPath: %i, %i:", indexPath.section, indexPath.row);
+	NSLog(@"cellForRowAtIndexPath");
     static NSString *SelectionListCellIdentifier = @"ListCellIdentifier";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];

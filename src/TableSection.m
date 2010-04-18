@@ -12,4 +12,19 @@
 @implementation TableSection
 @synthesize items, title;
 
+- (void) addItem:(NSObject*)item{
+	if (items == nil) {
+		items = [NSMutableArray arrayWithObject:item];
+		[items retain];
+	} else {
+		[items addObject:item];
+	}
+}
+
+- (void) addItems:(NSArray*)theItems{
+	for (NSObject *item in theItems){
+		[self addItem:item];
+	}
+}
+
 @end

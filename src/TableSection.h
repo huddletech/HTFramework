@@ -13,6 +13,10 @@
 	NSMutableArray *items;
 	NSString *title;
 }
+
+- (void) addItem:(NSObject*)item;
+- (void) addItems:(NSArray*)items;
+
 @property (nonatomic, retain) NSMutableArray *items;
 @property (nonatomic, retain) NSString *title;
 @end

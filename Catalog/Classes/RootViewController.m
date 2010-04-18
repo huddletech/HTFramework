@@ -22,7 +22,7 @@
 	catalogItems = [NSArray arrayWithObjects:@"Basic List",
 					                         @"Indexed List",
 					                         @"DateViewController",
-					                         @"SelectionListViewController",
+					                         @"Selection List",
 					                         @"LongTextFieldViewController",
 					                         @"TextFieldEditingViewController",
 					                         @"EditableSelectionListViewController",
@@ -119,51 +119,39 @@
 	
 	if ([selectedItemLabel isEqualToString:@"Indexed List"]){
 		controller = [[IndexedList alloc] init];
-		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"DateViewController"]){
 		controller = [[DateViewController alloc] init];
 		((DateViewController*)controller).delegate = self;
-		[self.navigationController pushViewController:controller animated:YES];
-	} else if ([selectedItemLabel isEqualToString:@"SelectionListViewController"]){
-		controller = [[SelectionListViewController alloc] init];
-		((SelectionListViewController*)controller).delegate = self;
-		((SelectionListViewController*)controller).items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
-		((SelectionListViewController*)controller).initialSelection = 1;
-		controller.showSaveButton = YES;
-		[self.navigationController pushViewController:controller animated:YES];
+	} else if ([selectedItemLabel isEqualToString:@"Selection List"]){
+		controller = [[SelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
 		controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		((LongTextFieldViewController*)controller).delegate = self;
 		((LongTextFieldViewController*)controller).string = @"Pre-populated text";
-		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"TextFieldEditingViewController"]){
 		controller = (TextFieldEditingViewController*)[[TextFieldEditingViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		((TextFieldEditingViewController*)controller).delegate = self;
 		((TextFieldEditingViewController*)controller).fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((TextFieldEditingViewController*)controller).fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
 		((TextFieldEditingViewController*)controller).fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
-		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"EditableSelectionListViewController"]){
 		controller = [[EditableSelectionListViewController alloc] init];
 		((EditableSelectionListViewController*)controller).delegate = self;
 		((EditableSelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((EditableSelectionListViewController*)controller).initialSelection = 1;
 		controller.showSaveButton = YES;
-		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
 		controller = [[BasicList alloc] init];
-		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"Apple Controls"]){
 		controller = [[ControlsViewController alloc] initWithStyle:UITableViewStyleGrouped];
-		[self.navigationController pushViewController:controller animated:YES];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
 		controller = [[SelectionListViewController alloc] init];
 		((SelectionListViewController*)controller).delegate = self;
 		((SelectionListViewController*)controller).items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
 		((SelectionListViewController*)controller).initialSelection = 1;
 		controller.showEditButton = YES;
-		[self.navigationController pushViewController:controller animated:YES];
 	}
+	[self.navigationController pushViewController:controller animated:YES];
 	[controller release];
 }
 

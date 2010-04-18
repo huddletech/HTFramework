@@ -25,11 +25,14 @@
 	ExampleTableItem *item3 = [ExampleTableItem tableItemWithName:@"Z"];
 	self.items = [NSArray arrayWithObjects:item1, item2, item3, nil];
 	
-	TableSection *section2 = [[TableSection alloc] init];
-	section2.title = @"Numbers";
-	section2.items = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
-	[self.sections addObject:section2];
-	[section2 release];
+	TableSection *section2 = [self addSectionWithTitle:@"Numbers"];
+	
+	NSArray *itemsForSection2 = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
+	
+	[section2 addItems:itemsForSection2];
+	
+	TableSection *section3 = [self addSectionWithTitle:@"Section 3"];
+	[section3 addItem:@"hello"];
 	
 	// AbstractGenericViewController has Save and Cancel buttons by default, but since
 	// we're showing a static list here there's no need for them

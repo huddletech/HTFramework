@@ -18,7 +18,7 @@
 
 -(IBAction)save
 {
-    [self.delegate rowChosen:[lastIndexPath row] fromArray:self.items];
+    [self.delegate rowChosen:[lastIndexPath row] fromArray:items];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -69,7 +69,8 @@
     	
 	NSUInteger row = [indexPath row];
 	NSUInteger oldRow = [lastIndexPath row];
-	cell.textLabel.text = [self.items objectAtIndex:row];
+	NSLog(@"items: %@", items);
+	cell.textLabel.text = [items objectAtIndex:row];
 	cell.accessoryType = (row == oldRow && lastIndexPath != nil) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 
     return cell;
