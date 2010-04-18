@@ -7,19 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0013046A117646CA00D67E55 /* ControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00130469117646CA00D67E55 /* ControlsViewController.m */; };
-		0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */; };
-		0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C51173CBD3003066B2 /* DateViewController.m */; };
-		0024F3D61173CBD3003066B2 /* AppendableSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */; };
-		0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */; };
-		0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */; };
-		0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */; };
-		004FE80E1176511800264407 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 004FE80D1176511800264407 /* TableSection.m */; };
-		00E48E5C117A78CE002FF4C6 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48E53117A78CE002FF4C6 /* ActivityCell.m */; };
-		00E48E5D117A78CE002FF4C6 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48E55117A78CE002FF4C6 /* ProgressCell.m */; };
-		00E48E5E117A78CE002FF4C6 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48E57117A78CE002FF4C6 /* SliderCell.m */; };
-		00E48E5F117A78CE002FF4C6 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48E59117A78CE002FF4C6 /* SwitchCell.m */; };
-		00E48E60117A78CE002FF4C6 /* TableControlItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48E5B117A78CE002FF4C6 /* TableControlItem.m */; };
 		00E48F87117A8C1C002FF4C6 /* IndexedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48F86117A8C1C002FF4C6 /* IndexedList.m */; };
 		00E4913A117B2B42002FF4C6 /* SelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49139117B2B42002FF4C6 /* SelectionList.m */; };
 		00E491DB117B302D002FF4C6 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E491DA117B302D002FF4C6 /* DatePicker.m */; };
@@ -31,13 +18,26 @@
 		00E4945C117B49C8002FF4C6 /* SimpleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4945B117B49C8002FF4C6 /* SimpleList.m */; };
 		00E4951E117B5E02002FF4C6 /* StyledTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4951D117B5E02002FF4C6 /* StyledTable.m */; };
 		00E49540117B5F22002FF4C6 /* tableViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 00E4953F117B5F22002FF4C6 /* tableViewBackground.png */; };
-		00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A581174F6FF006FE2E1 /* ListViewController.m */; };
+		00E4973D117BAAE9002FF4C6 /* ActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4971E117BAAE9002FF4C6 /* ActivityCell.m */; };
+		00E4973E117BAAE9002FF4C6 /* ProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49720117BAAE9002FF4C6 /* ProgressCell.m */; };
+		00E4973F117BAAE9002FF4C6 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49722117BAAE9002FF4C6 /* SliderCell.m */; };
+		00E49740117BAAE9002FF4C6 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49724117BAAE9002FF4C6 /* SwitchCell.m */; };
+		00E49741117BAAE9002FF4C6 /* TableControlItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49726117BAAE9002FF4C6 /* TableControlItem.m */; };
+		00E49742117BAAE9002FF4C6 /* HTStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49729117BAAE9002FF4C6 /* HTStyle.m */; };
+		00E49743117BAAE9002FF4C6 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4972B117BAAE9002FF4C6 /* TableSection.m */; };
+		00E49744117BAAE9002FF4C6 /* AbstractGenericViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4972E117BAAE9002FF4C6 /* AbstractGenericViewController.m */; };
+		00E49745117BAAE9002FF4C6 /* AppendableSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49730117BAAE9002FF4C6 /* AppendableSelectionListViewController.m */; };
+		00E49746117BAAE9002FF4C6 /* ControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49732117BAAE9002FF4C6 /* ControlsViewController.m */; };
+		00E49747117BAAE9002FF4C6 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49734117BAAE9002FF4C6 /* DateViewController.m */; };
+		00E49748117BAAE9002FF4C6 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49736117BAAE9002FF4C6 /* ListViewController.m */; };
+		00E49749117BAAE9002FF4C6 /* LongTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49738117BAAE9002FF4C6 /* LongTextFieldViewController.m */; };
+		00E4974A117BAAE9002FF4C6 /* SelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4973A117BAAE9002FF4C6 /* SelectionListViewController.m */; };
+		00E4974B117BAAE9002FF4C6 /* TextFieldEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4973C117BAAE9002FF4C6 /* TextFieldEditingViewController.m */; };
 		00FC9A781174F858006FE2E1 /* ListWithSections.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A771174F858006FE2E1 /* ListWithSections.m */; };
 		00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README.markdown */; };
 		00FC9B75117504E6006FE2E1 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9B74117504E6006FE2E1 /* MainWindow-iPad.xib */; };
 		00FC9C2911751499006FE2E1 /* ExampleTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9C2811751499006FE2E1 /* ExampleTableItem.m */; };
 		00FC9D33117520EA006FE2E1 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9D32117520EA006FE2E1 /* TODO */; };
-		00FC9D4D11753472006FE2E1 /* HTStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9D4C11753472006FE2E1 /* HTStyle.m */; };
 		1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CatalogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -49,32 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00130468117646CA00D67E55 /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlsViewController.h; path = ../../ControlsViewController.h; sourceTree = "<group>"; };
-		00130469117646CA00D67E55 /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControlsViewController.m; path = ../../ControlsViewController.m; sourceTree = "<group>"; };
-		0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGenericViewController.h; sourceTree = "<group>"; };
-		0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGenericViewController.m; sourceTree = "<group>"; };
-		0024F3C41173CBD3003066B2 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
-		0024F3C51173CBD3003066B2 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
-		0024F3C61173CBD3003066B2 /* AppendableSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppendableSelectionListViewController.h; sourceTree = "<group>"; };
-		0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppendableSelectionListViewController.m; sourceTree = "<group>"; };
-		0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongTextFieldViewController.h; sourceTree = "<group>"; };
-		0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongTextFieldViewController.m; sourceTree = "<group>"; };
-		0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionListViewController.h; sourceTree = "<group>"; };
-		0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionListViewController.m; sourceTree = "<group>"; };
-		0024F3CC1173CBD3003066B2 /* TextFieldEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEditingViewController.h; sourceTree = "<group>"; };
-		0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldEditingViewController.m; sourceTree = "<group>"; };
-		004FE80C1176511800264407 /* TableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSection.h; sourceTree = "<group>"; };
-		004FE80D1176511800264407 /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSection.m; sourceTree = "<group>"; };
-		00E48E52117A78CE002FF4C6 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
-		00E48E53117A78CE002FF4C6 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
-		00E48E54117A78CE002FF4C6 /* ProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressCell.h; sourceTree = "<group>"; };
-		00E48E55117A78CE002FF4C6 /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressCell.m; sourceTree = "<group>"; };
-		00E48E56117A78CE002FF4C6 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
-		00E48E57117A78CE002FF4C6 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
-		00E48E58117A78CE002FF4C6 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
-		00E48E59117A78CE002FF4C6 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
-		00E48E5A117A78CE002FF4C6 /* TableControlItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableControlItem.h; sourceTree = "<group>"; };
-		00E48E5B117A78CE002FF4C6 /* TableControlItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableControlItem.m; sourceTree = "<group>"; };
 		00E48F85117A8C1C002FF4C6 /* IndexedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexedList.h; sourceTree = "<group>"; };
 		00E48F86117A8C1C002FF4C6 /* IndexedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexedList.m; sourceTree = "<group>"; };
 		00E49138117B2B42002FF4C6 /* SelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionList.h; sourceTree = "<group>"; };
@@ -96,18 +70,44 @@
 		00E4951C117B5E02002FF4C6 /* StyledTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledTable.h; sourceTree = "<group>"; };
 		00E4951D117B5E02002FF4C6 /* StyledTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledTable.m; sourceTree = "<group>"; };
 		00E4953F117B5F22002FF4C6 /* tableViewBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBackground.png; sourceTree = "<group>"; };
-		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../../ListViewController.h; sourceTree = "<group>"; };
-		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../../ListViewController.m; sourceTree = "<group>"; };
+		00E4971D117BAAE9002FF4C6 /* ActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityCell.h; sourceTree = "<group>"; };
+		00E4971E117BAAE9002FF4C6 /* ActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityCell.m; sourceTree = "<group>"; };
+		00E4971F117BAAE9002FF4C6 /* ProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressCell.h; sourceTree = "<group>"; };
+		00E49720117BAAE9002FF4C6 /* ProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressCell.m; sourceTree = "<group>"; };
+		00E49721117BAAE9002FF4C6 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		00E49722117BAAE9002FF4C6 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
+		00E49723117BAAE9002FF4C6 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchCell.h; sourceTree = "<group>"; };
+		00E49724117BAAE9002FF4C6 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchCell.m; sourceTree = "<group>"; };
+		00E49725117BAAE9002FF4C6 /* TableControlItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableControlItem.h; sourceTree = "<group>"; };
+		00E49726117BAAE9002FF4C6 /* TableControlItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableControlItem.m; sourceTree = "<group>"; };
+		00E49727117BAAE9002FF4C6 /* HTFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFramework.h; sourceTree = "<group>"; };
+		00E49728117BAAE9002FF4C6 /* HTStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTStyle.h; sourceTree = "<group>"; };
+		00E49729117BAAE9002FF4C6 /* HTStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTStyle.m; sourceTree = "<group>"; };
+		00E4972A117BAAE9002FF4C6 /* TableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSection.h; sourceTree = "<group>"; };
+		00E4972B117BAAE9002FF4C6 /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSection.m; sourceTree = "<group>"; };
+		00E4972D117BAAE9002FF4C6 /* AbstractGenericViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractGenericViewController.h; sourceTree = "<group>"; };
+		00E4972E117BAAE9002FF4C6 /* AbstractGenericViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractGenericViewController.m; sourceTree = "<group>"; };
+		00E4972F117BAAE9002FF4C6 /* AppendableSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppendableSelectionListViewController.h; sourceTree = "<group>"; };
+		00E49730117BAAE9002FF4C6 /* AppendableSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppendableSelectionListViewController.m; sourceTree = "<group>"; };
+		00E49731117BAAE9002FF4C6 /* ControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlsViewController.h; sourceTree = "<group>"; };
+		00E49732117BAAE9002FF4C6 /* ControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlsViewController.m; sourceTree = "<group>"; };
+		00E49733117BAAE9002FF4C6 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
+		00E49734117BAAE9002FF4C6 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
+		00E49735117BAAE9002FF4C6 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		00E49736117BAAE9002FF4C6 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		00E49737117BAAE9002FF4C6 /* LongTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongTextFieldViewController.h; sourceTree = "<group>"; };
+		00E49738117BAAE9002FF4C6 /* LongTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongTextFieldViewController.m; sourceTree = "<group>"; };
+		00E49739117BAAE9002FF4C6 /* SelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionListViewController.h; sourceTree = "<group>"; };
+		00E4973A117BAAE9002FF4C6 /* SelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionListViewController.m; sourceTree = "<group>"; };
+		00E4973B117BAAE9002FF4C6 /* TextFieldEditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEditingViewController.h; sourceTree = "<group>"; };
+		00E4973C117BAAE9002FF4C6 /* TextFieldEditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldEditingViewController.m; sourceTree = "<group>"; };
 		00FC9A761174F858006FE2E1 /* ListWithSections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListWithSections.h; sourceTree = "<group>"; };
 		00FC9A771174F858006FE2E1 /* ListWithSections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListWithSections.m; sourceTree = "<group>"; };
-		00FC9A9E1174F966006FE2E1 /* HTFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTFramework.h; sourceTree = "<group>"; };
 		00FC9AB51174F9E5006FE2E1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = SOURCE_ROOT; };
 		00FC9B74117504E6006FE2E1 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources-iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		00FC9C2711751499006FE2E1 /* ExampleTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableItem.h; sourceTree = "<group>"; };
 		00FC9C2811751499006FE2E1 /* ExampleTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableItem.m; sourceTree = "<group>"; };
 		00FC9D32117520EA006FE2E1 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
-		00FC9D4B11753472006FE2E1 /* HTStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTStyle.h; sourceTree = "<group>"; };
-		00FC9D4C11753472006FE2E1 /* HTStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTStyle.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* CatalogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* CatalogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogAppDelegate.m; sourceTree = "<group>"; };
@@ -137,45 +137,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0024F3B21173CBD3003066B2 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				0024F3C11173CBD3003066B2 /* TableViewControllers */,
-				00E48E51117A78CE002FF4C6 /* Cells */,
-				00FC9A9E1174F966006FE2E1 /* HTFramework.h */,
-				00FC9D4B11753472006FE2E1 /* HTStyle.h */,
-				00FC9D4C11753472006FE2E1 /* HTStyle.m */,
-				004FE80C1176511800264407 /* TableSection.h */,
-				004FE80D1176511800264407 /* TableSection.m */,
-			);
-			name = src;
-			path = ../src;
-			sourceTree = SOURCE_ROOT;
-		};
-		0024F3C11173CBD3003066B2 /* TableViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				0024F3C21173CBD3003066B2 /* AbstractGenericViewController.h */,
-				0024F3C31173CBD3003066B2 /* AbstractGenericViewController.m */,
-				0024F3C61173CBD3003066B2 /* AppendableSelectionListViewController.h */,
-				0024F3C71173CBD3003066B2 /* AppendableSelectionListViewController.m */,
-				00130468117646CA00D67E55 /* ControlsViewController.h */,
-				00130469117646CA00D67E55 /* ControlsViewController.m */,
-				0024F3C41173CBD3003066B2 /* DateViewController.h */,
-				0024F3C51173CBD3003066B2 /* DateViewController.m */,
-				00FC9A571174F6FF006FE2E1 /* ListViewController.h */,
-				00FC9A581174F6FF006FE2E1 /* ListViewController.m */,
-				0024F3C81173CBD3003066B2 /* LongTextFieldViewController.h */,
-				0024F3C91173CBD3003066B2 /* LongTextFieldViewController.m */,
-				0024F3CA1173CBD3003066B2 /* SelectionListViewController.h */,
-				0024F3CB1173CBD3003066B2 /* SelectionListViewController.m */,
-				0024F3CC1173CBD3003066B2 /* TextFieldEditingViewController.h */,
-				0024F3CD1173CBD3003066B2 /* TextFieldEditingViewController.m */,
-			);
-			name = TableViewControllers;
-			path = "iPhoneBits/Generic Controllers";
-			sourceTree = "<group>";
-		};
 		00E48E47117A781F002FF4C6 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,21 +168,59 @@
 			name = Examples;
 			sourceTree = "<group>";
 		};
-		00E48E51117A78CE002FF4C6 /* Cells */ = {
+		00E4971B117BAAE9002FF4C6 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				00E48E52117A78CE002FF4C6 /* ActivityCell.h */,
-				00E48E53117A78CE002FF4C6 /* ActivityCell.m */,
-				00E48E54117A78CE002FF4C6 /* ProgressCell.h */,
-				00E48E55117A78CE002FF4C6 /* ProgressCell.m */,
-				00E48E56117A78CE002FF4C6 /* SliderCell.h */,
-				00E48E57117A78CE002FF4C6 /* SliderCell.m */,
-				00E48E58117A78CE002FF4C6 /* SwitchCell.h */,
-				00E48E59117A78CE002FF4C6 /* SwitchCell.m */,
-				00E48E5A117A78CE002FF4C6 /* TableControlItem.h */,
-				00E48E5B117A78CE002FF4C6 /* TableControlItem.m */,
+				00E4971C117BAAE9002FF4C6 /* Cells */,
+				00E49727117BAAE9002FF4C6 /* HTFramework.h */,
+				00E49728117BAAE9002FF4C6 /* HTStyle.h */,
+				00E49729117BAAE9002FF4C6 /* HTStyle.m */,
+				00E4972A117BAAE9002FF4C6 /* TableSection.h */,
+				00E4972B117BAAE9002FF4C6 /* TableSection.m */,
+				00E4972C117BAAE9002FF4C6 /* ViewControllers */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		00E4971C117BAAE9002FF4C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				00E4971D117BAAE9002FF4C6 /* ActivityCell.h */,
+				00E4971E117BAAE9002FF4C6 /* ActivityCell.m */,
+				00E4971F117BAAE9002FF4C6 /* ProgressCell.h */,
+				00E49720117BAAE9002FF4C6 /* ProgressCell.m */,
+				00E49721117BAAE9002FF4C6 /* SliderCell.h */,
+				00E49722117BAAE9002FF4C6 /* SliderCell.m */,
+				00E49723117BAAE9002FF4C6 /* SwitchCell.h */,
+				00E49724117BAAE9002FF4C6 /* SwitchCell.m */,
+				00E49725117BAAE9002FF4C6 /* TableControlItem.h */,
+				00E49726117BAAE9002FF4C6 /* TableControlItem.m */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		00E4972C117BAAE9002FF4C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				00E4972D117BAAE9002FF4C6 /* AbstractGenericViewController.h */,
+				00E4972E117BAAE9002FF4C6 /* AbstractGenericViewController.m */,
+				00E4972F117BAAE9002FF4C6 /* AppendableSelectionListViewController.h */,
+				00E49730117BAAE9002FF4C6 /* AppendableSelectionListViewController.m */,
+				00E49731117BAAE9002FF4C6 /* ControlsViewController.h */,
+				00E49732117BAAE9002FF4C6 /* ControlsViewController.m */,
+				00E49733117BAAE9002FF4C6 /* DateViewController.h */,
+				00E49734117BAAE9002FF4C6 /* DateViewController.m */,
+				00E49735117BAAE9002FF4C6 /* ListViewController.h */,
+				00E49736117BAAE9002FF4C6 /* ListViewController.m */,
+				00E49737117BAAE9002FF4C6 /* LongTextFieldViewController.h */,
+				00E49738117BAAE9002FF4C6 /* LongTextFieldViewController.m */,
+				00E49739117BAAE9002FF4C6 /* SelectionListViewController.h */,
+				00E4973A117BAAE9002FF4C6 /* SelectionListViewController.m */,
+				00E4973B117BAAE9002FF4C6 /* TextFieldEditingViewController.h */,
+				00E4973C117BAAE9002FF4C6 /* TextFieldEditingViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		00FC9B73117504E5006FE2E1 /* Resources-iPad */ = {
@@ -255,9 +254,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				00E4971B117BAAE9002FF4C6 /* src */,
 				00FC9D32117520EA006FE2E1 /* TODO */,
 				00FC9AB51174F9E5006FE2E1 /* README.markdown */,
-				0024F3B21173CBD3003066B2 /* src */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -366,23 +365,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* CatalogAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				0024F3D41173CBD3003066B2 /* AbstractGenericViewController.m in Sources */,
-				0024F3D51173CBD3003066B2 /* DateViewController.m in Sources */,
-				0024F3D61173CBD3003066B2 /* AppendableSelectionListViewController.m in Sources */,
-				0024F3D71173CBD3003066B2 /* LongTextFieldViewController.m in Sources */,
-				0024F3D81173CBD3003066B2 /* SelectionListViewController.m in Sources */,
-				0024F3D91173CBD3003066B2 /* TextFieldEditingViewController.m in Sources */,
-				00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */,
 				00FC9A781174F858006FE2E1 /* ListWithSections.m in Sources */,
 				00FC9C2911751499006FE2E1 /* ExampleTableItem.m in Sources */,
-				00FC9D4D11753472006FE2E1 /* HTStyle.m in Sources */,
-				0013046A117646CA00D67E55 /* ControlsViewController.m in Sources */,
-				004FE80E1176511800264407 /* TableSection.m in Sources */,
-				00E48E5C117A78CE002FF4C6 /* ActivityCell.m in Sources */,
-				00E48E5D117A78CE002FF4C6 /* ProgressCell.m in Sources */,
-				00E48E5E117A78CE002FF4C6 /* SliderCell.m in Sources */,
-				00E48E5F117A78CE002FF4C6 /* SwitchCell.m in Sources */,
-				00E48E60117A78CE002FF4C6 /* TableControlItem.m in Sources */,
 				00E48F87117A8C1C002FF4C6 /* IndexedList.m in Sources */,
 				00E4913A117B2B42002FF4C6 /* SelectionList.m in Sources */,
 				00E491DB117B302D002FF4C6 /* DatePicker.m in Sources */,
@@ -393,6 +377,21 @@
 				00E493F0117B4580002FF4C6 /* EditableList.m in Sources */,
 				00E4945C117B49C8002FF4C6 /* SimpleList.m in Sources */,
 				00E4951E117B5E02002FF4C6 /* StyledTable.m in Sources */,
+				00E4973D117BAAE9002FF4C6 /* ActivityCell.m in Sources */,
+				00E4973E117BAAE9002FF4C6 /* ProgressCell.m in Sources */,
+				00E4973F117BAAE9002FF4C6 /* SliderCell.m in Sources */,
+				00E49740117BAAE9002FF4C6 /* SwitchCell.m in Sources */,
+				00E49741117BAAE9002FF4C6 /* TableControlItem.m in Sources */,
+				00E49742117BAAE9002FF4C6 /* HTStyle.m in Sources */,
+				00E49743117BAAE9002FF4C6 /* TableSection.m in Sources */,
+				00E49744117BAAE9002FF4C6 /* AbstractGenericViewController.m in Sources */,
+				00E49745117BAAE9002FF4C6 /* AppendableSelectionListViewController.m in Sources */,
+				00E49746117BAAE9002FF4C6 /* ControlsViewController.m in Sources */,
+				00E49747117BAAE9002FF4C6 /* DateViewController.m in Sources */,
+				00E49748117BAAE9002FF4C6 /* ListViewController.m in Sources */,
+				00E49749117BAAE9002FF4C6 /* LongTextFieldViewController.m in Sources */,
+				00E4974A117BAAE9002FF4C6 /* SelectionListViewController.m in Sources */,
+				00E4974B117BAAE9002FF4C6 /* TextFieldEditingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

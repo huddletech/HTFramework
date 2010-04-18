@@ -34,7 +34,6 @@
 @property (nonatomic, assign /* for weak ref */) id <TextFieldEditingViewControllerDelegate> delegate;
 @property (nonatomic, retain) UITextField *textFieldBeingEdited;
 @property BOOL shouldClearOnEditing;
--(IBAction)save;
 -(IBAction)textFieldDone:(id)sender;
 -(void)setKeyboardType:(UIKeyboardType)theType forIndex:(NSUInteger)index;
 @end
