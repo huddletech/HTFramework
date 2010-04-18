@@ -15,7 +15,10 @@
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 @end
 
-@interface SelectionListViewController : AppendableSelectionListViewController 
+@interface SelectionListViewController : AppendableSelectionListViewController {
+	BOOL            returnAfterSelection;
+}
 
+@property (nonatomic) BOOL returnAfterSelection;
 
 @end

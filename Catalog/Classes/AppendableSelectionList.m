@@ -11,7 +11,6 @@
 
 @implementation AppendableSelectionList
 
-@synthesize returnImmediately;
 
 - (void)viewDidLoad
 {

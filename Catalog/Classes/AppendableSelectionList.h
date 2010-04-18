@@ -11,7 +11,6 @@
 
 
 @interface AppendableSelectionList : AppendableSelectionListViewController {
-
 }
 
 @end

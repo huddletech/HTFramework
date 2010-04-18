@@ -20,9 +20,7 @@
 {
 	NSIndexPath		*lastIndexPath;
 	NSInteger		initialSelection;
-	BOOL            returnAfterSelection;
 }
 @property (nonatomic, retain) NSIndexPath *lastIndexPath;
 @property NSInteger initialSelection;
-@property (nonatomic) BOOL returnAfterSelection;
 @end

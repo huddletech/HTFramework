@@ -25,4 +25,6 @@
 @property (nonatomic) BOOL showAddButton;
 @property (nonatomic) BOOL showDoneButton;
 
+-(void)doneAction;
+
 @end

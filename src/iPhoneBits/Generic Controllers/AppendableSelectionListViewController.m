@@ -14,7 +14,6 @@
 @synthesize lastIndexPath;
 @synthesize initialSelection;
 @synthesize delegate;
-@synthesize returnAfterSelection;
 
 - (void)viewDidLoad
 {
@@ -109,6 +108,7 @@
 			
 			lastIndexPath = indexPath;	
 		}
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	}
 	else
 	{
@@ -121,11 +121,6 @@
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}
-	if (returnAfterSelection){
-		[self doneAction];
-	} else {
-		[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	}
 }
 #pragma mark -
 - (void)selectRow:(NSIndexPath *)theIndexPath
@@ -135,6 +130,7 @@
 }
 - (void)valuesDidChange:(NSDictionary *)newValues
 {
+	NSLog(@"valuesDidChange");
 	NSString *newVal = [newValues objectForKey:@"newValue"];
 		
 	[self.items addObject:newVal];
@@ -143,9 +139,9 @@
 	[self.items sortUsingSelector:@selector(compare:)];
 	NSUInteger theIndices[] = {0, [self.items indexOfObject:newVal]};
 	NSIndexPath *theIndexPath = [[NSIndexPath alloc] initWithIndexes:theIndices length:2];
-	[self performSelector:@selector(selectRow:) withObject:theIndexPath afterDelay:0.05];
+	[self performSelector:@selector(selectRow:) withObject:theIndexPath];
 	//	[self tableView:self.tableView didSelectRowAtIndexPath:theIndexPath];
-	[self.tableView reloadData];
+	[self.tableView reloadData];	
 }
 
 @end
