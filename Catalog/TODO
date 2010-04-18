@@ -1,14 +1,18 @@
+SelectionListViewController
+* add support for sectioned lists
+
+EditableSelectionListViewController
+* add support for sectioned lists
+
 LongTextFieldViewController
+* fix crash
 * fix dimensions for iPad
 
 DateViewController
-* fix vertical layout for iPad
+* fix vertical layout for iPad large view
 
 TextFieldEditingViewController
-* add support for having more than rows
-
-Catalog
-* landscape orientation support
+* add support for having more than 5 rows
 
 General
 * unit tests
@@ -19,3 +23,6 @@ Other controllers to build
 iPad
 * Pop-over
 * Split-pane
+
+Other
+* check support for landscape and rotation
