@@ -6,11 +6,11 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "BasicList.h"
+#import "ListWithSections.h"
 #import "ExampleTableItem.h"
 
 
-@implementation BasicList
+@implementation ListWithSections
 
 - (void)viewDidLoad{
 	// you can provide a list of items as either:

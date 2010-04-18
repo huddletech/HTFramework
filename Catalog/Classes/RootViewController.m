@@ -17,7 +17,7 @@
 	
 	TableSection *listViews = [self addSectionWithTitle:@"List Views"];
 	
-	NSArray *listViewItems = [NSArray arrayWithObjects:@"Basic List",
+	NSArray *listViewItems = [NSArray arrayWithObjects:@"List With Sections",
 					                         @"Indexed List",
 					                         @"Selection List",
 					                         @"Appendable Selection List",
@@ -97,8 +97,8 @@
 		controller = [[TextFieldEditing alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Appendable Selection List"]){
 		controller = [[AppendableSelectionList alloc] init];
-	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
-		controller = [[BasicList alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"List With Sections"]){
+		controller = [[ListWithSections alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Controls"]){
 		controller = [[Controls alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
