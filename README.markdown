@@ -25,4 +25,4 @@ How to Use
 0. Copy the src folder into your project.
 0. `#import "HTFramework.h"`
 
-Look in Catalog/Classes/Examples to see how each screen is built. Usually it's just a case of subclassing on of the controllers and overriding viewDidLoad.
+Look in Catalog/Classes/Examples to see how each screen is built. Usually it's just a case of subclassing one of the controllers and overriding viewDidLoad.
