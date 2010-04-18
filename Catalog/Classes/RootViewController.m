@@ -20,16 +20,16 @@
 	NSArray *listViewItems = [NSArray arrayWithObjects:@"Basic List",
 					                         @"Indexed List",
 					                         @"Selection List",
-					                         @"LongTextFieldViewController",
-					                         @"TextField Editing",
 					                         @"Appendable Selection List",
-					                         @"Controls",
+											 @"Text Field Editing",
+											 @"Controls",
 											 @"Editable List",
 					                         nil];
 	[listViews addItems:listViewItems];
 	
 	TableSection *otherKinds = [self addSectionWithTitle:@"Other Kinds"];
 	NSArray *otherKindsItems = [NSArray arrayWithObjects:@"Date Picker",
+								@"Long Text Field",
 							  nil];
 	
 	[otherKinds addItems:otherKindsItems];
@@ -91,11 +91,11 @@
 		controller = [[DatePicker alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Selection List"]){
 		controller = [[SelectionList alloc] init];
-	} else if ([selectedItemLabel isEqualToString:@"LongTextFieldViewController"]){
+	} else if ([selectedItemLabel isEqualToString:@"Long Text Field"]){
 		controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		((LongTextFieldViewController*)controller).delegate = self;
 		((LongTextFieldViewController*)controller).string = @"Pre-populated text";
-	} else if ([selectedItemLabel isEqualToString:@"TextField Editing"]){
+	} else if ([selectedItemLabel isEqualToString:@"Text Field Editing"]){
 		controller = [[TextFieldEditing alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Appendable Selection List"]){
 		controller = [[AppendableSelectionList alloc] init];
