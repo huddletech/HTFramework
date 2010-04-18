@@ -11,7 +11,7 @@
 
 
 @implementation AbstractGenericViewController
-@synthesize showCancelButton, showSaveButton, showEditButton, showAddButton;
+@synthesize showCancelButton, showSaveButton, showEditButton, showAddButton, showDoneButton;
 - (void)viewWillAppear:(BOOL)animated 
 {
 	UIBarButtonItem *button = nil;
@@ -47,11 +47,24 @@
 		self.navigationItem.rightBarButtonItem = button;
 		
 	}
+	if (showDoneButton){
+		button = [[UIBarButtonItem alloc]
+				  initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+				  target:self
+				  action:@selector(doneAction)];
+		
+		self.navigationItem.rightBarButtonItem = button;
+		
+	}
 	[button release];
 	[super viewWillAppear:animated];
 }
 
 -(void)addAction{
+	NSLog(@"addAction called");
+}
+
+-(void)doneAction{
 	NSLog(@"addAction called");
 }
 

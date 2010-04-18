@@ -18,10 +18,10 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	self.showSaveButton = YES;
+	self.showDoneButton = YES;
 }
 
--(IBAction)save
+-(void)doneAction
 {
     [self.delegate rowChosen:[lastIndexPath row] fromArray:self.items];
     [self.navigationController popViewControllerAnimated:YES];

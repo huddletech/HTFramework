@@ -16,11 +16,13 @@
 	BOOL showSaveButton;
 	BOOL showEditButton;
 	BOOL showAddButton;
+	BOOL showDoneButton;
 }
 -(IBAction)cancel;
 @property (nonatomic) BOOL showCancelButton;
 @property (nonatomic) BOOL showSaveButton;
 @property (nonatomic) BOOL showEditButton;
 @property (nonatomic) BOOL showAddButton;
+@property (nonatomic) BOOL showDoneButton;
 
 @end
