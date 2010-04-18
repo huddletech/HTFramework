@@ -24,7 +24,7 @@
 					                         @"Date Picker",
 					                         @"Selection List",
 					                         @"LongTextFieldViewController",
-					                         @"TextFieldEditingViewController",
+					                         @"TextField Editing",
 					                         @"Appendable Selection List",
 					                         @"Controls",
 											 @"Editable List",
@@ -87,12 +87,8 @@
 		controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
 		((LongTextFieldViewController*)controller).delegate = self;
 		((LongTextFieldViewController*)controller).string = @"Pre-populated text";
-	} else if ([selectedItemLabel isEqualToString:@"TextFieldEditingViewController"]){
-		controller = (TextFieldEditingViewController*)[[TextFieldEditingViewController alloc] initWithStyle:UITableViewStyleGrouped];
-		((TextFieldEditingViewController*)controller).delegate = self;
-		((TextFieldEditingViewController*)controller).fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
-		((TextFieldEditingViewController*)controller).fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
-		((TextFieldEditingViewController*)controller).fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
+	} else if ([selectedItemLabel isEqualToString:@"TextField Editing"]){
+		controller = [[TextFieldEditing alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Appendable Selection List"]){
 		controller = [[AppendableSelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Basic List"]){
@@ -125,13 +121,6 @@
 
 - (void)takeNewString:(NSString *)newValue{
 	NSLog(@"You selected: %@", newValue);
-}
-
-
-#pragma mark TextFieldEditingViewControllerDelegate methods
-
-- (void)valuesDidChange:(NSDictionary *)newValues{
-	NSLog(@"You changed values: %@", newValues);
 }
 
 

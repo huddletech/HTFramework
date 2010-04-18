@@ -12,10 +12,10 @@
 #import "DatePicker.h"
 #import "Controls.h"
 #import "AppendableSelectionList.h"
+#import "TextFieldEditing.h"
 
 @interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,
-                                                       TextFieldEditingViewControllerDelegate,
                                                        SelectionListViewControllerDelegate>{
 	NSArray *catalogItems;
 	NSArray *catalogSections;													   
