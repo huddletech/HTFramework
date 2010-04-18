@@ -92,9 +92,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"Selection List"]){
 		controller = [[SelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Long Text Field"]){
-		controller = [[LongTextFieldViewController alloc] initWithStyle:UITableViewStyleGrouped];
-		((LongTextFieldViewController*)controller).delegate = self;
-		((LongTextFieldViewController*)controller).string = @"Pre-populated text";
+		controller = [[LongTextField alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Text Field Editing"]){
 		controller = [[TextFieldEditing alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Appendable Selection List"]){
@@ -122,13 +120,6 @@
 - (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
 {
     NSLog(@"You chose row %i from array %@", row, theList);
-}
-
-
-#pragma mark SelectionListViewControllerDelegate methods
-
-- (void)takeNewString:(NSString *)newValue{
-	NSLog(@"You selected: %@", newValue);
 }
 
 

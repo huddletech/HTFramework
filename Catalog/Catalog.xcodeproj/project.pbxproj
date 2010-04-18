@@ -27,6 +27,7 @@
 		00E49214117B31E5002FF4C6 /* Controls.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49213117B31E5002FF4C6 /* Controls.m */; };
 		00E49251117B3384002FF4C6 /* AppendableSelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49250117B3384002FF4C6 /* AppendableSelectionList.m */; };
 		00E492EE117B3E90002FF4C6 /* TextFieldEditing.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E492ED117B3E90002FF4C6 /* TextFieldEditing.m */; };
+		00E493AF117B4422002FF4C6 /* LongTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E493AE117B4422002FF4C6 /* LongTextField.m */; };
 		00FC9A591174F6FF006FE2E1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A581174F6FF006FE2E1 /* ListViewController.m */; };
 		00FC9A781174F858006FE2E1 /* BasicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC9A771174F858006FE2E1 /* BasicList.m */; };
 		00FC9AB61174F9E5006FE2E1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 00FC9AB51174F9E5006FE2E1 /* README.markdown */; };
@@ -85,6 +86,8 @@
 		00E49250117B3384002FF4C6 /* AppendableSelectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppendableSelectionList.m; sourceTree = "<group>"; };
 		00E492EC117B3E90002FF4C6 /* TextFieldEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEditing.h; sourceTree = "<group>"; };
 		00E492ED117B3E90002FF4C6 /* TextFieldEditing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldEditing.m; sourceTree = "<group>"; };
+		00E493AD117B4422002FF4C6 /* LongTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongTextField.h; sourceTree = "<group>"; };
+		00E493AE117B4422002FF4C6 /* LongTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongTextField.m; sourceTree = "<group>"; };
 		00FC9A571174F6FF006FE2E1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		00FC9A581174F6FF006FE2E1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		00FC9A761174F858006FE2E1 /* BasicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicList.h; sourceTree = "<group>"; };
@@ -201,16 +204,18 @@
 		00E48E47117A781F002FF4C6 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				00E4924F117B3384002FF4C6 /* AppendableSelectionList.h */,
+				00E49250117B3384002FF4C6 /* AppendableSelectionList.m */,
 				00FC9A761174F858006FE2E1 /* BasicList.h */,
 				00FC9A771174F858006FE2E1 /* BasicList.m */,
 				00E49212117B31E5002FF4C6 /* Controls.h */,
 				00E49213117B31E5002FF4C6 /* Controls.m */,
 				00E491D9117B302D002FF4C6 /* DatePicker.h */,
 				00E491DA117B302D002FF4C6 /* DatePicker.m */,
-				00E4924F117B3384002FF4C6 /* AppendableSelectionList.h */,
-				00E49250117B3384002FF4C6 /* AppendableSelectionList.m */,
 				00E48F85117A8C1C002FF4C6 /* IndexedList.h */,
 				00E48F86117A8C1C002FF4C6 /* IndexedList.m */,
+				00E493AD117B4422002FF4C6 /* LongTextField.h */,
+				00E493AE117B4422002FF4C6 /* LongTextField.m */,
 				00E49138117B2B42002FF4C6 /* SelectionList.h */,
 				00E49139117B2B42002FF4C6 /* SelectionList.m */,
 				00E492EC117B3E90002FF4C6 /* TextFieldEditing.h */,
@@ -402,6 +407,7 @@
 				00E49214117B31E5002FF4C6 /* Controls.m in Sources */,
 				00E49251117B3384002FF4C6 /* AppendableSelectionList.m in Sources */,
 				00E492EE117B3E90002FF4C6 /* TextFieldEditing.m in Sources */,
+				00E493AF117B4422002FF4C6 /* LongTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

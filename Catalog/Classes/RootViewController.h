@@ -14,10 +14,10 @@
 #import "AppendableSelectionList.h"
 #import "TextFieldEditing.h"
 #import "ListViewController.h"
+#import "LongTextField.h"
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,
-                                                       LongTextFieldEditingViewControllerDelegate,
                                                        SelectionListViewControllerDelegate>{										   
 }
 
