@@ -8,20 +8,17 @@
 
 #import "RootViewController.h"
 
-
-@implementation RootViewController
+@implementation RootViewController  
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
 	self.title = @"Catalog";
-		
-	catalogSections = [NSArray arrayWithObject:@"Originals from iphonebits"];
-	[catalogSections retain];
 	
-	catalogItems = [NSArray arrayWithObjects:@"Basic List",
+	TableSection *listViews = [self addSectionWithTitle:@"List Views"];
+	
+	NSArray *listViewItems = [NSArray arrayWithObjects:@"Basic List",
 					                         @"Indexed List",
-					                         @"Date Picker",
 					                         @"Selection List",
 					                         @"LongTextFieldViewController",
 					                         @"TextField Editing",
@@ -29,14 +26,21 @@
 					                         @"Controls",
 											 @"Editable List",
 					                         nil];
-	[catalogItems retain];
+	[listViews addItems:listViewItems];
+	
+	TableSection *otherKinds = [self addSectionWithTitle:@"Other Kinds"];
+	NSArray *otherKindsItems = [NSArray arrayWithObjects:@"Date Picker",
+							  nil];
+	
+	[otherKinds addItems:otherKindsItems];
 }
 
 - (void)viewDidUnload {
-	[catalogItems release];
-	[catalogSections release];
+	//[catalogItems release];
+	//[catalogSections release];
 }
 
+/*
 
 #pragma mark Table view methods
 
@@ -68,12 +72,16 @@
     return cell;
 }
 
+*/
+
 
 
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	NSString *selectedItemLabel = [catalogItems objectAtIndex:indexPath.row];
+	TableSection *selectedSection = [sections objectAtIndex:indexPath.section];
+	
+	NSString *selectedItemLabel = [selectedSection.items objectAtIndex:indexPath.row];
 	
 	AbstractGenericViewController *controller = nil;
 	

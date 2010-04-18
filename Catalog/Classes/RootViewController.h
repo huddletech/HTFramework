@@ -13,12 +13,12 @@
 #import "Controls.h"
 #import "AppendableSelectionList.h"
 #import "TextFieldEditing.h"
+#import "ListViewController.h"
 
-@interface RootViewController : UITableViewController <SelectionListViewControllerDelegate,
+
+@interface RootViewController : ListViewController <SelectionListViewControllerDelegate,
                                                        LongTextFieldEditingViewControllerDelegate,
-                                                       SelectionListViewControllerDelegate>{
-	NSArray *catalogItems;
-	NSArray *catalogSections;													   
+                                                       SelectionListViewControllerDelegate>{										   
 }
 
 @end
