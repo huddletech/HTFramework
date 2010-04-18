@@ -25,6 +25,7 @@
 											 @"Text Field Editing",
 											 @"Controls",
 											 @"Editable List",
+							                 @"Styled Table",
 					                         nil];
 	[listViews addItems:listViewItems];
 	
@@ -86,7 +87,9 @@
 	
 	AbstractGenericViewController *controller = nil;
 	
-	if ([selectedItemLabel isEqualToString:@"Simple List"]){
+	if ([selectedItemLabel isEqualToString:@"Styled Table"]){
+		controller = [[SimpleList alloc] initWithStyle:UITableViewStyleGrouped];
+	} else if ([selectedItemLabel isEqualToString:@"Simple List"]){
 		controller = [[SimpleList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Indexed List"]){
 		controller = [[IndexedList alloc] init];

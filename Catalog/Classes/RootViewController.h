@@ -17,6 +17,7 @@
 #import "LongTextField.h"
 #import "EditableList.h"
 #import "SimpleList.h"
+#import "StyledTable.h"
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,
