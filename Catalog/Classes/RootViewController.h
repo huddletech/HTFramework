@@ -16,6 +16,7 @@
 #import "ListViewController.h"
 #import "LongTextField.h"
 #import "EditableList.h"
+#import "SimpleList.h"
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,

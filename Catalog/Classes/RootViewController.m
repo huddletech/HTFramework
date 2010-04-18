@@ -17,7 +17,8 @@
 	
 	TableSection *listViews = [self addSectionWithTitle:@"List Views"];
 	
-	NSArray *listViewItems = [NSArray arrayWithObjects:@"List With Sections",
+	NSArray *listViewItems = [NSArray arrayWithObjects:@"Simple List",
+							                 @"List With Sections",
 					                         @"Indexed List",
 					                         @"Selection List",
 					                         @"Appendable Selection List",
@@ -85,7 +86,9 @@
 	
 	AbstractGenericViewController *controller = nil;
 	
-	if ([selectedItemLabel isEqualToString:@"Indexed List"]){
+	if ([selectedItemLabel isEqualToString:@"Simple List"]){
+		controller = [[SimpleList alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Indexed List"]){
 		controller = [[IndexedList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Date Picker"]){
 		controller = [[DatePicker alloc] init];
