@@ -33,5 +33,6 @@
 - (TableSection*)addSectionWithTitle:(NSString*)title;
 - (NSMutableArray*)sections;
 - (void)addItem:(NSObject*)item;
+- (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
 
 @end

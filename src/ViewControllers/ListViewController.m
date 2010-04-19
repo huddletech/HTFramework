@@ -126,5 +126,15 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     [delegate didDeleteRowAtIndexPath:indexPath];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	TableSection *selectedSection = [self.sections objectAtIndex:indexPath.section];
+	NSObject *selectedItem = [selectedSection.items objectAtIndex:indexPath.row];
+	[self didSelectItem:selectedItem atIndexPath:indexPath];
+}
+
+- (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath{
+	NSLog(@"you selected %@ at indexPath %@ (you should override this method)", item, indexPath);
+}
+
 @end
 
