@@ -18,6 +18,7 @@
 #import "EditableList.h"
 #import "SimpleList.h"
 #import "StyledTable.h"
+#import "ListWithSections.h"
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,
