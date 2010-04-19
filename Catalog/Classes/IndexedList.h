@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ExampleTableItem.h"
+#import "ListViewController.h"
 
 @interface IndexedList : ListViewController {
 

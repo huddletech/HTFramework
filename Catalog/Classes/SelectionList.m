@@ -7,7 +7,6 @@
 //
 
 #import "SelectionList.h"
-#import "ExampleTableItem.h"
 
 @implementation SelectionList
 
