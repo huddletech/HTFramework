@@ -38,13 +38,10 @@
 
 
 // Override to support row selection in the table view.
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-	TableSection *selectedSection = [sections objectAtIndex:indexPath.section];
-	
-	NSString *selectedItemLabel = [selectedSection.items objectAtIndex:indexPath.row];
-	
+- (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath{
 	AbstractGenericViewController *controller = nil;
+	
+	NSString *selectedItemLabel = (NSString*)item;
 	
 	if ([selectedItemLabel isEqualToString:@"Styled Table"]){
 		controller = [[SimpleList alloc] initWithStyle:UITableViewStyleGrouped];
