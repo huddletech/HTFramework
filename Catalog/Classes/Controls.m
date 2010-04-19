@@ -13,7 +13,7 @@
 
 - (void)viewDidLoad
 {	
-    [super viewDidLoad];
+    // setting up a bunch of controls is easy
 	
 	SwitchCell *switchCell = [[SwitchCell alloc] initWithTitle:@"Standard Switch"];
 	switchCell.delegate = self;
@@ -41,6 +41,14 @@
 	[sliderCell release];
 	[activityCell release];
 	[progressCell release];
+	
+	[super viewDidLoad];
+}
+
+// since we're using the detailText attribute, choose a cell type that supports this
+
+- (UITableViewCellStyle)tableViewCellStyle{
+	return UITableViewCellStyleValue1;
 }
 
 - (void)switchAction:(id)sender

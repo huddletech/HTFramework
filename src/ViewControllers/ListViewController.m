@@ -96,7 +96,7 @@
 }
 
 - (UITableViewCellStyle)tableViewCellStyle{
-	return UITableViewCellStyleValue1;
+	return UITableViewCellStyleDefault;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
