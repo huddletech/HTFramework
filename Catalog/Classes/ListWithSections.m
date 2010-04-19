@@ -7,7 +7,6 @@
 //
 
 #import "ListWithSections.h"
-#import "ExampleTableItem.h"
 
 
 @implementation ListWithSections
@@ -16,22 +15,20 @@
 
 	// All tableviews contain at least one section. By default, items are added
 	// to the first section.
-	
 	self.items = [NSArray arrayWithObjects:@"X", @"Y", @"Z", nil];
 	
 	// A TableSection object is just a collection of items, along with an optional title
+	TableSection *numbersSection = [self addSectionWithTitle:@"Numbers"];	
 	
-	TableSection *numbersSection = [self addSectionWithTitle:@"Numbers"];
-	
-	NSArray *numbers = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
-	
+	// You can add items to a particular section
+	NSArray *numbers = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
 	[numbersSection addItems:numbers];
 	
-	// By default, the first section has no title, but we can set change it:
-	
+	// By default, the first section has no title, but it can be set
 	TableSection *firstSection = [sections objectAtIndex:0];
 	firstSection.title = @"Letters";
 	
+	// as always, remember to call the superclass's viewDidLoad
 	[super viewDidLoad];
 }
 
