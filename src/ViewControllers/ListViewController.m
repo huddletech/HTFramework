@@ -106,13 +106,12 @@
     }
     
 	TableSection *ts = [sections objectAtIndex:indexPath.section];
+	NSObject *itemForRow = [ts.items objectAtIndex:indexPath.row];
 	
-	NSObject<TableItemDisplay> *itemForRow = [ts.items objectAtIndex:indexPath.row];
-	
-	if ([itemForRow isKindOfClass:[NSString class]])
-		cell.textLabel.text = (NSString*)itemForRow;
-	else {
-		cell.textLabel.text = [itemForRow descriptionForTable:self];
+	if ([itemForRow respondsToSelector:@selector(tableItemDescription)]){
+		cell.textLabel.text = [(id<HTTableItemDescription>)itemForRow tableItemDescription];
+	} else {
+		cell.textLabel.text = [ts.items objectAtIndex:indexPath.row];
 	}
 	
     return cell;

@@ -12,9 +12,9 @@
 #import "AbstractGenericViewController.h"
 #import "TableSection.h"
 
-@protocol TableItemDisplay <NSObject>
+@protocol HTTableItemDescription <NSObject>
 @required
--(NSString*) descriptionForTable:(AbstractGenericViewController*)table;
+- (NSString*)tableItemDescription;
 @end
 
 @interface ListViewController : AbstractGenericViewController 

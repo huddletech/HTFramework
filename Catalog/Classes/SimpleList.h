@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HTFramework.h"
-
+#import "ExampleTableItem.h"
 
 @interface SimpleList : ListViewController {
 

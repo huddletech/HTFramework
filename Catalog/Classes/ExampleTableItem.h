@@ -9,11 +9,12 @@
 #import "HTFramework.h"
 
 
-@interface ExampleTableItem : NSObject <TableItemDisplay> {
+@interface ExampleTableItem : NSObject <HTTableItemDescription> {
 	NSString *name;
 }
 @property (nonatomic, retain) NSString *name;
 
-+ (id) tableItemWithName:(NSString*)name;
++ (id) tableItemWithName:(NSString*)theName;
+- (NSString*) tableItemDescription;
 
 @end

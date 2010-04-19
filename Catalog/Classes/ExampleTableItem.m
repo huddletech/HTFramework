@@ -18,7 +18,7 @@
 	return exampleTableItem;
 }
 
-- (NSString*) descriptionForTable:(AbstractGenericViewController *)table{
+- (NSString*) tableItemDescription{
 	return name;
 }
 

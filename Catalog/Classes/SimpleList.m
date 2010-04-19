@@ -20,6 +20,11 @@
 	[self addItem:@"D"];
 	[self addItem:@"E"];
 	
+	// as an alternative to passing strings, you can provide any item
+	// which implements the 
+	
+	[self addItem:[ExampleTableItem tableItemWithName:@"G"]];
+	
 	// when overriding viewDidLoad you should always call the superclass's viewDidLoad last
 	[super viewDidLoad];
 }
