@@ -115,15 +115,15 @@
 	}
 	
 	if ([itemForRow respondsToSelector:@selector(accessoryType)]){
-		cell.accessoryType = (UITableViewCellAccessoryType)[itemForRow accessoryType];
+		cell.accessoryType = (UITableViewCellAccessoryType)[(TableControlItem*)itemForRow accessoryType];
 	}
 	
 	if ([itemForRow respondsToSelector:@selector(control)]){
-		cell.accessoryView = [itemForRow control];
+		cell.accessoryView = [(TableControlItem*)itemForRow control];
 	}
 	
 	if ([itemForRow respondsToSelector:@selector(detail)]){
-		cell.detailTextLabel.text = [itemForRow detail];
+		cell.detailTextLabel.text = [(TableControlItem*)itemForRow detail];
 	}
 	
     return cell;

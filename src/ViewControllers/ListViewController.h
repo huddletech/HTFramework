@@ -11,6 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
 #import "TableSection.h"
+#import "TableControlItem.h"
 
 @protocol HTTableItemDescription <NSObject>
 @required
