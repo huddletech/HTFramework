@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		007510FB117CCACB00139470 /* ExampleTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 007510FA117CCACB00139470 /* ExampleTableItem.m */; };
+		00751514117D15F300139470 /* EditableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00751513117D15F300139470 /* EditableListViewController.m */; };
 		00E48F87117A8C1C002FF4C6 /* IndexedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48F86117A8C1C002FF4C6 /* IndexedList.m */; };
 		00E4913A117B2B42002FF4C6 /* SelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49139117B2B42002FF4C6 /* SelectionList.m */; };
 		00E491DB117B302D002FF4C6 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E491DA117B302D002FF4C6 /* DatePicker.m */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		007510F9117CCACB00139470 /* ExampleTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableItem.h; sourceTree = "<group>"; };
 		007510FA117CCACB00139470 /* ExampleTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableItem.m; sourceTree = "<group>"; };
+		00751512117D15F300139470 /* EditableListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableListViewController.h; sourceTree = "<group>"; };
+		00751513117D15F300139470 /* EditableListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableListViewController.m; sourceTree = "<group>"; };
 		00E48F85117A8C1C002FF4C6 /* IndexedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexedList.h; sourceTree = "<group>"; };
 		00E48F86117A8C1C002FF4C6 /* IndexedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexedList.m; sourceTree = "<group>"; };
 		00E49138117B2B42002FF4C6 /* SelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionList.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				00E49730117BAAE9002FF4C6 /* AppendableSelectionListViewController.m */,
 				00E49733117BAAE9002FF4C6 /* DateViewController.h */,
 				00E49734117BAAE9002FF4C6 /* DateViewController.m */,
+				00751512117D15F300139470 /* EditableListViewController.h */,
+				00751513117D15F300139470 /* EditableListViewController.m */,
 				00E49735117BAAE9002FF4C6 /* ListViewController.h */,
 				00E49736117BAAE9002FF4C6 /* ListViewController.m */,
 				00E49737117BAAE9002FF4C6 /* LongTextFieldViewController.h */,
@@ -386,6 +391,7 @@
 				00E4974A117BAAE9002FF4C6 /* SelectionListViewController.m in Sources */,
 				00E4974B117BAAE9002FF4C6 /* TextFieldEditingViewController.m in Sources */,
 				007510FB117CCACB00139470 /* ExampleTableItem.m in Sources */,
+				00751514117D15F300139470 /* EditableListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
