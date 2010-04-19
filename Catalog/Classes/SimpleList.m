@@ -21,7 +21,7 @@
 	[self addItem:@"E"];
 	
 	// as an alternative to passing strings, you can provide any item
-	// which implements the 
+	// which implements the HTTableItemDescription protocol
 	
 	[self addItem:[ExampleTableItem tableItemWithName:@"G"]];
 	
