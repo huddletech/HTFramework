@@ -10,7 +10,7 @@
 #import "HTFramework.h"
 
 
-@interface Controls : ControlsViewController <UISwitchDelegate, UISliderDelegate> {
+@interface Controls : ListViewController <UISwitchDelegate, UISliderDelegate> {
 
 }
 

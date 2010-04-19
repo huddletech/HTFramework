@@ -114,6 +114,18 @@
 		cell.textLabel.text = [ts.items objectAtIndex:indexPath.row];
 	}
 	
+	if ([itemForRow respondsToSelector:@selector(accessoryType)]){
+		cell.accessoryType = (UITableViewCellAccessoryType)[itemForRow accessoryType];
+	}
+	
+	if ([itemForRow respondsToSelector:@selector(control)]){
+		cell.accessoryView = [itemForRow control];
+	}
+	
+	if ([itemForRow respondsToSelector:@selector(detail)]){
+		cell.detailTextLabel.text = [itemForRow detail];
+	}
+	
     return cell;
 }
 

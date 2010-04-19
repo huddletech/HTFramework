@@ -22,4 +22,9 @@
 	return self;	
 }
 
+
+- (NSString*) tableItemDescription{
+	return title;
+}
+
 @end
