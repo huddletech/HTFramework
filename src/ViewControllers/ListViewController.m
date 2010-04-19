@@ -94,6 +94,11 @@
 	TableSection *ts = [sections objectAtIndex:section];
     return [ts.items count];
 }
+
+- (UITableViewCellStyle)tableViewCellStyle{
+	return UITableViewCellStyleValue1;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     static NSString *SelectionListCellIdentifier = @"ListCellIdentifier";
@@ -101,7 +106,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
     if (cell == nil) 
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
+		cell = [[[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle]
 									   reuseIdentifier:SelectionListCellIdentifier] autorelease];
     }
     
