@@ -121,9 +121,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath {
 	TableSection *sectionToDeleteFrom = [sections objectAtIndex:indexPath.section];
+	NSObject *itemForDeletion = [sectionToDeleteFrom.items objectAtIndex:indexPath.row];
+    [self didDeleteItem:itemForDeletion atIndexPath:indexPath];
 	[sectionToDeleteFrom.items removeObjectAtIndex:indexPath.row];
 	[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    [delegate didDeleteRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -134,6 +135,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath{
 	NSLog(@"you selected %@ at indexPath %@ (you should override this method)", item, indexPath);
+}
+
+- (void) didDeleteItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath{
+	NSLog(@"you deleted item %@ at indexPath %@ (you should override this method)", item, indexPath);
 }
 
 @end

@@ -34,5 +34,6 @@
 - (NSMutableArray*)sections;
 - (void)addItem:(NSObject*)item;
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
+- (void) didDeleteItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
 
 @end
