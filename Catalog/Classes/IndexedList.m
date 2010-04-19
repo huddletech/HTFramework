@@ -15,9 +15,9 @@
 {
 	
 	// an indexed list displays the title of each section in a vertical list
-	
 	self.indexed = YES;
 	
+	// set up the list content in the usual way
 	NSArray *letters = [NSArray arrayWithObjects:@"A", @"B", @"C", @"D", @"E", @"F", nil];
 	
 	TableSection *section = nil;
