@@ -30,6 +30,6 @@
 @property (nonatomic, assign) id <LongTextFieldEditingViewControllerDelegate> delegate;
 @property (nonatomic) double keyboardHeight;
 @property (nonatomic) BOOL reloadedTable;
-- (void)save;
+- (void)saveAction;
 - (float)margin;
 @end

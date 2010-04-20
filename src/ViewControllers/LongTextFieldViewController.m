@@ -17,7 +17,7 @@
 @synthesize delegate;
 
 
-- (void)save
+- (void)saveAction
 {
 	[self.delegate takeNewString:textView.text];
 	[self.navigationController popViewControllerAnimated:YES];

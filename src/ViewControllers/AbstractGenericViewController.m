@@ -36,7 +36,7 @@
 {
 	[self.navigationController popViewControllerAnimated:YES];
 }
--(IBAction)save
+-(void)saveAction
 {
 	// you should override this
 }
@@ -44,7 +44,7 @@
 -(UIBarButtonItem*)saveButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
 														  target:self
-														  action:@selector(save)] autorelease];
+														  action:@selector(saveAction)] autorelease];
 };
 -(UIBarButtonItem*)cancelButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel

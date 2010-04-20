@@ -14,7 +14,7 @@
     self.date = [datePicker date];
 	[dateTableView reloadData];
 }
--(IBAction)save
+-(IBAction)saveAction
 {
     [self.delegate takeNewDate:date];
 	[self.navigationController popViewControllerAnimated:YES];
