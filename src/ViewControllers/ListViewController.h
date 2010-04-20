@@ -8,7 +8,6 @@
 //  Copyright 2009 Jeff LaMarche Consulting. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
 #import "TableSection.h"
 #import "TableControlItem.h"

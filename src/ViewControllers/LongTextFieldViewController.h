@@ -7,7 +7,6 @@
 //
 //  Modifications by Andy Waite
 
-#import <UIKit/UIKit.h>
 #import "AbstractGenericViewController.h"
 
 #define kTextViewOffset 10.0

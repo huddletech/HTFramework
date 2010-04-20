@@ -7,7 +7,6 @@
 //
 //  Modifications by Andy Waite
 
-#import <UIKit/UIKit.h>
 #import "AppendableSelectionListViewController.h"
 
 @protocol SelectionListViewControllerDelegate <NSObject>
