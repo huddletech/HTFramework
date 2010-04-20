@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad
 {	
-	self.topLeftButton = [self doneButtonItem];
+	self.topRightButton = [self doneButtonItem];
 	[super viewDidLoad];
 }
 
