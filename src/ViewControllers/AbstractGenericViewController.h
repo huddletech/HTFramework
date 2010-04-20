@@ -14,7 +14,7 @@
 {
 	UIBarButtonItem *topLeftButton, *topRightButton;
 }
--(IBAction)cancel;
+-(void)cancelAction;
 
 @property (nonatomic, retain) UIBarButtonItem *topLeftButton, *topRightButton;
 

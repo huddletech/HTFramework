@@ -32,7 +32,7 @@
 	NSLog(@"doneAction called");
 }
 
--(IBAction)cancel
+-(void)cancelAction
 {
 	[self.navigationController popViewControllerAnimated:YES];
 }
@@ -49,7 +49,7 @@
 -(UIBarButtonItem*)cancelButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 														  target:self
-														  action:@selector(cancel)] autorelease];
+														  action:@selector(cancelAction)] autorelease];
 };
 -(UIBarButtonItem*)addButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
