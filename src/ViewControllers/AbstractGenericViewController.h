@@ -12,19 +12,18 @@
 
 @interface AbstractGenericViewController : UITableViewController 
 {
-	BOOL showCancelButton;
-	BOOL showSaveButton;
-	BOOL showEditButton;
-	BOOL showAddButton;
-	BOOL showDoneButton;
+	UIBarButtonItem *topLeftButton, *topRightButton;
 }
 -(IBAction)cancel;
-@property (nonatomic) BOOL showCancelButton;
-@property (nonatomic) BOOL showSaveButton;
-@property (nonatomic) BOOL showEditButton;
-@property (nonatomic) BOOL showAddButton;
-@property (nonatomic) BOOL showDoneButton;
+
+@property (nonatomic, retain) UIBarButtonItem *topLeftButton, *topRightButton;
 
 -(void)doneAction;
+
+-(UIBarButtonItem*)saveButton;
+-(UIBarButtonItem*)cancelButton;
+-(UIBarButtonItem*)editButton;
+-(UIBarButtonItem*)addButton;
+-(UIBarButtonItem*)doneButton;
 
 @end

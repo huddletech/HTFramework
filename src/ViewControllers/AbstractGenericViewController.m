@@ -11,52 +11,16 @@
 
 
 @implementation AbstractGenericViewController
-@synthesize showCancelButton, showSaveButton, showEditButton, showAddButton, showDoneButton;
+@synthesize topLeftButton, topRightButton;
+
 - (void)viewWillAppear:(BOOL)animated 
 {
-	UIBarButtonItem *button = nil;
-	if (showCancelButton){
-		button = [[UIBarButtonItem alloc]
-									   initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-									   target:self
-									   action:@selector(cancel)];
-		self.navigationItem.leftBarButtonItem = button;
+	if (topLeftButton){
+		self.navigationItem.leftBarButtonItem = topLeftButton;
 	}
-	if (showSaveButton){
-		button = [[UIBarButtonItem alloc]
-									   initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-									   target:self
-									   action:@selector(save)];
-		
-		self.navigationItem.rightBarButtonItem = button;
+	if (topRightButton){
+		self.navigationItem.rightBarButtonItem = topRightButton;
 	}
-	if (showEditButton){
-		button = [[UIBarButtonItem alloc]
-									   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-									   target:self
-									   action:@selector(editAction)];
-		
-		self.navigationItem.rightBarButtonItem = button;
-	}
-	if (showAddButton){
-		button = [[UIBarButtonItem alloc]
-									   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-									   target:self
-									   action:@selector(addAction)];
-		
-		self.navigationItem.rightBarButtonItem = button;
-		
-	}
-	if (showDoneButton){
-		button = [[UIBarButtonItem alloc]
-				  initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-				  target:self
-				  action:@selector(doneAction)];
-		
-		self.navigationItem.rightBarButtonItem = button;
-		
-	}
-	[button release];
 	[super viewWillAppear:animated];
 }
 
@@ -102,4 +66,30 @@
 {
 	// you should override this
 }
+
+-(UIBarButtonItem*)saveButton{
+	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+														  target:self
+														  action:@selector(save)] autorelease];
+};
+-(UIBarButtonItem*)cancelButton{
+	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+														  target:self
+														  action:@selector(cancel)] autorelease];
+};
+-(UIBarButtonItem*)editButton{
+	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+														  target:self
+														  action:@selector(editAction)] autorelease];
+};
+-(UIBarButtonItem*)addButton{
+	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+														  target:self
+														  action:@selector(addAction)] autorelease];
+};
+-(UIBarButtonItem*)doneButton{
+	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+														  target:self
+														  action:@selector(doneAction)] autorelease];
+};
 @end

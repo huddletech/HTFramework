@@ -13,8 +13,6 @@
 
 -(void)viewDidLoad{
 	
-	self.showEditButton = YES;
-	
 	TableSection *section = [self addSectionWithTitle:@"Numbers"];
 	NSArray *itemsForSection = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
 	[section addItems:itemsForSection];

@@ -18,7 +18,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	self.showDoneButton = YES;
+	self.topRightButton = [self doneButton];
 }
 
 -(void)doneAction
@@ -117,7 +117,7 @@
 		controller.fieldNames = [NSArray arrayWithObject:NSLocalizedString(@"New Item", @"New Item")];
 		controller.fieldValues = [NSArray arrayWithObject:@""];
 		controller.delegate = self;
-		controller.showSaveButton = YES;
+		controller.topRightButton = [self saveButton];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}

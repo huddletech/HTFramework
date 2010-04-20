@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad
 {	
-	self.showDoneButton = YES;
+	self.topLeftButton = [self doneButton];
 	[super viewDidLoad];
 }
 
