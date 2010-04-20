@@ -13,6 +13,8 @@
 
 -(void)viewDidLoad{
 	
+	self.topRightButton = [self editButtonItem];
+	
 	TableSection *section = [self addSectionWithTitle:@"Numbers"];
 	NSArray *itemsForSection = [NSMutableArray arrayWithObjects:@"1", @"2", @"3", nil];
 	[section addItems:itemsForSection];

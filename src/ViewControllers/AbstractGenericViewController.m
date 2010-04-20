@@ -32,32 +32,6 @@
 	NSLog(@"doneAction called");
 }
 
--(void)editAction{
-	// toggle mode
-	
-	[self.tableView setEditing:!self.tableView.editing animated:YES];
-	
-	if (self.tableView.editing) {
-	
-	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc]
-								   initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-								   target:self
-								   action:@selector(editAction)];
-	
-	self.navigationItem.rightBarButtonItem = doneButton;
-	[doneButton release];
-	} else {
-		UIBarButtonItem *editButton = [[UIBarButtonItem alloc]
-									   initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-									   target:self
-									   action:@selector(editAction)];
-		
-		self.navigationItem.rightBarButtonItem = editButton;
-		[editButton release];
-	}
-	
-	
-}
 -(IBAction)cancel
 {
 	[self.navigationController popViewControllerAnimated:YES];
@@ -76,11 +50,6 @@
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 														  target:self
 														  action:@selector(cancel)] autorelease];
-};
--(UIBarButtonItem*)editButton{
-	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-														  target:self
-														  action:@selector(editAction)] autorelease];
 };
 -(UIBarButtonItem*)addButton{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd

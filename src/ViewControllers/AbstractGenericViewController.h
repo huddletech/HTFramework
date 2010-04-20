@@ -22,7 +22,6 @@
 
 -(UIBarButtonItem*)saveButton;
 -(UIBarButtonItem*)cancelButton;
--(UIBarButtonItem*)editButton;
 -(UIBarButtonItem*)addButton;
 -(UIBarButtonItem*)doneButton;
 
