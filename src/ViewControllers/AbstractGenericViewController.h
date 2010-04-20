@@ -20,9 +20,9 @@
 
 -(void)doneAction;
 
--(UIBarButtonItem*)saveButton;
--(UIBarButtonItem*)cancelButton;
--(UIBarButtonItem*)addButton;
--(UIBarButtonItem*)doneButton;
+-(UIBarButtonItem*)saveButtonItem;
+-(UIBarButtonItem*)cancelButtonItem;
+-(UIBarButtonItem*)addButtonItem;
+-(UIBarButtonItem*)doneButtonItem;
 
 @end

@@ -28,7 +28,7 @@
 {
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 	[nc addObserver:self selector:@selector(keyboardWillShow:) name: UIKeyboardWillShowNotification object:nil];	
-    self.topRightButton = [self saveButton];
+    self.topRightButton = [self saveButtonItem];
 	[super viewDidLoad];
 }
 

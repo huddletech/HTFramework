@@ -50,7 +50,7 @@
 	
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 	
-	self.topRightButton = [self saveButton];
+	self.topRightButton = [self saveButtonItem];
 
 }
 

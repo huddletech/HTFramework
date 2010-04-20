@@ -41,22 +41,22 @@
 	// you should override this
 }
 
--(UIBarButtonItem*)saveButton{
+-(UIBarButtonItem*)saveButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
 														  target:self
 														  action:@selector(save)] autorelease];
 };
--(UIBarButtonItem*)cancelButton{
+-(UIBarButtonItem*)cancelButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
 														  target:self
 														  action:@selector(cancel)] autorelease];
 };
--(UIBarButtonItem*)addButton{
+-(UIBarButtonItem*)addButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
 														  target:self
 														  action:@selector(addAction)] autorelease];
 };
--(UIBarButtonItem*)doneButton{
+-(UIBarButtonItem*)doneButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
 														  target:self
 														  action:@selector(doneAction)] autorelease];
