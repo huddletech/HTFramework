@@ -28,12 +28,12 @@
 @property (nonatomic, retain) id delegate;
 @property (nonatomic) BOOL indexed;
 
+
 - (void)setItems:(NSArray*)items;
 - (NSArray*)items;
 - (TableSection*)addSectionWithTitle:(NSString*)title;
 - (NSMutableArray*)sections;
 - (void)addItem:(NSObject*)item;
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
-- (void) didDeleteItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
 
 @end

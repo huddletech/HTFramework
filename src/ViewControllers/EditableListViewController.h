@@ -5,4 +5,6 @@
 
 }
 
+- (void) didDeleteItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
+
 @end
