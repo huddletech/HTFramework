@@ -26,3 +26,5 @@ How to Use
 0. `#import "HTFramework.h"`
 
 Look in Catalog/Classes/Examples to see how each screen is built. Usually it's just a case of subclassing one of the controllers and overriding viewDidLoad. Watch the debugger console to see the delegate methods in action.
+
+For support, please post on the Google Group at "http://groups.google.com/group/htframework":http://groups.google.com/group/htframework
