@@ -9,10 +9,9 @@
 //
 #import "ListViewController.h"
 
-
 @implementation ListViewController
 @synthesize delegate, indexed;
-
+@synthesize rootVC;
 
 - (TableSection*)addSectionWithTitle:(NSString*)title{
 	TableSection *newSection = [[[TableSection alloc] init] autorelease];
@@ -100,14 +99,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
-{
-    static NSString *SelectionListCellIdentifier = @"ListCellIdentifier";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SelectionListCellIdentifier];
+{    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self cellIdentifier]];
     if (cell == nil) 
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle]
-									   reuseIdentifier:SelectionListCellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle] reuseIdentifier:[self cellIdentifier]];
     }
     
 	TableSection *ts = [sections objectAtIndex:indexPath.section];
@@ -142,6 +138,21 @@
 
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath{
 	NSLog(@"you selected %@ at indexPath %@ (you should override this method)", item, indexPath);
+}
+
+- (NSString*)cellIdentifier{
+	return @"abc";
+}
+
++ (NSString*)cellIdentifier{
+	return @"abc";
+	
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return YES;
 }
 
 @end

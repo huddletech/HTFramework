@@ -12,6 +12,8 @@
 #import "TableSection.h"
 #import "TableControlItem.h"
 
+@class RootViewController;
+
 @protocol HTTableItemDescription <NSObject>
 @required
 - (NSString*)tableItemDescription;
@@ -23,10 +25,12 @@
 	NSMutableArray	*items;
 	id delegate;
 	BOOL indexed;
+	RootViewController *rootVC;
 }
 
 @property (nonatomic, retain) id delegate;
 @property (nonatomic) BOOL indexed;
+@property (nonatomic, retain) IBOutlet RootViewController *rootVC;
 
 
 - (void)setItems:(NSArray*)items;

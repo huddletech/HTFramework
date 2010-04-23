@@ -22,7 +22,10 @@
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,
-                                                       SelectionListViewControllerDelegate>{										   
+                                                       SelectionListViewControllerDelegate>{
+														   ListViewController *listVC;
 }
+
+@property (nonatomic, retain) IBOutlet ListViewController *listVC;
 
 @end

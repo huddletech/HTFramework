@@ -8,7 +8,8 @@
 
 #import "RootViewController.h"
 
-@implementation RootViewController  
+@implementation RootViewController
+@synthesize listVC;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
