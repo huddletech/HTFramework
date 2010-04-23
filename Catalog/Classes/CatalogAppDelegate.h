@@ -10,10 +10,12 @@
     
     UIWindow *window;
     UINavigationController *navigationController;
+	UISplitViewController *splitVC;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, retain) IBOutlet UISplitViewController *splitVC;
 
 @end
 

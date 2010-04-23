@@ -14,17 +14,19 @@
 
 @synthesize window;
 @synthesize navigationController;
-
+@synthesize splitVC;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
-    
-    // Override point for customization after app launch    
-	
-	[window addSubview:[navigationController view]];
-    [window makeKeyAndVisible];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		[window addSubview:[splitVC view]];
+	} else {
+		[window addSubview:[navigationController view]];
+	}
+	[window makeKeyAndVisible];
+	return YES;
 }
 
 
