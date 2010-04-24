@@ -13,7 +13,6 @@
 
 - (void)viewDidLoad
 {	
-	self.topLeftButton = [self cancelButtonItem];
 	// creating a list is as simple as passing an array of strings
 	self.items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 
