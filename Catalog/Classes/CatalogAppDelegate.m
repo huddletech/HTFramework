@@ -14,17 +14,19 @@
 
 @synthesize window;
 @synthesize navigationController;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
 @synthesize splitVC;
-
+#endif
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		[window addSubview:[splitVC view]];
-	} else {
-		[window addSubview:[navigationController view]];
-	}
+	
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+	[window addSubview:[splitVC view]];
+#else
+	[window addSubview:[navigationController view]];
+#endif
 	[window makeKeyAndVisible];
 	return YES;
 }

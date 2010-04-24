@@ -68,8 +68,13 @@
 		controller = [[EditableList alloc] init];
 	}
 	controller.title = selectedItemLabel;
-	[self.navigationController pushViewController:controller animated:YES];
-	[controller release];
+	
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
+		[self.listVC.view addSubview:[controller view]];
+#else
+		[self.navigationController pushViewController:controller animated:YES];
+#endif
+	//[controller release];
 }
 
 
