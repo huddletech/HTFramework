@@ -70,11 +70,12 @@
 	controller.title = selectedItemLabel;
 	
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
-		[self.listVC.view addSubview:[controller view]];
+	NSArray *newVCs = [NSArray arrayWithObjects:listVC, controller, nil];	
+	[self.listVC.navigationController setViewControllers:newVCs];
 #else
 		[self.navigationController pushViewController:controller animated:YES];
 #endif
-	//[controller release];
+	[controller release];
 }
 
 
