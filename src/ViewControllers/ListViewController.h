@@ -39,5 +39,7 @@
 - (NSMutableArray*)sections;
 - (void)addItem:(NSObject*)item;
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
+- (NSString*)reuseIdentifier;
++ (NSString*)reuseIdentifier;
 
 @end

@@ -100,10 +100,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self cellIdentifier]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self reuseIdentifier]];
     if (cell == nil) 
 	{
-		cell = [[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle] reuseIdentifier:[self cellIdentifier]];
+		cell = [[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle] reuseIdentifier:[self reuseIdentifier]];
     }
     
 	TableSection *ts = [sections objectAtIndex:indexPath.section];
@@ -140,12 +140,12 @@
 	NSLog(@"you selected %@ at indexPath %@ (you should override this method)", item, indexPath);
 }
 
-- (NSString*)cellIdentifier{
-	return @"abc";
+- (NSString*)reuseIdentifier{
+	return [[self class] reuseIdentifier];
 }
 
-+ (NSString*)cellIdentifier{
-	return @"abc";
++ (NSString*)reuseIdentifier{
+	return NSStringFromClass([self class]);
 	
 }
 
