@@ -7,6 +7,7 @@
 @synthesize changedValues;
 @synthesize textFieldBeingEdited;
 @synthesize shouldClearOnEditing;
+@synthesize clearButtonMode;
 - (id)initWithStyle:(UITableViewStyle)style
 {
 	if (self = [super initWithStyle:style])
@@ -131,6 +132,7 @@
 		
 		
 		UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 190, 25)];
+		textField.clearButtonMode = self.clearButtonMode;
 		textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 		//textField.tag = kDefaultTextFieldTag;
 		textField.clearsOnBeginEditing = shouldClearOnEditing;

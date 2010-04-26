@@ -24,6 +24,7 @@
 															// is responsble for converting back from string if necessary
 	
 	UITextField							*textFieldBeingEdited; // The field currently being edited
+	UITextFieldViewMode                 clearButtonMode;
 }
 
 @property (nonatomic, retain) NSArray *fieldNames;
@@ -33,6 +34,9 @@
 @property (nonatomic, assign /* for weak ref */) id <TextFieldEditingViewControllerDelegate> delegate;
 @property (nonatomic, retain) UITextField *textFieldBeingEdited;
 @property BOOL shouldClearOnEditing;
+@property (nonatomic) UITextFieldViewMode clearButtonMode;
+
+
 -(IBAction)textFieldDone:(id)sender;
 -(void)setKeyboardType:(UIKeyboardType)theType forIndex:(NSUInteger)index;
 @end
