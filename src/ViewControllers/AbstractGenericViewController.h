@@ -19,6 +19,7 @@
 
 -(void)doneAction;
 
+-(UIBarButtonItem*)refreshButtonItem;
 -(UIBarButtonItem*)saveButtonItem;
 -(UIBarButtonItem*)cancelButtonItem;
 -(UIBarButtonItem*)addButtonItem;

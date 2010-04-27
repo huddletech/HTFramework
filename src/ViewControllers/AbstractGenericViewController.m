@@ -41,6 +41,12 @@
 	// you should override this
 }
 
+-(UIBarButtonItem*)refreshButtonItem{
+	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+														  target:self
+														  action:@selector(refreshAction)] autorelease];
+};
+
 -(UIBarButtonItem*)saveButtonItem{
 	return [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
 														  target:self
