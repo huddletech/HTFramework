@@ -67,4 +67,34 @@
 														  target:self
 														  action:@selector(doneAction)] autorelease];
 };
+
+-(void) showActivityAlert:(NSString*)title message:(NSString*)message{
+	
+	progressAlert = [[[UIAlertView alloc] initWithTitle:title
+															 message:message
+															delegate:self
+												   cancelButtonTitle:nil
+												   otherButtonTitles:nil] autorelease];
+	
+	UIActivityIndicatorView *activityView = [[[UIActivityIndicatorView alloc] 	initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge]autorelease];
+	
+	CGRect frame = activityView.frame;
+	
+	const float activityViewWidth = 37.0;
+	
+	frame.origin.x += 139.0 - (activityViewWidth / 2);
+	frame.origin.y += 80.0;
+	activityView.frame = frame;
+	
+	[progressAlert addSubview:activityView];
+	[activityView startAnimating];
+	[progressAlert show];
+	[progressAlert retain];
+}
+
+-(void)hideActivityAlert{
+	[progressAlert dismissWithClickedButtonIndex:0 animated:YES];
+	[progressAlert release];
+}
+
 @end

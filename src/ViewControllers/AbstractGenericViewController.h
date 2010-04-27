@@ -12,6 +12,7 @@
 @interface AbstractGenericViewController : UITableViewController 
 {
 	UIBarButtonItem *topLeftButton, *topRightButton;
+	UIAlertView *progressAlert;
 }
 -(void)cancelAction;
 
@@ -24,5 +25,8 @@
 -(UIBarButtonItem*)cancelButtonItem;
 -(UIBarButtonItem*)addButtonItem;
 -(UIBarButtonItem*)doneButtonItem;
+
+-(void)showActivityAlert:(NSString*)title message:(NSString*)message;
+-(void)hideActivityAlert;
 
 @end

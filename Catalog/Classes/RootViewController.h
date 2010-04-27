@@ -19,6 +19,7 @@
 #import "SimpleList.h"
 #import "StyledTable.h"
 #import "ListWithSections.h"
+#import "AlertView.h"
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,

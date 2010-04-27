@@ -32,6 +32,7 @@
 	TableSection *otherKinds = [self addSectionWithTitle:@"Other Kinds"];
 	NSArray *otherKindsItems = [NSArray arrayWithObjects:@"Date Picker",
 								@"Long Text Field",
+								@"Alert View",
 							  nil];
 	
 	[otherKinds addItems:otherKindsItems];
@@ -66,6 +67,8 @@
 		controller = [[Controls alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Editable List"]){
 		controller = [[EditableList alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Alert View"]){
+		controller = [[AlertView alloc] init];
 	}
 	controller.title = selectedItemLabel;
 	
