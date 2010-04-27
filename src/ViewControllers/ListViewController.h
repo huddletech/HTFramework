@@ -33,11 +33,12 @@
 @property (nonatomic, retain) IBOutlet RootViewController *rootVC;
 
 
-- (void)setItems:(NSArray*)items;
+- (void)addItems:(NSArray*)items;
 - (NSArray*)items;
 - (TableSection*)addSectionWithTitle:(NSString*)title;
 - (NSMutableArray*)sections;
 - (void)addItem:(NSObject*)item;
+- (void)addItem:(NSObject*)item display:(BOOL)display;
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
 - (NSString*)reuseIdentifier;
 + (NSString*)reuseIdentifier;

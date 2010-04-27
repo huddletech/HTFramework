@@ -13,7 +13,7 @@
 - (void)viewDidLoad
 {
 	self.delegate = self;
-	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+	[self addItems:[NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil]];
 	self.initialSelection = 1;
 	self.returnAfterSelection = YES;
 	

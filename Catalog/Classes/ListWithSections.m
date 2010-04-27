@@ -15,7 +15,8 @@
 
 	// All tableviews contain at least one section. By default, items are added
 	// to the first section.
-	self.items = [NSArray arrayWithObjects:@"X", @"Y", @"Z", nil];
+	
+	[self addItems:[NSArray arrayWithObjects:@"X", @"Y", @"Z", nil]];
 	
 	// A TableSection object is just a collection of items, along with an optional title
 	TableSection *numbersSection = [self addSectionWithTitle:@"Numbers"];	

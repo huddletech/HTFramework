@@ -15,7 +15,7 @@
 {	
 	// creating a list is as simple as passing an array of string
 	
-	self.items = [NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil];
+	[self addItems:[NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil]];
 	
 	// you can also add items individually
 	

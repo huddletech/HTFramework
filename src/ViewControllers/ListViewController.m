@@ -46,7 +46,7 @@
 
 }
 
-- (void)setItems:(NSArray*)theItems{
+- (void)addItems:(NSArray*)theItems{
 
 	for (NSObject* item in theItems){
 		[self addItem:item];
@@ -55,6 +55,10 @@
 }
 
 - (void)addItem:(NSObject*)item{
+	[self addItem:item display:NO];
+}
+
+- (void)addItem:(NSObject*)item display:(BOOL)display{
 	TableSection *sectionToAddTo = nil;
 	if ([[self sections] count] == 0){
 		sectionToAddTo = [self addSectionWithTitle:@""];

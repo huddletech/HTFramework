@@ -14,7 +14,7 @@
 - (void)viewDidLoad
 {	
 	// creating a list is as simple as passing an array of strings
-	self.items = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+	[self addItems:[NSArray arrayWithObjects:@"A", @"B", @"C", nil]];
 
 	// you can also add items individually
 	[self addItem:@"D"];
