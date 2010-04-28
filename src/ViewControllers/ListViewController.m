@@ -65,7 +65,27 @@
 	} else {
 		sectionToAddTo = [sections objectAtIndex:0];
 	}
+
 	[sectionToAddTo addItem:item];
+	
+
+	if (display){
+[self.tableView beginUpdates];
+		// seems needed because of UITableView bug
+		// see http://www.feedspew.com/article/quick-table-view-weirdness-1361
+		if ([self.items count] == 1){
+			NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+			[self.tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+		}
+		
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[self.items count]-1 inSection:0];
+		NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+		[self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade]; 
+																	   
+	
+	[self.tableView endUpdates];
+	[self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+}
 }
 
 - (NSMutableArray*)sections{
