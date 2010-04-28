@@ -10,6 +10,7 @@
 		007510FB117CCACB00139470 /* ExampleTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 007510FA117CCACB00139470 /* ExampleTableItem.m */; };
 		00751514117D15F300139470 /* EditableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00751513117D15F300139470 /* EditableListViewController.m */; };
 		0094A5EB1187ACFB0042379A /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0094A5EA1187ACFB0042379A /* AlertView.m */; };
+		0094A61D1187B1CC0042379A /* InsertingRows.m in Sources */ = {isa = PBXBuildFile; fileRef = 0094A61C1187B1CC0042379A /* InsertingRows.m */; };
 		00E48F87117A8C1C002FF4C6 /* IndexedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E48F86117A8C1C002FF4C6 /* IndexedList.m */; };
 		00E4913A117B2B42002FF4C6 /* SelectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E49139117B2B42002FF4C6 /* SelectionList.m */; };
 		00E491DB117B302D002FF4C6 /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E491DA117B302D002FF4C6 /* DatePicker.m */; };
@@ -56,6 +57,8 @@
 		00751513117D15F300139470 /* EditableListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditableListViewController.m; sourceTree = "<group>"; };
 		0094A5E91187ACFB0042379A /* AlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertView.h; sourceTree = "<group>"; };
 		0094A5EA1187ACFB0042379A /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertView.m; sourceTree = "<group>"; };
+		0094A61B1187B1CC0042379A /* InsertingRows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertingRows.h; sourceTree = "<group>"; };
+		0094A61C1187B1CC0042379A /* InsertingRows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertingRows.m; sourceTree = "<group>"; };
 		00E48F85117A8C1C002FF4C6 /* IndexedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexedList.h; sourceTree = "<group>"; };
 		00E48F86117A8C1C002FF4C6 /* IndexedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexedList.m; sourceTree = "<group>"; };
 		00E49138117B2B42002FF4C6 /* SelectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionList.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				007510FA117CCACB00139470 /* ExampleTableItem.m */,
 				00E48F85117A8C1C002FF4C6 /* IndexedList.h */,
 				00E48F86117A8C1C002FF4C6 /* IndexedList.m */,
+				0094A61B1187B1CC0042379A /* InsertingRows.h */,
+				0094A61C1187B1CC0042379A /* InsertingRows.m */,
 				00E493AD117B4422002FF4C6 /* LongTextField.h */,
 				00E493AE117B4422002FF4C6 /* LongTextField.m */,
 				00E49138117B2B42002FF4C6 /* SelectionList.h */,
@@ -401,6 +406,7 @@
 				007510FB117CCACB00139470 /* ExampleTableItem.m in Sources */,
 				00751514117D15F300139470 /* EditableListViewController.m in Sources */,
 				0094A5EB1187ACFB0042379A /* AlertView.m in Sources */,
+				0094A61D1187B1CC0042379A /* InsertingRows.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
