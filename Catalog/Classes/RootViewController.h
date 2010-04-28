@@ -20,6 +20,7 @@
 #import "StyledTable.h"
 #import "ListWithSections.h"
 #import "AlertView.h"
+#import "InsertingRows.h"
 
 
 @interface RootViewController : ListViewController <SelectionListViewControllerDelegate,

@@ -26,6 +26,7 @@
 											 @"Text Field Editing",
 											 @"Controls",
 											 @"Editable List",
+							  			     @"Inserting Rows",
 					                         nil];
 	[listViews addItems:listViewItems];
 	
@@ -69,6 +70,8 @@
 		controller = [[EditableList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Alert View"]){
 		controller = [[AlertView alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Inserting Rows"]){
+		controller = [[InsertingRows alloc] init];
 	}
 	controller.title = selectedItemLabel;
 	
