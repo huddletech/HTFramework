@@ -76,12 +76,19 @@
 	controller.title = selectedItemLabel;
 	
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 30200
-	NSArray *newVCs = [NSArray arrayWithObjects:listVC, controller, nil];	
-	[self.listVC.navigationController setViewControllers:newVCs];
+	
+	if ([controller isKindOfClass:[DateViewController class]]){
+		UIPopoverController* aPopover = [[UIPopoverController alloc] initWithContentViewController:controller];
+		aPopover.delegate = self;
+		[aPopover presentPopoverFromRect:self.view.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+	} else {
+		NSArray *newVCs = [NSArray arrayWithObjects:controller, nil];	
+		[self.listVC.navigationController setViewControllers:newVCs];
+	}
 #else
 		[self.navigationController pushViewController:controller animated:YES];
 #endif
-	[controller release];
+	//[controller release];
 }
 
 
