@@ -59,7 +59,7 @@
 	} else if ([selectedItemLabel isEqualToString:@"Long Text Field"]){
 		controller = [[LongTextField alloc] initWithStyle:UITableViewStyleGrouped];
 	} else if ([selectedItemLabel isEqualToString:@"Text Field Editing"]){
-		controller = [[TextFieldEditing alloc] initWithStyle:UITableViewStyleGrouped];
+		controller = [[TextFieldEditing alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Appendable Selection List"]){
 		controller = [[AppendableSelectionList alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"List With Sections"]){

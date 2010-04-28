@@ -8,6 +8,11 @@
 @synthesize textFieldBeingEdited;
 @synthesize shouldClearOnEditing;
 @synthesize clearButtonMode;
+
+- (id)init{
+	return [self initWithStyle:UITableViewStyleGrouped];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
 	if (self = [super initWithStyle:style])
