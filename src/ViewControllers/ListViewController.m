@@ -83,8 +83,9 @@
 																	   
 	
 	[self.tableView endUpdates];
-	[self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
-}
+		//[self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+
+	}
 }
 
 - (NSMutableArray*)sections{
