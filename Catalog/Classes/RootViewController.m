@@ -23,6 +23,7 @@
 					                         @"Indexed List",
 					                         @"Selection List",
 					                         @"Appendable Selection List",
+							                 @"Single Text Field Editing",
 											 @"Text Field Editing",
 											 @"Controls",
 											 @"Editable List",
@@ -72,6 +73,8 @@
 		controller = [[AlertView alloc] init];
 	} else if ([selectedItemLabel isEqualToString:@"Inserting Rows"]){
 		controller = [[InsertingRows alloc] init];
+	} else if ([selectedItemLabel isEqualToString:@"Single Text Field Editing"]){
+		controller = [[SingleTextFieldEditing alloc] init];
 	}
 	controller.title = selectedItemLabel;
 	

@@ -12,3 +12,4 @@
 #import "SwitchCell.h"
 #import "ProgressCell.h"
 #import "ActivityCell.h"
+#import "SingleTextFieldEditingViewController.h"
