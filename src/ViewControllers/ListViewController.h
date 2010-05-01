@@ -42,5 +42,6 @@
 - (NSString*)reuseIdentifier;
 + (NSString*)reuseIdentifier;
 - (void)prepareCell:(UITableViewCell*)cell withItem:(NSObject*)itemForRow;
+- (void)clearAllItems;
 
 @end

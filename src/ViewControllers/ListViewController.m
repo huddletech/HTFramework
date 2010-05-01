@@ -53,6 +53,10 @@
 	
 }
 
+- (void)clearAllItems{
+	sections = [NSMutableArray array];
+}
+
 - (void)addItem:(NSObject*)item{
 	[self addItem:item display:NO];
 }
