@@ -22,7 +22,6 @@
 @interface ListViewController : AbstractGenericViewController 
 {
 	NSMutableArray *sections;
-	NSMutableArray	*items;
 	id delegate;
 	BOOL indexed;
 	RootViewController *rootVC;
