@@ -147,7 +147,7 @@
 	if ([itemForRow respondsToSelector:@selector(tableItemDescription)]){
 		cell.textLabel.text = [(id<HTTableItemDescription>)itemForRow tableItemDescription];
 	} else {
-		cell.textLabel.text = [ts.items objectAtIndex:indexPath.row];
+		cell.textLabel.text = (NSString*)itemForRow;
 	}
 	
 	if ([itemForRow respondsToSelector:@selector(accessoryType)]){
