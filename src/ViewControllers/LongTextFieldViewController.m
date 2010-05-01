@@ -100,7 +100,8 @@
 }
 
 - (float) margin{
-	return 20.0; // on iPad this varies depending on width (up to 45?)
+	return 85; // hacked in for ipad
+	//return 20.0; // on iPad this varies depending on width (up to 45?)
 }
 
 @end
