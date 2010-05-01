@@ -41,5 +41,6 @@
 - (void)didSelectItem:(NSObject*)item atIndexPath:(NSIndexPath*)indexPath;
 - (NSString*)reuseIdentifier;
 + (NSString*)reuseIdentifier;
+- (void)prepareCell:(UITableViewCell*)cell withItem:(NSObject*)itemForRow;
 
 @end

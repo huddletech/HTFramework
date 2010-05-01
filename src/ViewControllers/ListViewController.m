@@ -132,6 +132,13 @@
 	TableSection *ts = [sections objectAtIndex:indexPath.section];
 	NSObject *itemForRow = [ts.items objectAtIndex:indexPath.row];
 	
+	[self prepareCell:cell withItem:itemForRow];
+	
+    return cell;
+}
+
+- (void)prepareCell:(UITableViewCell*)cell withItem:(NSObject*)itemForRow{
+	
 	if ([itemForRow respondsToSelector:@selector(tableItemDescription)]){
 		cell.textLabel.text = [(id<HTTableItemDescription>)itemForRow tableItemDescription];
 	} else {
