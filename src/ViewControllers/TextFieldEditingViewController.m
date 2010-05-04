@@ -67,9 +67,10 @@
 }
 -(void)doneAction
 {
-	if (textFieldBeingEdited != nil)
+	if (textFieldBeingEdited != nil){
+		[textFieldBeingEdited resignFirstResponder];
 		[changedValues replaceObjectAtIndex:textFieldBeingEdited.tag withObject:textFieldBeingEdited.text];
-
+	}
 	[self.delegate valuesDidChange:[NSMutableDictionary dictionaryWithObjects:changedValues forKeys:fieldKeys]];
 	[self.navigationController popViewControllerAnimated:YES];
 }
