@@ -18,12 +18,15 @@
 	
 	self.delegate = self;
 	[self addItems:[NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil]];
-	self.initialSelection = 1;
+	self.selections = [NSMutableArray arrayWithObjects:@"B",
+							 @"C",
+							  nil];
 }
 
-- (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
+
+- (void)didChooseItems:(NSArray*)theSelections
 {
-    NSLog(@"You chose row %i from array %@", row, theList);
+    NSLog(@"You chose items %@", theSelections);
 }
 
 @end
