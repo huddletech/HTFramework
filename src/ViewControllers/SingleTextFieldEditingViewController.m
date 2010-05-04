@@ -13,7 +13,7 @@
 }
 
 - (void)valuesDidChange:(NSDictionary *)newValues{
-	[delegate valueDidChangeTo:self.fieldValue];
+	[delegate valueDidChangeTo:[newValues objectForKey:@"key"]];
 }
 
 @end
