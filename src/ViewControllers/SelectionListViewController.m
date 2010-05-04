@@ -18,10 +18,5 @@
     return [super tableView:tableView numberOfRowsInSection:section] - 1;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-	[super tableView:tableView didSelectRowAtIndexPath:indexPath];
-	[self doneAction];
-}
-
 @end
 
