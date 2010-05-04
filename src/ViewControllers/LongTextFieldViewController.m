@@ -17,6 +17,10 @@
 @synthesize delegate;
 
 
+- (id)init{
+	return [self initWithStyle:UITableViewStyleGrouped];
+}
+
 - (void)saveAction
 {
 	[self.delegate takeNewString:textView.text];
