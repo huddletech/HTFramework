@@ -54,7 +54,7 @@
 }
 
 - (void)clearAllItems{
-	sections = [NSMutableArray array];
+	sections = nil;
 }
 
 - (void)addItem:(NSObject*)item{
