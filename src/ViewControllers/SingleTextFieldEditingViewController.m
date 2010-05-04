@@ -6,9 +6,13 @@
 
 - (void)viewDidLoad {
 	self.fieldNames = [NSArray arrayWithObject:fieldName];
-	self.fieldKeys = [NSArray arrayWithObject:fieldKey];
-	self.fieldValues = [NSArray arrayWithObject:fieldValue];
+	self.fieldKeys = [NSArray arrayWithObject:@"key"];
 	
+	if (fieldValue == nil){
+		fieldValue = @"";
+	}
+	
+	self.fieldValues = [NSArray arrayWithObject:fieldValue];
 	[super viewDidLoad];
 }
 
