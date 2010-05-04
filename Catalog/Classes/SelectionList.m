@@ -14,15 +14,13 @@
 {
 	self.delegate = self;
 	[self addItems:[NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil]];
-	self.initialSelection = 1;
-	self.returnAfterSelection = YES;
-	
+	self.selections = [NSMutableArray arrayWithObject:@"B"];	
 	[super viewDidLoad];
 }
 
-- (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
+- (void)didChooseItems:(NSArray*)selections
 {
-    NSLog(@"You chose row %i from array %@", row, theList);
+    NSLog(@"You chose items %@", selections);
 }
 
 @end
