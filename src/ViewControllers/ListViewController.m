@@ -161,8 +161,6 @@
 	if ([itemForRow respondsToSelector:@selector(detail)]){
 		cell.detailTextLabel.text = [(TableControlItem*)itemForRow detail];
 	}
-	
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
