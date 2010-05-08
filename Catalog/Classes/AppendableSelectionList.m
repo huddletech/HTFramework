@@ -9,6 +9,7 @@
 	[super viewDidLoad];
 	
 	self.delegate = self;
+	self.canAddOther = YES;
 	[self addItems:[NSMutableArray arrayWithObjects:@"A", @"B", @"C", nil]];
 	self.selections = [NSMutableArray arrayWithObjects:@"B",
 							 @"C",

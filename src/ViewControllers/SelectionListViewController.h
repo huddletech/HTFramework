@@ -7,17 +7,25 @@
 //
 //  Modifications by Andy Waite
 
-#import "AppendableSelectionListViewController.h"
+#import "ListViewController.h"
+#import "TextFieldEditingViewController.h"
 
-@protocol SelectionListViewControllerDelegate <NSObject>
+@protocol EditableSelectionListViewControllerDelegate <NSObject>
 @required
-- (void)rowChosen:(NSInteger)row fromArray:(NSArray *)theList;
+- (void)didChooseItems:(NSArray*)selections;
 @end
 
-@interface SelectionListViewController : AppendableSelectionListViewController {
-	BOOL            returnAfterSelection;
+@interface SelectionListViewController : ListViewController <TextFieldEditingViewControllerDelegate>
+{
+	NSIndexPath		*lastIndexPath;
+	NSMutableArray  *selectedIndexPaths;
+	NSMutableArray         *selections;
+	BOOL multiple;
+	BOOL canAddOther;
 }
-
-@property (nonatomic) BOOL returnAfterSelection;
+@property (nonatomic, retain) NSIndexPath *lastIndexPath;
+@property (nonatomic, retain) NSMutableArray *selections;
+@property (nonatomic) BOOL multiple;
+@property (nonatomic) BOOL canAddOther;
 
 @end

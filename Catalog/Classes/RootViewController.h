@@ -24,8 +24,7 @@
 #import "SingleTextFieldEditing.h"
 
 
-@interface RootViewController : ListViewController <SelectionListViewControllerDelegate,
-                                                       SelectionListViewControllerDelegate>{
+@interface RootViewController : ListViewController {
 														   ListViewController *listVC;
 }
 

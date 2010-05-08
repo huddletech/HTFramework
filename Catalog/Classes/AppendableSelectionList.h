@@ -2,7 +2,7 @@
 #import "HTFramework.h"
 
 
-@interface AppendableSelectionList : AppendableSelectionListViewController {
+@interface AppendableSelectionList : SelectionListViewController {
 }
 
 @end

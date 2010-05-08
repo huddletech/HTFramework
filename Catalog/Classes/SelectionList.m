@@ -18,9 +18,10 @@
 	[super viewDidLoad];
 }
 
-- (void)didChooseItems:(NSArray*)selections
+
+- (void)didChooseItems:(NSArray*)theSelections
 {
-    NSLog(@"You chose items %@", selections);
+    NSLog(@"You chose items %@", theSelections);
 }
 
 @end
