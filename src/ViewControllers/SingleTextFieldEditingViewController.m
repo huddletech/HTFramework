@@ -7,6 +7,7 @@
 - (void)viewDidLoad {
 	self.fieldNames = [NSArray arrayWithObject:fieldName];
 	self.fieldKeys = [NSArray arrayWithObject:@"key"];
+	self.hideLabels = YES;
 	
 	if (fieldValue == nil){
 		fieldValue = @"";

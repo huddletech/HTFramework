@@ -25,6 +25,7 @@
 	
 	UITextField							*textFieldBeingEdited; // The field currently being edited
 	UITextFieldViewMode                 clearButtonMode;
+	BOOL hideLabels;
 }
 
 @property (nonatomic, retain) NSArray *fieldNames;
@@ -35,6 +36,7 @@
 @property (nonatomic, retain) UITextField *textFieldBeingEdited;
 @property BOOL shouldClearOnEditing;
 @property (nonatomic) UITextFieldViewMode clearButtonMode;
+@property (nonatomic) BOOL hideLabels;
 
 
 -(IBAction)textFieldDone:(id)sender;

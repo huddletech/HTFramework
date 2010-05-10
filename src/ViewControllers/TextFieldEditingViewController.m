@@ -8,6 +8,7 @@
 @synthesize textFieldBeingEdited;
 @synthesize shouldClearOnEditing;
 @synthesize clearButtonMode;
+@synthesize hideLabels;
 
 - (id)init{
 	return [self initWithStyle:UITableViewStyleGrouped];
@@ -132,12 +133,24 @@
 		UIFont *font = [UIFont boldSystemFontOfSize:12.0];
 		label.textColor = [HTStyle tableCellNonEditableTextColor];
 		label.font = font;
-		[cell.contentView addSubview:label];
+		if (!hideLabels){
+			[cell.contentView addSubview:label];
+		}
 		cell.backgroundColor = [UIColor whiteColor];
 		[label release];
 		
 		
-		UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 10, 190, 25)];
+		float textFieldLeftOffset;
+		float textFieldWidth;
+		
+		if (hideLabels){
+			textFieldLeftOffset = 10;
+			textFieldWidth = 280;
+		} else {
+			textFieldLeftOffset = 100;
+			textFieldWidth = 190;
+		}
+		UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(textFieldLeftOffset, 10, textFieldWidth, 25)];
 		textField.clearButtonMode = self.clearButtonMode;
 		textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 		//textField.tag = kDefaultTextFieldTag;

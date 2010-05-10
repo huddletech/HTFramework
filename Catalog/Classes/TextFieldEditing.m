@@ -16,7 +16,7 @@
 	self.fieldNames = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
 	self.fieldKeys = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
 	self.fieldValues = [NSArray arrayWithObjects:@"1", @"2", @"3", nil];
-	
+	self.hideLabels = YES;
 	[super viewDidLoad];
 }
 
