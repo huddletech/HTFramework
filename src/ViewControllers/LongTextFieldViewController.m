@@ -77,13 +77,12 @@
 	if (cell == nil) 
 	{
         cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:LongTextFieldCellIdentifier] autorelease];
-		UITextView *theTextView = [[UITextView alloc] initWithFrame:CGRectMake(kTextViewOffset, kTextViewOffset, textViewWidth, 0)];
-		theTextView.editable = YES;
-		theTextView.text = string;
-		theTextView.font = [HTStyle longTextFieldFont];
-		self.textView = theTextView;
-		[[cell contentView] addSubview:theTextView];
-		[theTextView release];
+		self.textView = [[UITextView alloc] initWithFrame:CGRectMake(kTextViewOffset, kTextViewOffset, textViewWidth, 0)];
+		textView.editable = YES;
+		textView.text = string;
+		textView.font = [HTStyle longTextFieldFont];
+		[cell.contentView addSubview:textView];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 	// This doesn't work - no matter where I put it. It's almost as if this property is readonly
 	textView.selectedRange = NSMakeRange([string length], 0);
@@ -104,8 +103,7 @@
 }
 
 - (float) margin{
-	return 85; // hacked in for ipad
-	//return 20.0; // on iPad this varies depending on width (up to 45?)
+	return 20.0; // on iPad this varies depending on width (up to 45?)
 }
 
 @end
