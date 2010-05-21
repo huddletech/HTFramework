@@ -120,11 +120,10 @@
 		} else {
 			[self.selections addObject:chosenRow];
 		}
-				
-		NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
 		
 		// causes crash after returning from AddOther
-		//[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+		// NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+		// [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
 		
 		[tableView reloadData];
 	}
