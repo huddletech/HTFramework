@@ -29,7 +29,7 @@
 	accessoryCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	accessoryCell.detail = @"Goodbye";
 	
-	[self addIitems:[NSArray arrayWithObjects:
+	[self addItems:[NSArray arrayWithObjects:
 							switchCell,
 							sliderCell,
 							activityCell,
