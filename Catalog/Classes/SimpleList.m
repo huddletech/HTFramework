@@ -29,4 +29,8 @@
 	[super viewDidLoad];
 }
 
+- (void)prepareCell:(UITableViewCell*)cell{
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
 @end
