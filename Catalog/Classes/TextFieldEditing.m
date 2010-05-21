@@ -26,4 +26,9 @@
 	NSLog(@"You changed values: %@", newValues);
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+	[self save];
+	[super viewWillDisappear:animated];
+}
+
 @end
