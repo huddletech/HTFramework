@@ -24,12 +24,6 @@
 	return self;
 }
 
-- (void)viewDidLoad
-{	
-	self.topRightButton = [self doneButtonItem];
-	[super viewDidLoad];
-}
-
 -(IBAction)textFieldDone:(id)sender
 {
 	UITableViewCell *cell = (UITableViewCell *)[[(UIView *)sender superview] superview];
