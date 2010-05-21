@@ -14,11 +14,11 @@
     self.date = [datePicker date];
 	[dateTableView reloadData];
 }
--(IBAction)saveAction
-{
+-(void)viewWillDisappear:(BOOL)animated{
     [self.delegate takeNewDate:date];
-	[self.navigationController popViewControllerAnimated:YES];
+	[super viewWillDisappear:animated];
 }
+	
 - (void)loadView
 {
     UIView *theView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -49,9 +49,6 @@
     [self.view addSubview:datePicker];
 	
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-	
-	self.topRightButton = [self saveButtonItem];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
