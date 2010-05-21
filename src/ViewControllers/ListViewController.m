@@ -129,20 +129,45 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[self reuseIdentifier]];
-    if (cell == nil) 
+    
+	NSString *customNibName = [self customNibName];
+	
+	if (cell == nil) 
 	{
-		cell = [[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle] reuseIdentifier:[self reuseIdentifier]];
-    }
+		if (customNibName){
+			NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:customNibName owner:self options:nil];
+			cell = [topLevelObjects objectAtIndex:0];
+		} else {
+			cell = [[UITableViewCell alloc] initWithStyle:[self tableViewCellStyle] reuseIdentifier:[self reuseIdentifier]];
+		}
+		[self prepareCell:cell];
+	}
     
 	TableSection *ts = [sections objectAtIndex:indexPath.section];
 	NSObject *itemForRow = [ts.items objectAtIndex:indexPath.row];
 	
-	[self prepareCell:cell withItem:itemForRow];
+	[self configureCell:cell withItem:itemForRow];
+	
+	[self configureCell:cell forItem:itemForRow];
 	
     return cell;
 }
 
-- (void)prepareCell:(UITableViewCell*)cell withItem:(NSObject*)itemForRow{
+// override this if you want
+-(void)prepareCell:(UITableViewCell*)cell{
+}
+
+// override this if you want
+-(void)configureCell:(UITableViewCell*)cell forItem:(id)item{
+}
+
+
+- (NSString*)customNibName{
+	return nil;
+}
+
+
+- (void)configureCell:(UITableViewCell*)cell withItem:(NSObject*)itemForRow{
 	
 	if ([itemForRow respondsToSelector:@selector(tableItemDescription)]){
 		cell.textLabel.text = [(id<HTTableItemDescription>)itemForRow tableItemDescription];
