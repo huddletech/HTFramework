@@ -9,6 +9,8 @@
 
 #import "ListViewController.h"
 #import "TextFieldEditingViewController.h"
+#import <UIKit/UIKit.h>
+#import "AddOther.h"
 
 @protocol EditableSelectionListViewControllerDelegate <NSObject>
 @required
@@ -27,5 +29,7 @@
 @property (nonatomic, retain) NSMutableArray *selections;
 @property (nonatomic) BOOL multiple;
 @property (nonatomic) BOOL canAddOther;
+
+- (void)save;
 
 @end
