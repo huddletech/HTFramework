@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00355F3111A6DB5C00A929DA /* AddOther.m in Sources */ = {isa = PBXBuildFile; fileRef = 00355F2F11A6DB5C00A929DA /* AddOther.m */; };
 		007510FB117CCACB00139470 /* ExampleTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 007510FA117CCACB00139470 /* ExampleTableItem.m */; };
 		00751514117D15F300139470 /* EditableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00751513117D15F300139470 /* EditableListViewController.m */; };
 		0094A5EB1187ACFB0042379A /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0094A5EA1187ACFB0042379A /* AlertView.m */; };
@@ -52,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00355F2E11A6DB5C00A929DA /* AddOther.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOther.h; sourceTree = "<group>"; };
+		00355F2F11A6DB5C00A929DA /* AddOther.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOther.m; sourceTree = "<group>"; };
 		007510F9117CCACB00139470 /* ExampleTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleTableItem.h; sourceTree = "<group>"; };
 		007510FA117CCACB00139470 /* ExampleTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleTableItem.m; sourceTree = "<group>"; };
 		00751512117D15F300139470 /* EditableListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditableListViewController.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 		00E4972C117BAAE9002FF4C6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				00355F2E11A6DB5C00A929DA /* AddOther.h */,
+				00355F2F11A6DB5C00A929DA /* AddOther.m */,
 				00E4972D117BAAE9002FF4C6 /* AbstractGenericViewController.h */,
 				00E4972E117BAAE9002FF4C6 /* AbstractGenericViewController.m */,
 				00E4972F117BAAE9002FF4C6 /* SelectionListViewController.h */,
@@ -413,6 +418,7 @@
 				0094A61D1187B1CC0042379A /* InsertingRows.m in Sources */,
 				00AA086A1188CF5300B53B80 /* SingleTextFieldEditingViewController.m in Sources */,
 				00AA08A31188D10300B53B80 /* SingleTextFieldEditing.m in Sources */,
+				00355F3111A6DB5C00A929DA /* AddOther.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
