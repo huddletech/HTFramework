@@ -60,14 +60,18 @@
 	[firstCellTextField becomeFirstResponder];
 	[super viewDidAppear:animated];
 }
--(void)doneAction
-{
+
+-(void)saveAction{
+	[self save];
+	[self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+-(void)save{
 	if (textFieldBeingEdited != nil){
 		[textFieldBeingEdited resignFirstResponder];
 		[changedValues replaceObjectAtIndex:textFieldBeingEdited.tag withObject:textFieldBeingEdited.text];
 	}
 	[self.delegate valuesDidChange:[NSMutableDictionary dictionaryWithObjects:changedValues forKeys:fieldKeys]];
-	[self.navigationController popViewControllerAnimated:YES];
 }
 -(void)setKeyboardType:(UIKeyboardType)theType forIndex:(NSUInteger)index
 {

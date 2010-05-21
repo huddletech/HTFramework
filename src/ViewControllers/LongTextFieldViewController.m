@@ -21,10 +21,9 @@
 	return [self initWithStyle:UITableViewStyleGrouped];
 }
 
-- (void)saveAction
-{
+-(void)viewWillDisappear:(BOOL)animated{
 	[self.delegate takeNewString:textView.text];
-	[self.navigationController popViewControllerAnimated:YES];
+	[super viewWillDisappear:animated];
 }
 
 #pragma mark -
@@ -32,7 +31,7 @@
 {
 	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 	[nc addObserver:self selector:@selector(keyboardWillShow:) name: UIKeyboardWillShowNotification object:nil];	
-    self.topRightButton = [self saveButtonItem];
+	self.tableView.showsHorizontalScrollIndicator = NO;
 	[super viewDidLoad];
 }
 

@@ -41,4 +41,6 @@
 
 -(IBAction)textFieldDone:(id)sender;
 -(void)setKeyboardType:(UIKeyboardType)theType forIndex:(NSUInteger)index;
+-(void)save;
+
 @end
